@@ -1,0 +1,8 @@
+
+.magnifier-button-icon {
+  box-shadow: 0px 0px 3px var(--greyColor);
+  border-radius: 50%;
+}
+.magnifier-button-icon:hover {
+  transform: rotate(45deg);
+}

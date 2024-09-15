@@ -1,0 +1,45 @@
+.user-info-layout {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 70px;
+  margin-right: 25px;
+}
+
+.user-info-inner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.user-profile-image {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--whiteColor);
+  border-radius: 12px;
+  margin-right: 10px;
+}
+
+.user-avatar-icon {
+  width: 33px;
+  height: 33px;
+  border: 1px solid var(--whiteColor);
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 3px;
+}
+
+.txt-top-name {
+  font-size: 15px;
+  color: var(--whiteColor);
+  display: inline-block;
+}
+
+.top-button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+

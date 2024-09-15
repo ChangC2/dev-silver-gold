@@ -1,0 +1,43 @@
+.content-layout{
+  position: fixed;
+  top: 70px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  color: var(--whiteColor);
+  overflow:hidden;
+}
+
+.content-machine-details {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.content-right-carousel {
+  margin: 0;
+  width: 100%;
+  height: 90%;
+}
+
+.content-carousel-content {
+  position: absolute !important;
+  margin: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 500px !important;
+  color: "#fff";
+  text-align: "center";
+  background-color: "#red";
+}
+

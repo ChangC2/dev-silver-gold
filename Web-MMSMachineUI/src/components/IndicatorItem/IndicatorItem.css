@@ -1,0 +1,16 @@
+.indicator-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+.indicator-gauge{
+    height: 70% !important;
+    padding: 0px !important;
+    margin-top: 5% !important;
+    margin-bottom: 10px !important;
+}

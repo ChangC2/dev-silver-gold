@@ -1,0 +1,17 @@
+.machine-status-button {
+  position: absolute;
+  left: 0px;
+  right: 0;
+  top: 0;
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.machine-status-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}

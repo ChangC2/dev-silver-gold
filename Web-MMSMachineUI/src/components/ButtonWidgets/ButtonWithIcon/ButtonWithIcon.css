@@ -1,0 +1,7 @@
+.button-with-icon {
+  text-align: center;
+  line-height: 1.5;
+}
+.button-with-icon > * img{
+  width: 25px;
+}

@@ -1,0 +1,7 @@
+.one-line-timeline text {
+    color: #eeeeee !important;
+    fill: #eeeeee !important;
+}
+.one-line-timeline svg g:first-of-type rect {
+    fill-opacity: 0;
+}

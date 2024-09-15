@@ -1,0 +1,38 @@
+.factory-info-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  margin: 10px 15px 10px 15px;
+  padding: 0px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 100%
+  ) !important;
+  color: var(--whiteColor);
+}
+
+.factory-info {
+  font-size: 18px;
+  padding-left: 15px;
+  color: white;
+}
+
+
+.factory-info-photo {
+  cursor: pointer;
+  height: 45px;
+  max-height: 45px;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.factory-info-edit {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
