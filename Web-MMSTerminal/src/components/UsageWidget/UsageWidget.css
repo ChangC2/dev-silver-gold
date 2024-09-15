@@ -1,0 +1,29 @@
+.usage-layout {
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #363636 0%, var(--backgroundColor) 100%);
+}
+
+
+.usage-title{
+  color: rgb(44, 128, 255);
+  font-size: 15px;
+}
+
+.usage-input{
+  color: rgb(44, 128, 255);
+  font-size: 15px;
+}
+
+.usage-unit {
+  position: absolute;
+  right: 20px;
+  width: 30px;
+  color: white;
+}
+
+.usage-value {
+  position: absolute;
+  left: 0;
+  right: 50px;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b1e4cc9-6d59-4e63-8805-b50d96a84072" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/view/SettingsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobdata/515.sly" beforeDir="false" afterPath="$PROJECT_DIR$/../jobdata/515.sly" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/resource/style/customStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/resource/style/customStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$Stopwatch$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$Stopwatch$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$Stopwatch$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$Stopwatch$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView$Stopwatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView$Stopwatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/TOS/view/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/TOS/view/MainView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/style/customStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resource/style/customStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainView.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26S7Ew0Cdk1HlQbwz2unPZ9Fwl7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b1e4cc9-6d59-4e63-8805-b50d96a84072" name="Changes" comment="" />
+      <created>1647405025815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647405025815</updated>
+    </task>
+    <servers />
+  </component>
+</project>

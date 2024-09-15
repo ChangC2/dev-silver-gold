@@ -1,0 +1,21 @@
+.radial-input-container {
+    /* width: 110px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.radial-input {
+    max-width: 15px !important;
+    background-color: #1e1e1e !important;
+}
+
+.radial-input.ant-switch-checked {
+    background-color: rgb(99, 8, 245) !important;
+
+}
+
+.radial-input-title {
+    margin-top: 4px;
+    margin-left: 5px;
+}

@@ -1,0 +1,121 @@
+.install-config-page {
+  background-color: var(--backgroundColor);
+  height: 100vh;
+}
+
+.install-config-content {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+}
+
+.install-config-content .text-input-title {
+  font-size: 18px;
+}
+
+.install-config-grad-background {
+  padding: 10px 20px 15px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 100%
+  ) !important;
+  color: var(--whiteColor);
+}
+
+.install-config-title {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.install-config-machine-info-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.install-config-incyle-signal {
+  font-size: 15px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.install-config-textarea {
+  margin: 3px 15px 0px 5px !important;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+.install-config-content .radial-input-container {
+  margin-top: 15px;
+}
+
+.install-config-save-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 60px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.install-config-save-button-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
+}
+
+.install-config-images-container {
+  height: 100px;
+  margin: 15px 10px 0px 5px;
+}
+
+.install-config-image-picker {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border: rgba(255, 255, 255, 0.5) dashed 1px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.install-config-image-picker:hover {
+    color: white;
+}
+
+.install-config-image-picker:active {
+    color: white;
+}
+
+.install-config-images {
+  overflow: auto;
+  overflow-y: hidden;
+  position: absolute;
+  top: 50px;
+  left: 140px;
+  right: 0px;
+  bottom: 0;
+  white-space: nowrap;
+}
+
+.install-config-pic {
+  height: 100px;
+  margin-right: 15px;
+}
+
+

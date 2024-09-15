@@ -1,0 +1,41 @@
+.settings-gantt-chart-calc-fomula-container {
+  color: white;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.settings-gantt-chart-calc-option-container {
+  margin: 0px 0px 15px 15px;
+}
+
+.settings-gantt-chart-calc-option-container .ant-select {
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.settings-gantt-chart-calc-option-container .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.settings-gantt-chart-calc-option-container .ant-select-selector {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+  border-width: 0px !important;
+}
+
+.settings-gantt-chart-calc-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.settings-gantt-chart-calc-dropdown-item {
+  color: #eeeeee !important;
+  background-color: #353535 !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: #111111 !important;
+  border: 1px solid #eeeeee !important;
+}

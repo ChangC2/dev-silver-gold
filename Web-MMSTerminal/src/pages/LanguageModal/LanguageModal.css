@@ -1,0 +1,39 @@
+.language-dialog-style {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+    border: 1px solid white !important;
+    color: white !important;
+    padding-bottom: 0px !important;
+}
+
+.language-dialog-style .ant-modal-header {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+
+}
+
+.language-dialog-style>* .ant-modal-title {
+    color: #eeeeee;
+}
+
+.language-dialog-style>* .ant-modal-close-x {
+    color: #eeeeee;
+}
+
+.language-dialog-style .ant-modal-body {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+}
+
+.language-dialog-style .ant-modal-footer {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+    /* border: 1px solid white !important; */
+}
+
+.lanuage-modal-title{
+    color: white ;
+    font-size: 20px ;
+    margin-right: 5%;
+    font-family: sans-serif;
+}

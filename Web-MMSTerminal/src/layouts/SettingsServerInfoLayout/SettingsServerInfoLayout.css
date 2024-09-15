@@ -1,0 +1,30 @@
+.settings-server-info-layout {
+  margin: 10px 15px 0px 15px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 70%,
+    var(--backgroundColor) 100%
+  );
+  color: var(--whiteColor);
+}
+
+.settings-server-info-title {
+  margin: 30px;
+  line-height: 60px;
+  font-size: 21px;
+}
+
+.settings-server-info-content {
+  background-color: transparent;
+  margin-left: 25px;
+  height: 55px;
+}
+
+.settings-server-version-desc {
+  font-size: 15px;
+  color: white;
+  margin-left: 50px;
+}

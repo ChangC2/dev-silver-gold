@@ -1,0 +1,27 @@
+.dashboard-chart-layout {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 140px;
+  width: 100%;
+  margin: 0px;
+}
+
+.dashboard-chart-container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0px 15px 10px 15px;
+  padding: 0px;
+  border-radius: 10px;
+  border: 1px solid aqua;
+}
+
+.dashboard-chart-icon{
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}

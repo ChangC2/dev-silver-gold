@@ -1,0 +1,86 @@
+.quality-station-layout {
+  height: 100%;
+  background-color: transparent;
+  color: var(--whiteColor);
+  overflow: hidden;
+}
+
+.quality-station-title {
+  color: rgb(0, 201, 201);
+  font-size: 27px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.quality-station-part-id {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 50%;
+  height: 80px;
+  padding: 10px 0px 10px 30px;
+}
+
+.quality-station-user-info {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: 50%;
+  height: 60px;
+}
+
+.quality-station-content {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+  right: 30px;
+  bottom: 20px;
+}
+
+.quality-station-content .good-bad-widget {
+  height: 130px !important;
+}
+
+.quality-station-info {
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #363636 0%, var(--backgroundColor) 100%);
+}
+
+.quality-station-info-title {
+  color: rgb(44, 128, 255);
+  font-size: 15px;
+}
+
+.quality-station-info-content {
+  height: 100%;
+  font-size: 25px;
+}
+
+.quality-station-reject-reasons{
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.reject-reasons-comment-textarea {
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+.reject-reasons-title-edit{
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+}

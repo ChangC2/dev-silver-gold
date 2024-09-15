@@ -1,0 +1,106 @@
+.record-phosphate-testinfo-dialog-style {
+  width: 50% !important;
+  min-width: 800px;
+  background: var(--backgroundColor);
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.record-phosphate-testinfo-dialog-style .ant-modal-body {
+  background-color: var(--backgroundColor);
+  padding: 0;
+}
+
+.record-phosphate-testinfo-dialog-top {
+  height: 60px;
+  margin: 0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.record-phosphate-testinfo-dialog-title {
+  font-size: 21px;
+  margin-left: 30px;
+}
+
+.record-phosphate-testinfo-dialog-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.record-phosphate-testinfo-dialog-button {
+  border: 0px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.record-phosphate-testinfo-input-container {
+  margin-left: 5px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.record-phosphate-testinfo-input-container > .ant-picker {
+  background: transparent !important;
+  width: 100% !important;
+}
+
+.record-phosphate-testinfo-input-container > .ant-picker > .ant-picker-input > input{
+  color: white !important;
+  text-align: center;
+}
+
+.record-phosphate-testinfo-input-container > .ant-picker > .ant-picker-input > span {
+  color: white !important;
+  background-color: transparent;
+  display: none;
+}
+
+.record-phosphate-testinfo-input-title {
+  font-size: 13px;
+  height: 30px;
+  text-align: center;
+}
+
+.left-aligned {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.record-phosphate-testinfo-input-value {
+  background: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #eeeeee !important;
+  color: #eeeeee !important;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+}
+
+.record-phosphate-testinfo-input-value>* .ant-input-group-addon {
+  background: transparent !important;
+  color: #eeeeee !important;
+  border: 0px;
+}
+
+.record-phosphate-testinfo-option {
+  width: 100% !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.record-phosphate-testinfo-option-item {
+  height: 30px !important;
+  color: white;
+}
+
+.record-phosphate-testinfo-option>* .ant-radio-checked>.ant-radio-inner {
+  border-color: transparent;
+}

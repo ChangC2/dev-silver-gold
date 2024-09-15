@@ -1,0 +1,566 @@
+.root {
+    -fx-background-color: transparent;
+}
+.menu-button{
+    -fx-background-color: transparent;
+}
+.menu-button:hover{
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+}
+.tex{
+   -fx-background-color: #005a72;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+#black_area{
+    -fx-background-color: linear-gradient(#000000, #000000);
+}
+#rightArea{
+    -fx-background-color: #005a72;
+}
+#main_area{
+    -fx-background-color: transparent;
+}
+#main_register_area{
+    -fx-background-color: #005a72;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+/*=============== Login css area ===========================*/
+#login_area{
+    -fx-background-color: linear-gradient( #005a72,  #005a72);
+}
+#login_title_label{
+    -fx-font: 18px "Montserrat";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+#username_label{
+    -fx-font: 16px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-font-weight: bold;
+}
+#password_label{
+    -fx-font: 16px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-font-weight: bold;
+}
+#username{
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 16px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-border-color: #cdd0d3;
+    -fx-border-width: 1;
+}
+#username:focused{
+    -fx-background-color: linear-gradient( #f5f6f7,  #f5f6f7);
+}
+#password{
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 14px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-border-color: #cdd0d3;
+    -fx-border-width: 1;
+}
+#password:focused{
+    -fx-background-color: linear-gradient( #eae9e9,  #eae9e9);
+}
+#loginnbtn{
+    -fx-background-color: linear-gradient( #fdb926,  #fdb926);
+    -fx-font: 14px "Montserrat";
+    -fx-text-fill: #002732;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0;
+}
+#loginnbtn:hover{
+    -fx-background-color: linear-gradient( #fdcc62,  #fdcc62);
+    -fx-text-fill: #002732;
+}
+#loginnbtn:focused{
+    -fx-background-color: linear-gradient( #fdcc62,  #fdcc62);
+    -fx-text-fill: #002732;
+}
+#cancelbtn{
+    -fx-background-color: linear-gradient( #054253,  #054253);
+    -fx-font: 14px "Montserrat";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0;
+}
+#cancelbtn:hover{
+    -fx-background-color: linear-gradient( #168cab,  #168cab);
+}
+#cancelbtn:focused{
+    -fx-background-color: linear-gradient( #168cab,  #168cab);
+}
+/*========== Printer Main page css ================*/
+#printer_title_label{
+    -fx-font: 23px "Montserrat";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+#sign_out_label{
+    -fx-font: 17px "Montserrat";
+    -fx-text-fill: #002732;
+}
+#sign_out_label:hover{
+    -fx-text-fill: #FFFFFF;
+    -fx-underline: true;
+}
+#setting_area{
+    -fx-background-color: #0097bf;
+    -fx-border-width: 0 3 0 3;
+    -fx-border-color: #00dcff;
+}
+#setting_area:hover{
+    -fx-background-color: #35c1e6;
+}
+#adding_area{
+    -fx-background-color: #0097bf;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-color: #00dcff;
+}
+#adding_area:hover{
+    -fx-background-color: #35c1e6;
+}
+/*=============== Printer Detail Css ===================*/
+#detail_text_field{
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 17px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-font-weight: bold;
+    -fx-border-color: #cdd0d3;
+    -fx-border-width: 1;
+}
+#detail_label_field{
+    -fx-font: 14px "Lato";
+    -fx-text-fill: #6a768c;
+}
+#detail_list_field{
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 16px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-font-weight: 400;
+    -fx-border-color: #cdd0d3;
+    -fx-border-width: 1;
+}
+#text_field:focused{
+    /*-fx-background-color: linear-gradient( #eae9e9,  #eae9e9);*/
+}
+
+#signout_label{
+    -fx-font: 27px "Courier New";
+    -fx-text-fill: #1b1b1a;
+    -fx-font-weight: bold;
+}
+#signout_label:hover{
+    -fx-font: 27px "Courier New";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+#sideArea{
+    -fx-background-color: linear-gradient( #000000,  #000000);
+}
+#account_label{
+    -fx-font: 35px "Comic Sans MS";
+    -fx-text-fill: #888783;
+    -fx-font-weight: bold; 
+}
+
+#close_label{
+    -fx-background-color: linear-gradient( #014152,  #014152);
+    -fx-font: 14px "Courier New";
+    -fx-text-fill: #f2f2f3;
+    -fx-padding: 4 4 4 4;
+    -fx-font-weight: bold;
+}
+#close_label:hover{
+    -fx-text-fill: #FFFFFF;
+}
+
+#stock_close_label{
+    -fx-font: 14px "Courier New";
+    -fx-text-fill: #007eff;
+    -fx-padding: 4 4 4 4;
+    -fx-font-weight: bold;
+}
+#stock_close_area{
+    -fx-background-color: #FFFFFF;
+    /*-fx-background-radius: 3;*/
+    -fx-border-width: 0 2 0 0;
+    -fx-border-color: #00dcff;
+}
+#stock_close_area2{
+    -fx-background-color: #FFFFFF;
+    /*-fx-background-radius: 3;*/
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: #00dcff;
+}
+/*=========== Othre ==============*/
+#group_title_label{
+    -fx-font: 15px "Montserrat";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+#group_content_label{
+    -fx-font: 16px "Montserrat";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+#group_btn{
+    -fx-background-color: linear-gradient( #fdb926,  #fdb926);
+    -fx-font: 14px "Montserrat";
+    -fx-text-fill: #002732;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0;
+}
+#group_btn:hover{
+    -fx-background-color: linear-gradient( #fdcc62,  #fdcc62);
+    -fx-text-fill: #002732;
+}
+#group_btn:focused{
+    -fx-background-color: linear-gradient( #fdcc62,  #fdcc62);
+    -fx-text-fill: #002732;
+}
+/*============= Register Dialog *=====================*/
+#register_label{
+    -fx-font: 16px "Montserrat";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+#register_field{
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 16px "Lato";
+    -fx-text-fill: #6a768c;
+    -fx-border-color: #cdd0d3;
+    -fx-border-width: 1;
+}
+#register_field:focused{
+    -fx-background-color: linear-gradient( #eae9e9,  #eae9e9);
+}
+.image-view:border {
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}
+
+#combo{
+    -fx-background-color:  linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 18px "Courier New";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 1;
+}
+#radio{
+    -fx-background-color:  transparent;
+    -fx-font: 14px "Courier New";
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+/*#round:focused{
+    -fx-background-color: linear-gradient( #A30015,  #A30015);
+    -fx-text-fill: white;
+}*/
+
+#table_input{
+    -fx-background-color:  #1b1b1a;
+    -fx-font: 20px "Courier New";
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color:  #1b1b1a #1b1b1a #1b1b1a #1b1b1a;
+    -fx-border-width: 1;
+}
+#table_input:focused{
+    -fx-background-color: linear-gradient( #A30015,  #A30015);
+    -fx-text-fill: white;
+}
+#table_input_label{
+    -fx-background-color:  #FFFFFF;
+    -fx-font: 20px "Courier New";
+    -fx-text-fill: #1b1b1a;
+    -fx-font-weight: bold;
+}
+#table_input_label:hover{
+    -fx-background-color:  #0625e8;
+    -fx-text-fill: white;
+}
+/*
+    Customer table css
+*/
+#customer_table .column-header
+{
+    -fx-background-color:  #FFFFFF;
+    -fx-border-color: #545151;
+    -fx-border-width: 1;
+}
+#customer_table .column-header .label{
+    -fx-alignment: CENTER_LEFT;
+     -fx-font: 20px "Courier New";
+    /*-fx-text-fill: #1b1b1a;*/
+    -fx-text-fill: #1b1b1a;
+    -fx-font-weight: bold;
+}
+#customer_table .table-row-cell{
+    -fx-background-color:  #FFFFFF;
+}
+#customer_table .table-cell{
+    -fx-border-color: #545151;
+    -fx-font: 15px "Courier New";
+    -fx-text-fill: #1b1b1a;
+    -fx-font-weight: bold;
+}
+/*#customer_table .table-row-cell:hover .text {
+       -fx-fill: white ;
+}*/
+#customer_table .table-row-cell:focused .text {
+       -fx-fill: white ;
+}
+/*#customer_table .table-row-cell:hover {
+    -fx-background-color: #0625e8;
+}*/
+#customer_table .table-row-cell:focused {
+    -fx-background-color: #56a8f3;
+}
+#customer_table .table-row-cell:selected {
+    -fx-background-color: #56a8f3;
+}
+#customer_table .table-cell:selected{
+    -fx-background-color: #56a8f3;
+}
+#customer_table{
+    -fx-background-color:  #FFFFFF;
+    -fx-border-color: #545151;
+    -fx-border-width: 1;
+}
+.profile-button{
+	-fx-background-color:  #242551;
+
+}
+.primary-color{
+    -fx-background-color:  #13123A;
+}
+.secondary-color{
+    -fx-background-color:  #00002C;
+}
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow, 
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.table-view .column-header#my-special-column .label {
+  -fx-alignment: CENTER_LEFT;
+  -fx-text-fill: #1b1b1a;
+}
+.table-view .table-cell#my-special-column{
+  -fx-alignment: CENTER_LEFT;
+}
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+.table-view .table-row-cell:empty{
+    -fx-opacity: 0;
+}
+
+.button{
+-fx-background-color: #242551;
+-fx-background-radius: 30;
+}
+
+.text-input{
+-fx-background-color: rgba(0,0,0,0);
+-fx-border-width: 0 0 1 0;
+-fx-border-color: #242551;
+}
+
+.selected-border{
+-fx-border-color: #fff;
+-fx-border-width: 0 3 0 0;
+}
+
+.selected:hover{
+    -fx-background-color: #3c3058;
+}
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 1 1 1 1; /* its make really one-pixel-border */
+    -fx-border-color: #7a7a7b;
+}
+
+#separator1 {
+    -fx-background-color: #FFFFFF;
+    -fx-border-style: solid;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: #FFFFFF;
+}
+#separator2 {
+    -fx-background-color: #FFFFFF;
+    -fx-border-style: solid;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #FFFFFF;
+}
+.settings-option-border{
+    -fx-border-style: solid;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #FFFFFF;
+
+}
+/*.text-area {
+    text-area-background: #000000 ;
+    -fx-text-fill: #1b1b1b;
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+    
+}*/
+/*.list-view {
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-font: 18px "Courier New";
+    -fx-font-weight: bold;
+}
+.list-view .list-cell:hover {
+    -fx-text-fill: #34a6ea;
+}
+.list-view .list-cell {
+    -fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);
+    -fx-text-fill: #757575;
+    -fx-font: 18px "Courier New";
+    -fx-font-weight: bold;
+    -fx-alignment: BASELINE_LEFT;
+}
+.list-view .list-cell:selected {
+    -fx-background-color: linear-gradient(#e2e5e6, #e2e5e6);
+    -fx-text-fill: #34a6ea;
+}
+
+.list-view .list-cell:empty {
+    -fx-opacity: 0;
+}
+.list-view .scroll-bar:vertical {
+   -fx-padding: 0px;
+}
+.list-view .scroll-bar:horizontal {
+   -fx-padding: 0px;
+}
+
+.label {
+    -fx-font: 16px "Courier New";
+    -fx-text-fill: #757575;
+    -fx-font-weight: bold;
+}*/
+
+.bordered-titled-title {
+  /*-fx-background-color: linear-gradient( #FFFFFF,  #FFFFFF);*/
+  -fx-background-color: linear-gradient( #000000,  #000000);
+  -fx-translate-y: -15;
+}
+
+.bordered-titled-border {
+  -fx-content-display: center;
+  -fx-border-insets: 0 0 0 0;
+  -fx-background-color: linear-gradient( #005a72,  #005a72);
+  -fx-border-color: black;
+  -fx-border-width: 2;
+}
+
+.context-menu {
+  -fx-background-color: #FFFFFF;
+  
+}
+.menu-item .label {
+  -fx-font: 15px "Montserrat";
+  -fx-text-fill: #000000;
+}
+
+.menu-item:focused .label {
+}
+
+.scroll-bar{
+ -fx-background-color: rgb(96,96,96);
+ -fx-background-radius: 2em;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+ -fx-background-color: transparent;
+ -fx-border-color:transparent;
+ -fx-background-radius: 2em;
+}
+.scroll-bar:vertical .track-background,
+.scroll-bar:horizontal .track-background {
+ -fx-background-color: transparent;
+ -fx-background-insets: 0;
+ -fx-background-radius: 2em;
+}
+.scroll-bar:horizontal .thumb {
+ -fx-background-color: rgb(211,211,211);
+ -fx-background-insets: 4 0 4 0;
+ -fx-background-radius: 2em;
+}
+.scroll-bar:vertical .thumb {
+ -fx-background-color: rgb(211,211,211);
+ -fx-background-insets: 0 4 0 4;
+ -fx-background-radius: 2em;
+}
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+ -fx-background-color: rgb(231,231,231);
+}
+.scroll-bar:horizontal .thumb:pressed,
+.scroll-bar:vertical .thumb:pressed {
+ -fx-background-color: rgb(255,255,255);
+}
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+ -fx-background-color:transparent;
+ -fx-background-radius: 2em;
+ -fx-padding: 5;
+}
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+ -fx-background-color:transparent;
+ -fx-background-radius: 2em;
+ -fx-padding: 5;
+}
+.scroll-bar:horizontal .increment-arrow {
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-background-color: rgb(211,211,211);
+ -fx-padding: 0.25em;
+ -fx-rotate: -90;
+}
+.scroll-bar:vertical .increment-arrow {
+ -fx-background-color: rgb(211,211,211);
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-padding: 0.25em;
+ -fx-rotate: 0;
+}
+.scroll-bar:horizontal .decrement-arrow {
+ -fx-background-color: rgb(211,211,211);
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-padding: 0.25em;
+ -fx-rotate: 90;
+}
+.scroll-bar:vertical .decrement-arrow {
+ -fx-background-color: rgb(211,211,211);
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-padding: 0.25em;
+ -fx-rotate: -180;
+}
+.scroll-bar:vertical:focused,
+.scroll-bar:horizontal:focused {
+ -fx-background-color: transparent,rgb(96,96,96),rgb(96,96,96);
+}

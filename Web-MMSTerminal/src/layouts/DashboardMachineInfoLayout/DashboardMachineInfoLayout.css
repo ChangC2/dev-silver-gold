@@ -1,0 +1,73 @@
+.dashboard-machine-info-layout {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 120px;
+  margin: 10px 15px 10px 15px;
+  padding: 0px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 100%
+  ) ;
+  color: var(--whiteColor);
+}
+
+.dashboard-machine-info-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-machine-info-content {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  right: 10px;
+  bottom: 15px;
+  font-size: 18px;
+  overflow: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+.dashboard-machine-info-jobid {
+  font-size: 21px;
+  margin-left: 30px;
+}
+
+.dashboard-machine-info-jobid-edit {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.dashboard-machine-info-job-attaches {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+  font-size: 21px;
+  overflow: auto;
+  background-color: transparent;
+}
+
+.dashboard-machine-info-job-guides {
+  position: absolute;
+  right: 70px;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+  font-size: 21px;
+  overflow: auto;
+  background-color: transparent;
+}

@@ -1,0 +1,99 @@
+.assembly3-station-layout {
+  height: 100%;
+  background-color: transparent;
+  color: var(--whiteColor);
+  overflow: hidden;
+}
+
+.assembly3-station-title {
+  color: rgb(0, 201, 201);
+  font-size: 27px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.assembly3-station-top-left{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 150px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+.assembly3-station-top-right{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 150px;
+  height: 80px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.assembly3-station-part-id {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 50%;
+  height: 80px;
+  padding: 10px 0px 10px 30px;
+}
+
+.assembly3-station-user-info {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 50%;
+  height: 60px;
+}
+
+.assembly3-station-content {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+  right: 30px;
+  bottom: 20px;
+}
+
+.assembly3-station-content .good-bad-widget {
+  height: 130px !important;
+}
+
+.assembly3-station-info {
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #363636 0%, var(--backgroundColor) 100%);
+  height: 150px;
+}
+
+.assembly3-station-info-title {
+  color: rgb(44, 128, 255);
+  font-size: 15px;
+}
+
+.assembly3-station-info-content {
+  margin-top: 30px;
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.assembly3-station-info-button{
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  height: 40px;
+  cursor: default;
+  font-size: 17px;
+  text-align: center;
+  line-height: 38px;
+  margin-left: 20px;
+  margin-right: 20px;
+}

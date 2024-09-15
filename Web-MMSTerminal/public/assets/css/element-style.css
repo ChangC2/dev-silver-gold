@@ -1,0 +1,14 @@
+.custom-dialog > .ant-modal-content {
+  /* background-color: transparent !important; */
+  padding: 10px;
+  border-radius: 10px;
+}
+.custom-dialog > * .ant-modal-header {
+  border-bottom: none;
+  font-family: semiBoldFont;
+  font-size: 18px;
+}
+
+.custom-dialog > * .ant-modal-footer {
+  border-top: none;
+}

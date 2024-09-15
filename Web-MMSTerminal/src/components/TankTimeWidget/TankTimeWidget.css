@@ -1,0 +1,13 @@
+.time-logger-tank-time-layout{
+  font-size: 17px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #363636 0%, var(--backgroundColor) 100%) !important;
+  font-size: 20px;
+}

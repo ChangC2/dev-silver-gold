@@ -1,0 +1,41 @@
+.dashboard-oee-layout {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: 10px 15px 10px 15px;
+  padding: 0px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 80%,
+    var(--backgroundColor) 100%
+  ) !important;
+  color: var(--whiteColor);
+}
+
+.dashboard-oee-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-oee-title {
+  font-size: 21px;
+}
+
+.dashboard-oee-content {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  right: 10px;
+  bottom: 20px;
+  background-color: transparent;
+}

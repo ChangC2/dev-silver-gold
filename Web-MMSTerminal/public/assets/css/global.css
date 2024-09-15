@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "regularFont";
+  src: url("/assets/fonts/Poppins-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "mediumFont";
+  src: url("/assets/fonts/Poppins-Medium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "semiBoldFont";
+  src: url("/assets/fonts/Poppins-SemiBold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "boldFont";
+  src: url("/assets/fonts/Poppins-Bold.ttf");
+}
+
+.custom-button {
+  cursor: pointer;
+  opacity: 1;
+  transition: 200ms all ease;
+}
+.custom-button:hover {
+  opacity: 0.8;
+}
+.custom-button:active {
+  opacity: 0.95;
+}
+.disabled-custom-button {
+  cursor: default !important;
+}
+.text-input {
+  background: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #eeeeee !important;
+  color: #eeeeee !important;
+  width: 100%;
+}
+
+.text-input>* .ant-input-group-addon {
+    background: transparent !important;
+    color: #eeeeee !important;
+    border: 0px;
+}
+.text-input.centered-text {
+    text-align: center;
+}
+.common-input-error {
+  border: 1px solid #ff8787 !important;
+  border-radius: 4px;
+  background: var(--backgroundColor);
+  padding: 6px 6px;
+  font-size: 12px;
+}
+.common-input .ant-input {
+  background: var(--backgroundColor);
+}
+:root {
+  --backgroundColor: rgb(24, 24, 24);
+  --whiteColor: #ffffff;
+  --blackColor: rgb(12, 12, 12);
+  --greyColor: #b5b5b5;
+  --darkGreyColor: #3d3d3d;
+  --lightGreyColor: #f0f0f0;
+  --whiteGreyColor: rgb(0 0 0 / 20%);
+  --blueColor: #43aae1;
+  --greenColor: #9dce74;
+  --lightGreenColor: #d7ebc6;
+  --redColor: #ff0c00;
+  --orangeColor: #f68b43;
+  --yellowColor: #fac600;
+  --fontBlackColor: #313131;
+  --greyShadowColor: rgb(0 0 0 / 10%);
+  --sidebarColor: rgb(22, 22, 22);
+  /* --primaryFont: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; */
+}
+.custom-shadow {
+  box-shadow: 0 0 15px 0 var(--greyShadowColor);
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--greyColor);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--greyColor);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--greyColor);
+}
+
+.display-none{
+  display: none;
+}
+
+

@@ -1,0 +1,23 @@
+.ambient-paint-layout {
+  padding: 15px 20px 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #363636 0%, var(--backgroundColor) 100%);
+}
+
+
+.ambient-paint-title{
+  color: rgb(44, 128, 255);
+  font-size: 15px;
+}
+
+
+.ambient-paint-value{
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.ambient-paint-name{
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+}

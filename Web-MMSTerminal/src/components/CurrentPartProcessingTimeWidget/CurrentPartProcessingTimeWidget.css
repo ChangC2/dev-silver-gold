@@ -1,0 +1,40 @@
+.current-part-processing-time-layout {
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #363636 0%, var(--backgroundColor) 100%);
+}
+
+
+.current-part-processing-time-title{
+  color: rgb(44, 128, 255);
+  font-size: 15px;
+}
+
+.current-part-processing-time-start-button{
+  border-radius: 5px;
+  border: 1px solid rgb(48, 191, 120);
+  color: rgb(48, 191, 120);
+  height: 40px;
+  cursor: default;
+  text-align: center;
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.current-part-processing-time-stop-button{
+  border-radius: 5px;
+  border: 1px solid rgb(244, 102, 74);
+  color: rgb(244, 102, 74);
+  height: 40px;
+  cursor: default;
+  font-size: 17px;
+  text-align: center;
+  line-height: 38px;
+  opacity: 0.8;
+}
+
+.current-part-processing-time-value{
+  font-size: 18px;
+  text-align: center;
+  cursor: default;
+}

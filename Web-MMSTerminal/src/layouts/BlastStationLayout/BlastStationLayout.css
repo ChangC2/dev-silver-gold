@@ -1,0 +1,42 @@
+.blast-station-layout {
+  height: 100%;
+  background-color: transparent;
+  color: var(--whiteColor);
+  overflow: hidden;
+}
+
+.blast-station-title {
+  color: rgb(0, 201, 201);
+  font-size: 27px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.blast-station-part-id {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 50%;
+  height: 80px;
+  padding: 10px 0px 10px 30px;
+}
+
+.blast-station-user-info {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: 50%;
+  height: 60px;
+}
+
+.blast-station-content {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+  right: 30px;
+  bottom: 20px;
+}

@@ -1,0 +1,39 @@
+.settings-top-layout {
+  width: 100%;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--darkGreyColor);
+  color: var(--whiteColor);
+}
+
+.settings-top-layout-left {
+  margin-left: 20px;
+  height: 50px;
+  display: table;
+}
+
+.settings-top-layout-menu-button {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.settings-top-layout-menu-icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.settings-top-layout-title-div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.settings-top-layout-title {
+  color: var(--whiteColor);
+  font-size: 18px;
+  margin-left: 5px;
+}
+

@@ -1,0 +1,46 @@
+.good-bad-widget {
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 100%
+  ) !important;
+  border-radius: 10px;
+  height: 110px;
+  display: block;
+  margin: 0;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.good-bad-widget-title {
+  font-size: 24px;
+}
+
+.good-bad-widget-up-down {
+  position: absolute;
+  top:30px;
+  right:20px;
+  bottom: 0px;
+  left: 20px;
+}
+
+.good-bad-widget-down {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.good-bad-widget-value {
+  cursor: default;
+  font-size: 24px;
+}
+
+.good-bad-widget-up {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+}

@@ -1,0 +1,29 @@
+.settings-app-info-layout {
+  margin: 10px 15px 0px 15px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 70%,
+    var(--backgroundColor) 100%
+  );
+  color: var(--whiteColor);
+}
+
+.settings-app-info-title {
+  margin: 30px;
+  line-height: 60px;
+  font-size: 21px;
+}
+
+.settings-app-info-content {
+  background-color: transparent;
+  margin-left: 25px;
+}
+
+.settings-app-version-desc {
+  font-size: 15px;
+  color: white;
+  margin-left: 50px;
+}

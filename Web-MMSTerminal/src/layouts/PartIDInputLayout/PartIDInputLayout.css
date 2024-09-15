@@ -1,0 +1,12 @@
+.part-id-input-layout {
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 100%
+  ) !important;
+  border-radius: 5px;
+  height: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+}

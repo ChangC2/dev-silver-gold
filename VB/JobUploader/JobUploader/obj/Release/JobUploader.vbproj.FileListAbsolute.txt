@@ -1,0 +1,15 @@
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\bin\Release\JobUploader.exe.config
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\bin\Release\JobUploader.exe
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\bin\Release\JobUploader.pdb
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\bin\Release\JobUploader.xml
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\bin\Release\MySql.Data.dll
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\bin\Release\MySql.Data.xml
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.vbproj.AssemblyReference.cache
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.Main.resources
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.Resources.resources
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.vbproj.GenerateResource.cache
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.vbproj.CoreCompileInputs.cache
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.vbproj.CopyComplete
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.exe
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.xml
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploader\obj\Release\JobUploader.pdb

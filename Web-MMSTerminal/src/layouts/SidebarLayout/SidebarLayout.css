@@ -1,0 +1,16 @@
+.sidebar {
+  height: 100vh;
+}
+
+
+
+.sidebar .ant-layout-sider-children {
+  background-color: var(--sidebarColor);
+  width: 350px;
+}
+
+.sidebar .c-menu-item.ant-menu-item-selected {
+  background-color: var(--darkGreyColor) !important;
+  padding-left: 22px;
+  color: var(--whiteColor) !important;
+}

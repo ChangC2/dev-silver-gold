@@ -1,0 +1,37 @@
+.input-normal .ant-input {
+  height: 45px;
+  border-radius: 7px;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: regularFont;
+  font-size: 16px;
+  color: var(--lightGreyColor);
+}
+
+.input-title{
+  font-family: regularFont;
+  font-size: 14px;
+  color: var(--lightGreyColor);
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  .input-normal  .ant-input {
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-normal .ant-input {
+    height: 45px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

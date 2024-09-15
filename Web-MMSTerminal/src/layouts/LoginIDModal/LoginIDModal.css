@@ -1,0 +1,57 @@
+.login-id-dialog-style {
+  background: var(--backgroundColor);
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.login-id-dialog-style .ant-modal-body {
+  background-color: var(--backgroundColor);
+  padding: 0;
+}
+
+.login-id-dialog-top {
+  height: 60px;
+  margin: 0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-id-dialog-title {
+  font-size: 21px;
+  margin-left: 30px;
+}
+
+.login-id-dialog-input-desc {
+  font-size: 14px;
+  color: white;
+  line-height: 50px;
+}
+
+.login-id-dialog-content{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.login-id-dialog-input {
+  background: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #eeeeee !important;
+  color: #eeeeee !important;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+.login-id-dialog-button{
+  border: 0px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+

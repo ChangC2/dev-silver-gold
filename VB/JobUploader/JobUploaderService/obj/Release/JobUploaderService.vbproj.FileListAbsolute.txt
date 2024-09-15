@@ -1,0 +1,14 @@
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\bin\Release\JobUploaderService.exe.config
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\bin\Release\JobUploaderService.exe
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\bin\Release\JobUploaderService.pdb
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\bin\Release\JobUploaderService.xml
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\bin\Release\Newtonsoft.Json.dll
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\bin\Release\Newtonsoft.Json.xml
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.vbproj.AssemblyReference.cache
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.Resources.resources
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.vbproj.GenerateResource.cache
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.vbproj.CoreCompileInputs.cache
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.vbproj.CopyComplete
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.exe
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.xml
+E:\MMS\Fanuc(VisualStudio)\VBExam\JobUploaderService\obj\Release\JobUploaderService.pdb

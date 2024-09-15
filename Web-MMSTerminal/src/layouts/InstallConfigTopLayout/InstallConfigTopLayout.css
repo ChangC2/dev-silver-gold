@@ -1,0 +1,39 @@
+.install-config-top-layout {
+  width: 100%;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--darkGreyColor);
+  color: var(--whiteColor);
+}
+
+.install-config-top-layout-left {
+  margin-left: 20px;
+  height: 50px;
+  display: table;
+}
+
+.install-config-top-layout-menu-button {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.install-config-top-layout-menu-icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.install-config-top-layout-title-div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.install-config-top-layout-title {
+  color: var(--whiteColor);
+  font-size: 18px;
+  margin-left: 5px;
+}
+

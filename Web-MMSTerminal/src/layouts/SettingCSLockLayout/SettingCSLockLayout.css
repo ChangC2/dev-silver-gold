@@ -1,0 +1,25 @@
+.settings-cslock-layout {
+  margin: 10px 15px 0px 15px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 70%,
+    var(--backgroundColor) 100%
+  );
+  color: var(--whiteColor);
+}
+
+.settings-cslock-title {
+  margin: 30px;
+  line-height: 60px;
+  font-size: 21px;
+}
+
+.settings-cslock-content {
+  background-color: transparent;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+

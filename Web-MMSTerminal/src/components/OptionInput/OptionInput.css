@@ -1,0 +1,21 @@
+.option-input-container {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.option {
+  width: 100% !important;
+}
+
+.option-item {
+  height: 30px !important;
+}
+
+.option-item .ant-radio-wrapper{
+    color:white
+}
+
+.option > * .ant-radio-checked > .ant-radio-inner {
+  border-color: transparent;
+  color: white;
+}

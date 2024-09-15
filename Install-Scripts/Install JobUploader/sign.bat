@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\signtool.exe" sign /f "E:\MMS\JavaFx\MakeInstallVersion\Install Fanuc\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "E:\MMS\JavaFx\MakeInstallVersion\Install Fanuc\FanucServiceSetup.exe"

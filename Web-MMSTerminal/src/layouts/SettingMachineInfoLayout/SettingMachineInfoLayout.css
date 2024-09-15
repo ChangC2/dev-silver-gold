@@ -1,0 +1,33 @@
+.settings-machine-info-layout {
+  margin: 10px 15px 10px 15px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 70%,
+    var(--backgroundColor) 100%
+  );
+  color: var(--whiteColor);
+}
+
+.settings-machine-info-title {
+  margin: 30px;
+  line-height: 60px;
+  font-size: 21px;
+}
+
+.settings-machine-info-content {
+  background-color: transparent;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.app-setting-machine-info-icon{
+  position: absolute;
+  top:10px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+}

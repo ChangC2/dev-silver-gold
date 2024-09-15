@@ -1,0 +1,38 @@
+.settings-temp_data_source-layout {
+  margin: 10px 15px 0px 15px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #363636 0%,
+    var(--backgroundColor) 70%,
+    var(--backgroundColor) 100%
+  );
+  color: var(--whiteColor);
+}
+
+.settings-temp_data_source-title {
+  margin: 30px;
+  line-height: 60px;
+  font-size: 21px;
+}
+
+.settings-temp_data_source-content {
+  background-color: transparent;
+  margin-left: 25px;
+}
+
+.app-setting-temp_data_source-option {
+  width: 100% !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.app-setting-temp_data_source-option-item {
+  height: 30px !important;
+  color: white;
+}
+
+.app-setting-temp_data_source-option > * .ant-radio-checked > .ant-radio-inner {
+  border-color: transparent;
+}

@@ -1,0 +1,25 @@
+.content-layout-with-top {
+  position: fixed;
+  top: 70px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  color: var(--whiteColor);
+  overflow:hidden;
+}
+
+.content-layout-no-top {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  color: var(--whiteColor);
+  overflow:hidden;
+}

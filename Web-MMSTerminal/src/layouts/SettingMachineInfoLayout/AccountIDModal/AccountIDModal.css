@@ -1,0 +1,55 @@
+.account-id-dialog-style {
+  background: var(--backgroundColor);
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.account-id-dialog-style .ant-modal-body {
+  background-color: var(--backgroundColor);
+  padding: 0;
+}
+
+.account-id-dialog-top {
+  height: 60px;
+  margin: 0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.account-id-dialog-title {
+  font-size: 21px;
+  margin-left: 30px;
+}
+
+.account-id-dialog-input-desc {
+  font-size: 14px;
+  color: white;
+  line-height: 50px;
+}
+
+.account-id-dialog-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.account-id-dialog-input {
+  background: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #eeeeee !important;
+  color: #eeeeee !important;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+.account-id-dialog-button {
+  border: 0px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

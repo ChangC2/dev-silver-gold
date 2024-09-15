@@ -1,0 +1,10 @@
+.main-layout {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--backgroundColor);
+}

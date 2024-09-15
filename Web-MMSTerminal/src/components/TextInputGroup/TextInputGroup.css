@@ -1,0 +1,25 @@
+.setting-text-input-group-container {
+  margin: 0px 15px 15px 15px;
+}
+
+.setting-text-input-group-title {
+    font-size: 14px;
+}
+
+.setting-text-input-group-value {
+  background: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #eeeeee !important;
+  color: #eeeeee !important;
+  width: 100%;
+}
+
+.setting-text-input-group-value.centered-text {
+  text-align: center;
+}
+
+.setting-text-input-group-value > * .ant-input-group-addon {
+  background: transparent !important;
+  color: #eeeeee !important;
+  border: 0px;
+}
