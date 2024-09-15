@@ -1,0 +1,119 @@
+.cd-add-form-back {
+  margin-top: 50px;
+  border-radius: 8px;
+  padding-bottom: 50px !important;
+  background: var(--sidebarColor);
+}
+
+.cd-add-form-button {
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  color: white !important;
+}
+
+.cd-button-title {
+  color: white !important;
+  font-size: 14px !important;
+  display: inline;
+}
+
+
+
+.cd-add-form-step {
+  color: white !important;
+  font-size: 15px;
+  margin: 25px 25px;
+}
+
+.cd-add-form-close {
+  color: white !important;
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.cd-add-form-title {
+  color: white !important;
+  font-size: 20px;
+}
+
+.cd-add-form-content {
+  margin-top: 20px;
+  color: white;
+}
+
+.cd-add-form-checkbox-step1 {
+  color: white !important;
+  font-size: 16px;
+}
+
+.cd-add-form-checkbox-step2 {
+  width: 200px;
+  color: white !important;
+  margin-top: 5px !important;
+  font-size: 16px;
+}
+
+.cd-add-form-step3 {
+  color: white !important;
+  font-size: 16px;
+}
+
+.cd-selector-label {
+  padding-top: 5px !important;
+  color: #eeeeee !important;
+  font-size: 15px !important;
+}
+
+.cd-machine-selector {
+  width: 240px !important;
+  margin-left: 10px !important;
+  color: #eeeeee !important;
+}
+
+.cd-machine-selector > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.cd-machine-selector-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.cd-machine-selector > .ant-select-selector {
+  background-color: transparent !important;
+}
+
+.cd-machine-selector-value {
+  color: #eeeeee !important;
+  background-color: #353535 !important;
+}
+
+.cd-machine-selector-value:hover {
+  background-color: #575757 !important;
+}
+
+.cd-machine-selector-value:active {
+  color: #1e1e1e !important;
+}
+
+.cd-number-input {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.cd-page-no {
+  color: white !important;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cd-no-widget{
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+

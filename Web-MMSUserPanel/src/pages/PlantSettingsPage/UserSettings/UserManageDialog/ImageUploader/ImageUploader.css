@@ -1,0 +1,40 @@
+.user-image-container {
+    display: inline-block;
+}
+
+.user-manage-avatar-add-button-container {
+    display: inline-block;
+    /* position: absolute; */
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+
+.user-manage-avatar-add-button-style {
+    margin-left: 10px !important;
+    font-size: 50px !important;
+    cursor: pointer;
+    color: rgb(102, 102, 102) !important;
+}
+
+.user-manage-avatar-add-button-style:hover {
+    color: white !important;
+}
+
+.user-manage-avatar-add-button-style:active {
+    color: #dddddd !important;
+}
+
+.user-manage-dialog-avatar-style {
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: 10px !important;
+}
+
+.logo-image-style {
+    height: 100px !important;
+    margin-left: 10px !important;
+    background-color: white !important;
+}

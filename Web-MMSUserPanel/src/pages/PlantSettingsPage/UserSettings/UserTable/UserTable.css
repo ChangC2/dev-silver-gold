@@ -1,0 +1,16 @@
+.user-table-style {
+  height: 100% !important;
+}
+.user-table-style > * .ant-table-thead > tr > th {
+  background-color: #131313 !important;
+  color: #eeeeee !important;
+}
+.user-table-style > * .ant-table-tbody > tr > td {
+  background-color: #2b2b2b !important;
+  color: #eeeeee !important;
+}
+
+.user-picture-style {
+  max-height: 50px !important;
+  border-radius: 5px;
+}

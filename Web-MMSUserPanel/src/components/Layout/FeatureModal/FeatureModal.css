@@ -1,0 +1,73 @@
+.app-setting-dialog-style {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+    border: 1px solid white !important;
+    color: white !important;
+    padding-bottom: 0px !important;
+}
+
+.app-setting-dialog-style .ant-modal-header {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+
+}
+
+.app-setting-dialog-style>* .ant-modal-title {
+    color: #eeeeee;
+}
+
+.app-setting-dialog-style>* .ant-modal-close-x {
+    color: #eeeeee;
+}
+
+.app-setting-dialog-style .ant-modal-body {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+}
+
+.app-setting-dialog-style .ant-modal-footer {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+    /* border: 1px solid white !important; */
+}
+
+.cycler_alert_info_dlg {
+    border: 1px solid #b8b8b8;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #414040 0%, #1e1e1e 100%) !important;
+}
+
+.cycler_alert_info_title{
+    color: #e0e0e0 !important;
+    font-size: 20px !important;
+    margin-right: 5%;
+    font-weight: bold;
+}
+
+.cycler_alert_info_content{
+    background-color : transparent !important;
+    color: rgb(212, 212, 212) !important;
+    margin-top: 20px;
+    font-size: 15px !important;
+}
+
+.cycler_alert_info_row{
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-bottom: 1px solid rgb(163, 163, 163) !important;
+}
+
+.cycler_alert_info_key{
+    color: rgb(212, 212, 212) !important;
+    font-size: 15px !important;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.cycler_alert_info_format{
+   text-align: end;
+   padding-right: 5px;
+}

@@ -1,0 +1,30 @@
+.add-sensor-button-container {
+  margin: 6px;
+  padding: 10px;
+  min-height: 325px;
+  border-radius: 8px;
+  background: var(--sidebarColor);
+  text-align: center;
+}
+
+.add-sensor-button-container:hover {
+  background: linear-gradient(#333333, #222222);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #6793f1;
+}
+
+.add-sensor-button-container:active {
+  background: linear-gradient(#252525, #222222, #252525);
+}
+
+.add-sensor-button {
+  text-align: right;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px !important;
+}
+
+.add-sensor-button button{
+  border-radius: 5px !important;
+}
+

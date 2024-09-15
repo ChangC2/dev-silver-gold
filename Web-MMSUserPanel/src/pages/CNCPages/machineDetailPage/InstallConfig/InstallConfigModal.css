@@ -1,0 +1,66 @@
+.install-config-dialog-style {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+    border: 1px solid white !important;
+    color: white !important;
+    padding-bottom: 0px !important;
+}
+
+.install-config-dialog-style .ant-modal-header {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+
+}
+
+.install-config-dialog-style>* .ant-modal-title {
+    color: #eeeeee;
+}
+
+.install-config-dialog-style>* .ant-modal-close-x {
+    color: #eeeeee;
+}
+
+.install-config-dialog-style .ant-modal-body {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+}
+
+.install-config-dialog-style .ant-modal-footer {
+    background: #1e1e1e !important;
+    background-color: #1e1e1e !important;
+    /* border: 1px solid white !important; */
+}
+
+.install-config-group-container {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #414040 0%, #1e1e1e 100%) !important;
+}
+
+.install-config-sub-group-container {
+    border: 1px solid #b8b8b8;
+    margin-top: 10px;
+    padding: 5px 10px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.install-config-group-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.install-config-sub-group-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.install-config-show_cycle_help{
+    color: #eeeeee !important;
+    font-size: 21px !important;
+    margin-top: 5px;
+    margin-right: 5%;
+   
+}

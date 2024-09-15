@@ -1,0 +1,15 @@
+.email-select-container-style{
+    margin-left: 50px;   
+    width: 400px !important;
+}
+.email-select-switch-style-unchecked{
+    width: 40px !important;
+    background-color: transparent !important;
+}
+.email-select-switch-style-checked{
+    width: 40px !important;
+    background-color: green !important;
+}
+.email-style{
+    color: #eeeeee;
+}

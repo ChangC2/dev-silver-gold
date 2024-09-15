@@ -1,0 +1,36 @@
+.one-factory-info-container {
+    margin-bottom: 10px !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    padding-left: 5px !important;
+    text-align: center !important;
+    cursor: pointer;        
+}
+
+.one-factory-info-container:hover {
+    color: #eeeeee !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border: 1px #414040 solid !important;
+}
+
+.normal {
+    color: #dddddd !important;
+    font-size: 16px !important;
+}
+
+.selected {
+    color: white !important;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    border: 1px #8b8b8b solid !important;
+}
+
+.factory-logo-img {
+    max-width: 100% !important;
+    background-color: white !important;
+    border-radius: 5px !important;
+    height: 30px !important;
+}
+
+.factory-name {}

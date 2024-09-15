@@ -1,0 +1,29 @@
+.day_check_container {
+    display: inline-block;
+    margin-right: 20px !important;
+    color: #cccccc;
+    font-size: 18px !important;
+    cursor: pointer;
+    width: 30px !important;
+    text-align: center;
+}
+
+.day_check_container:hover {
+    color: #ffffff !important;
+}
+
+.day_check_container:active {
+    color: #aaaaaa !important;
+}
+
+.day_check_container_checked {
+    border: 1px solid green;
+    background-color: green;
+
+}
+
+.day_check_container_unchecked {
+    border: 1px solid red;
+    /* background-color: red; */
+
+}

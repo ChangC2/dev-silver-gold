@@ -1,0 +1,32 @@
+.reportemails-title-style {
+    color: #eeeeee !important;
+    display: inline-block;
+    margin-right: 10px !important;
+}
+
+.reportemails-mail-add-button-style {
+    margin-left: 10px !important;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border: rgba(255, 255, 255, 0.466) 1px solid;
+    text-align: center;
+    cursor: pointer;
+}
+
+.reportemails-mail-add-button-style:hover {
+    background-color: rgba(255, 255, 255, 0.466);
+    cursor: pointer;
+}
+
+.reportemails-input {
+    background-color: transparent !important;
+    color: #eeeeee !important;
+    width: 200px !important;
+}
+
+.reportemails-maillist-container-style{
+    margin-top: 10px;
+    font-size: 16px;
+}

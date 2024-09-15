@@ -1,0 +1,388 @@
+.machine-detail-container {
+  background: transparent;
+  margin: 15px 10px;
+  text-align: center !important;
+}
+
+.detail-content-container {
+  /* background: red !important; */
+}
+
+.content-table {
+  /* background: red; */
+}
+
+.machine-detail-header-back {
+  height: 70px !important;
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0px !important;
+}
+
+.machine-detail-header-date {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #eeeeee !important;
+  text-align: right !important;
+}
+
+.machine-detail-header-name {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #eeeeee !important;
+  text-align: left !important;
+}
+
+.machine-detail-customer-container {
+  height: 70px !important;
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  margin-left: 10px;
+}
+
+.machine-detail-indicator-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  margin-top: 10px;
+}
+
+.machine-detail-img-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.machine-detail-camera-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.machine-detail-utilization-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding:5px 5px 8px 5px;
+  margin-top: 10px;
+}
+
+.machine-detail-text-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding:10px 15px 10px 15px;
+  margin-top: 10px;
+  text-align: left !important;
+  height: 135px !important;
+}
+
+.machine-detail-timeline-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding:5px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.machine-detail-history-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding:5px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.info-container {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 5px !important;
+  margin: 5px !important;
+}
+
+.user-machine-info-container-mobile {
+  height: 100px;
+}
+
+.machine-detail-user-info-mobile {
+  background: var(--sidebarColor);
+  border-radius: 5px;
+  padding: 8px 20px !important;
+  margin: 5px !important;
+  height: 80px;
+  text-align: center;
+}
+
+.operator-name-style {
+  color: #eeeeee;
+  text-align: left;
+  margin-top: 17px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+  float: left;
+}
+
+.user-name-container {
+  /* display: flex;
+    flex-direction: row;
+    width: 50%; */
+  float: center;
+}
+
+.app-version-container {
+  /* display: flex;
+    flex-direction: row;
+    width: 50%; */
+  float: right;
+}
+
+.app-version-text {
+  color: #eeeeee;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* style={{ display: 'flex', flexDirection: 'row', width: '100%' }} */
+.detail-operator-image-style {
+  margin-top: 5px;
+  float: left;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px white;
+  object-fit: cover;
+}
+
+.machine-image-container {
+  text-align: center !important;
+}
+
+.machine-image-container-mobile img {
+  max-width: 100%;
+  height: 90px !important;
+}
+
+.intro-video-container {
+  height: 152px !important;
+  padding-top: 25px;
+}
+
+
+.utilization-video-container {
+  height: 152px !important;
+  padding-top: 25px;
+}
+
+.indicator-container {
+  height: 318px !important;
+  padding: 10px !important;
+}
+
+.utilization-container {
+  padding-top: 0px !important;
+}
+
+.timeline-container {
+  height: 223px !important;
+}
+
+.history-container {
+  height: 223px !important;
+}
+
+.history-item {
+  color: #eeeeee !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.history-item:hover {
+  cursor: pointer;
+  background: #8a8a8a !important;
+}
+
+.history-item:active {
+  cursor: pointer;
+  background: rgb(104, 104, 104) !important;
+}
+
+.history-item-selected {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+.ant-progress-text {
+  color: #eeeeee !important;
+  font-weight: bold !important;
+}
+
+.ant-progress-circle > path {
+  stroke-width: 20 !important;
+}
+
+.see-detail-gantt-modal {
+  color: #36a3f0 !important;
+  cursor: pointer;
+}
+
+.see-detail-gantt-modal:hover {
+  color: rgb(94, 185, 250) !important;
+}
+
+.detailed-line-timeline text {
+  color: #eeeeee !important;
+  fill: #eeeeee !important;
+}
+
+.detailed-line-timeline svg g:first-of-type rect {
+  fill-opacity: 0;
+}
+
+.detail-gantt-modal {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+}
+
+.detail-gantt-modal .ant-modal-body {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  border: 2px solid white !important;
+}
+
+.detailed-chart-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.detail-gantt-modal .ant-modal-close-x {
+  display: none !important;
+}
+
+.backward-button {
+  color: #eeeeee !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+.backward-button :hover {
+  color: #f5dbdb !important;
+  border: 1px solid #1e1e1e !important;
+}
+
+.app-setting-button {
+  color: #eeeeee !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  margin: 6%;
+  text-align: right !important;
+}
+
+.app-setting-show_cycle_help {
+  color: #eeeeee !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  margin: 2%;
+}
+
+.app-setting-button:hover {
+  color: #f5dbdb !important;
+  border: 1px solid #1e1e1e !important;
+}
+
+.sendEmail {
+  font-size: 30px !important;
+  color: grey !important;
+  rotate: 10 !important;
+  transform: rotate(-20deg);
+}
+
+.sendEmail:hover {
+  color: white !important;
+  transform: rotate(-45deg);
+}
+
+.sendEmail:active {
+  color: red !important;
+  transform: rotate(-45deg);
+}
+
+.sendEmailContainer {
+  text-align: right !important;
+  padding-right: 50px !important;
+}
+
+.confirm-dialog > .ant-modal-content {
+  background-color: #0e0e0e !important;
+}
+
+.confirm-dialog > * .ant-modal-confirm-title {
+  color: #eeeeee !important;
+}
+
+.confirm-dialog > * .ant-modal-confirm-content {
+  color: #eeeeee !important;
+  font-size: 20px !important;
+  text-align: center;
+}
+
+.confirm-dialog > * .ant-btn-primary {
+  color: green !important;
+  border-color: #0e0e0e !important;
+}
+
+.confirm-dialog > * .ant-btn-primary:hover {
+  color: darkgreen !important;
+  border-color: green !important;
+}
+
+.confirm-dialog > * .ant-btn {
+  color: red;
+  border-color: #0e0e0e;
+  background-color: #0e0e0e !important;
+}
+
+.confirm-dialog > * .ant-btn:hover {
+  color: rgb(243, 75, 75);
+  border-color: #0e0e0e;
+  background-color: #0e0e0e !important;
+}
+
+
+.machine-detail-oee-container{
+    height: 170px !important;
+    padding: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.machine-detail-gauge-container{
+    height: 120px !important;
+    padding: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.indicator-title{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 3px;
+  text-align: left;
+}
+
+.shift-select{
+  display: inline;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  margin-right: 0px;
+  text-align: right;
+  margin-bottom: 5px;
+}
+

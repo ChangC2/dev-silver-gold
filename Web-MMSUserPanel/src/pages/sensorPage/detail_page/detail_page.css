@@ -1,0 +1,146 @@
+.sensor-detail-page-container-style {
+  color: #eeeeee !important;
+  padding: 25px;
+  background: var(--sidebarColor);
+  border-radius: 5px;
+}
+
+.sensor-backward-button {
+  color: #eeeeee !important;
+  font-size: 21px !important;
+  font-weight: bold !important;
+  margin-bottom: 15px;
+}
+
+.sensor-detail-one-sensor-container {
+  border-radius: 5px;
+  padding: 20px;
+  background: #1e1e1e !important;
+}
+
+.sensor-detail-one-sensor-text {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.chart-description-container {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  background: #1e1e1e !important;
+}
+
+
+
+.sensor-detail-page-image-style {
+  height: 100px;
+  border-radius: 6px;
+  background: #dddddd;
+  margin-bottom: 0px !important;
+}
+
+.detail-page-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.detail-page-trend-container {
+  margin-top: 20px;
+}
+
+.detail-page-trend-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.detail-page-trend-chart {
+  background-color: transparent !important;
+}
+
+.detail-page-export-button {
+  background: #181818;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.detail-page-export-button:hover {
+  background-color: #353535;
+  cursor: pointer;
+}
+
+.detail-page-one-date {
+  background: transparent !important;
+}
+
+.detail-page-container-info-container {
+}
+
+.sensor-backward-button :hover {
+  color: #f5dbdb !important;
+  /* border: 1px solid #1e1e1e !important; */
+}
+
+
+
+.sensor-detail-one-sensor-location {
+  margin-top: 5px;
+}
+
+.sensor-detail-one-sensor-info-title {
+  font-size: 17px;
+  display: inline-block;
+  width: 100px;
+}
+
+.sensor-detail-one-sensor-info-value {
+  margin-left: 10px;
+  font-size: 17px;
+  display: inline-block;
+}
+
+
+.sensor-detail-one-sensor-status-title {
+  display: inline-block;
+}
+
+.sensor-detail-one-sensor-status-value {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.nowrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.delete-sensor-button {
+  text-align: right;
+  margin-bottom: 5px;
+  border-radius: 5px !important;
+}
+
+.delete-sensor-button span{
+  margin-right: 5px;
+  color: rgb(252, 41, 41);
+}
+
+.delete-sensor-button span:hover {
+  color: rgb(252, 56, 56);
+  cursor: pointer;
+}

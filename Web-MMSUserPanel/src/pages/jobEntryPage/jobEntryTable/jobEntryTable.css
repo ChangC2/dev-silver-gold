@@ -1,0 +1,20 @@
+.entry-table-style{
+    overflow-x: scroll !important;
+    width: auto;
+}
+
+.entry-table-style > * .ant-table-thead > tr > th{
+    background-color: #131313 !important;
+    color: #eeeeee !important;
+}
+.entry-table-style > * .ant-table-tbody > tr > td{
+    background-color: #2b2b2b !important;
+    color: #eeeeee !important;
+}
+
+.ant-upload-list-item-info, .anticon-paper-clip, .anticon-delete{
+    color: rgb(30, 135, 255) !important;
+}
+
+
+

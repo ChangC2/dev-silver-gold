@@ -1,0 +1,53 @@
+.maintenance-entry-add-modal {
+    /* background-color: #1e1e1e !important; */
+}
+
+.maintenance-entry-add-modal>* .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.maintenance-entry-add-modal>* .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.maintenance-entry-add-modal>.ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.maintenance-entry-add-modal>* .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.date-time-picker-style {
+    background-color: #1e1e1e !important;
+}
+
+.date-time-picker-style>.ant-picker-input input {
+    color: #eeeeee !important;
+}
+
+.date-time-picker-style>.ant-picker-input span {
+    color: #eeeeee !important;
+}
+
+.maintenance-machine-image-style {
+    max-width: 100%;
+    max-height: 30px;
+}
+
+.ant-switch.maintenance-interlock-style {
+    background: transparent;
+}
+
+.maintenance-interlock-style .ant-switch {
+    width: 50px !important;
+    background-color: transparent !important;
+}
+
+.maintenance-interlock-style .ant-switch-checked {
+    background-color: green !important;
+}

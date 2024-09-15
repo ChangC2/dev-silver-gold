@@ -1,0 +1,17 @@
+
+.report-setting-page-title {
+    color: #dbdbdb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.report-setting-page-title:hover{
+    color: #ffffff;
+}
+.report-setting-page-title:active{
+    color: #c2c2c2;
+}
+.report-setting-content-container-style{
+    margin-left: 50px !important;
+    margin-right: 10px !important;
+    margin-top: 20px !important;
+}

@@ -1,0 +1,118 @@
+.labor-tracking-modal {
+  /* background-color: #1e1e1e !important; */
+}
+
+.labor-tracking-modal > * .ant-modal-header {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+}
+
+.labor-tracking-modal > * .ant-modal-title {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+  font-size: 21px !important;
+}
+
+.labor-tracking-modal > .ant-modal-content {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+}
+
+.labor-tracking-modal > * .ant-modal-footer {
+  background-color: #1e1e1e !important;
+  color: transparent !important;
+}
+
+.labor-tracking-modal-body-container {
+  width: 100%;
+}
+
+.labor-tracking-label {
+  color: rgb(241, 241, 241);
+  font-size: 14px;
+  margin-right: 10px;
+  display: block;
+  width: 150px !important;
+}
+
+.labor-tracking-or {
+  color: rgb(241, 241, 241);
+  font-size: 14px;
+}
+
+.labor-tracking-line {
+  background: rgb(180, 180, 180);
+  height: 1px;
+}
+
+
+.labor-tracking-input-style {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+  width: 100%;
+}
+
+.labor-tracking-auto-button {
+  color: #ffffff !important;
+  border-color: white !important;
+  width: 100%;
+  height: 100px !important;
+  margin-top: 10px;
+  border-radius: 5px !important;
+}
+
+.labor-tracking-auto-button:disabled {
+  color: #797979 !important;
+  border-color: #797979 !important;
+  width: 100%;
+  height: 100px !important;
+  margin-top: 10px;
+  border-radius: 5px !important;
+}
+
+.labor-tracking-time-picker {
+  color: white;
+  width: 100%;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.labor-tracking-task-time {
+  color: rgb(243, 243, 243);
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.labor-selector {
+  width: 100%;
+  color: #eeeeee !important;
+}
+
+.labor-selector > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.labor-selector-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.labor-selector > .ant-select-selector {
+  background-color: transparent !important;
+}
+
+.labor-selector-value {
+  color: #eeeeee !important;
+  background-color: #353535 !important;
+}
+
+.labor-selector-value:hover {
+  background-color: #575757 !important;
+}
+
+.labor-selector-value:active {
+  color: #1e1e1e !important;
+}

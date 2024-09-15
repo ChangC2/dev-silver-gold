@@ -1,0 +1,38 @@
+.hennig-type-selector-container {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.hennig-type-selector-title {}
+
+.hennig-type-selector {
+    width: 100%;
+    color: #eeeeee !important;
+}
+
+.hennig-type-selector>.ant-select-arrow {
+    color: #eeeeee !important;
+}
+
+.hennig-type-selector-dropdown {
+    background-color: #353535 !important;
+    color: black !important;
+}
+
+.hennig-type-selector>.ant-select-selector {
+    background-color: transparent !important;
+}
+
+
+.hennig-type-selector-value {
+    color: #eeeeee !important;
+    background-color: #353535 !important;
+}
+
+.hennig-type-selector-value:hover {
+    background-color: #575757 !important;
+}
+
+.hennig-type-selector-value:active {
+    color: #1e1e1e !important;
+}

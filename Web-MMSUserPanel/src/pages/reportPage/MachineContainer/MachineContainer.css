@@ -1,0 +1,28 @@
+.one-machine-container {
+    margin-bottom: 10px !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    padding-left: 5px !important;
+    text-align: center !important;
+
+    color: #dddddd !important;
+    cursor: pointer;
+}
+.one-machine-container:hover{
+    color: white !important;
+}
+
+.one-machine-image {
+    max-width: 100% !important;
+    /* background-color: white !important; */
+    border-radius: 5px !important;
+    height: 30px !important;
+}
+
+.option-container {
+    border: 1px solid #b8b8b8;
+    margin-bottom: 20px;
+    padding: 0px 30px 15px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #414040 0%, #1e1e1e 100%) !important;
+}

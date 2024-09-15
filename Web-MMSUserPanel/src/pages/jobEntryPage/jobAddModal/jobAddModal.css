@@ -1,0 +1,33 @@
+.entry-add-modal {
+    /* background-color: #1e1e1e !important; */
+}
+
+.entry-add-modal > * .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.entry-add-modal > * .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.entry-add-modal > .ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.entry-add-modal > * .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.date-time-picker-style{
+    background-color: #1e1e1e !important;
+}
+.date-time-picker-style > .ant-picker-input input{
+    color: #eeeeee !important;
+}
+.date-time-picker-style > .ant-picker-input span{
+    color: #eeeeee !important;
+}

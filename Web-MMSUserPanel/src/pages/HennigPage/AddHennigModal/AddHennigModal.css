@@ -1,0 +1,37 @@
+.add-hennig-modal {
+    /* background-color: #1e1e1e !important; */
+}
+
+.add-hennig-modal>* .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.add-hennig-group-title {
+  font-weight: bold;
+}
+
+.add-hennig-modal>* .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.add-hennig-modal>.ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.add-hennig-modal>* .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.add-hennig-modal-body-container {
+    width: 100%;
+}
+
+.add-hennig-modal-image-upload-container {
+    min-height: 100px;
+    width: 100% !important;
+    text-align: center !important;
+}

@@ -1,0 +1,63 @@
+.customer-setting-dialog-style {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.customer-setting-dialog-style .ant-modal-header {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+}
+
+.customer-setting-dialog-style > * .ant-modal-title {
+  color: #eeeeee;
+}
+
+.customer-setting-dialog-style > * .ant-modal-close-x {
+  color: #eeeeee;
+}
+
+.customer-setting-dialog-style .ant-modal-body {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  padding-bottom: 15px !important;
+}
+
+.customer-setting-dialog-style .ant-modal-footer {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  border: 0 !important;
+  padding: 0px 25px 20px 0px !important;
+  /* border: 1px solid white !important; */
+}
+
+.customer-setting-page-title {
+  color: #fff;
+  font-size: 21px;
+  font: bold;
+}
+
+.customer-setting-container-style {
+  width: 100% !important;
+  margin: 15px 0px 0px 0px;
+  font-size: 17px !important;
+  display: inline-block !important;
+  color: white;
+  padding: 20px 30px 30px 30px;
+  border-radius: 5px;
+  border: #616161 1px solid;
+  background-color: #303030;
+}
+
+.customer-setting-update-button {
+  width: 35%;
+  height: 40px;
+  border-radius: 5px !important;
+  color: white !important;
+  background-color: #3f3f3f !important ;
+  border-color: #3f3f3f !important ;
+  font-size: 15px;
+  margin: 50px 0px 0px 0px !important;
+}

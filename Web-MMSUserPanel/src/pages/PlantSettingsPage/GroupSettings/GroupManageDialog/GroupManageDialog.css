@@ -1,0 +1,31 @@
+.group-setting-modal-style > * .ant-modal-close-x {
+  color: #eeeeee !important;
+}
+
+.group-setting-modal-style > * .ant-modal-header {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+}
+
+.group-setting-modal-style > * .ant-modal-title {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+}
+
+.group-setting-modal-style > .ant-modal-content {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+}
+
+.group-setting-modal-style > * .ant-modal-footer {
+  background-color: #1e1e1e !important;
+  color: #eeeeee !important;
+}
+
+.group-dlg-machine-item {
+  cursor: pointer;
+  padding: 0px 10px;
+}
+.group-dlg-machine-item:hover {
+  background-color: #111111;
+}

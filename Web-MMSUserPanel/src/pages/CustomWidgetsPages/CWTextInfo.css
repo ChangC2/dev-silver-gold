@@ -1,0 +1,43 @@
+.cwtextinfo-title-container{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.cwtextinfo-content-container{
+    padding: 0px 30px;
+}
+
+.cwtextinfo-title{
+   color: rgb(230, 230, 230);
+   font-size: 18px;
+   font-weight: bold;
+}
+
+
+
+.cwtextinfo-goods{
+   color: #30BF78;
+   font-size: 17px;
+}
+
+.cwtextinfo-bads{
+   color: #F4664A;
+   font-size: 17px;
+}
+
+.cwtextinfo-content{
+   color: rgb(230, 230, 230);
+   font-size: 17px;
+}
+
+.cwtextinfo-title-darkmode{
+   color: rgb(68, 68, 68);
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.cwtextinfo-content-darkmode{
+   color: rgb(61, 61, 61);
+   font-size: 17px;
+}
+

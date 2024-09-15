@@ -1,0 +1,71 @@
+.trello-setting-container {
+    color: #dbdbdb;
+    border-radius: 5px;
+}
+
+.trello-select-title {
+    color: rgb(241, 241, 241);
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.trello-select {
+    width: 100%;
+    color: #eeeeee !important;
+}
+
+.trello-select>.ant-select-arrow {
+    color: #eeeeee !important;
+}
+
+.trello-select-dropdown {
+    background-color: #353535 !important;
+    color: black !important;
+}
+
+.trello-select>.ant-select-selector {
+    background-color: transparent !important;
+}
+
+
+.trello-select-value {
+    color: #eeeeee !important;
+    background-color: #353535 !important;
+}
+
+.trello-select-value:hover {
+    background-color: #575757 !important;
+}
+
+.trello-select-value:active {
+    color: #1e1e1e !important;
+}
+
+.trello-description-style {
+    background-color: transparent !important;
+    color: #eeeeee !important;
+    width: 400px !important;
+}
+
+
+.trello-description-title {
+    color: rgb(241, 241, 241);
+    font-size: 16px;
+    margin-right: 10px;
+    display: block;
+    width: 150px !important;
+    margin-bottom: 5px;
+}
+
+.trello-update-button {
+    width: 100%;
+    color: rgb(255, 255, 255) !important;
+    font-size: 14px;
+    margin: 30px 0px 0px 0px;
+    padding:0px 30px  !important;
+    border-radius: 5px;
+}
+

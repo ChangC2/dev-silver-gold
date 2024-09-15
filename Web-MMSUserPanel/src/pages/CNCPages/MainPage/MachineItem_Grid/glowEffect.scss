@@ -1,0 +1,35 @@
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+.led-one-line-style {
+  font-size: 80px;
+}
+
+.col-glow {
+  line-height: 0px !important;
+  text-align: left;
+  animation: col-glow 1s infinite alternate $easeInOutQuad;
+}
+
+@keyframes col-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.border-glow {
+  animation: border-col-glow 1s infinite alternate $easeInOutQuad;
+}
+
+@keyframes border-col-glow {
+  0% {
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4), -1px -1px 3px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7), -1px -1px 3px rgba(255, 255, 255, 0.4);
+  }
+}

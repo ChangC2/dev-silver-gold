@@ -1,0 +1,78 @@
+.machine-item-style {
+  margin: 15px 10px 0px 10px !important;
+  /* height: 150px; */
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(#313131, #1b1b1b);
+}
+
+.machine-item-style:hover {
+  background: linear-gradient(#383838, #2e2e2e);
+}
+
+.machine-item-style:active {
+  background: linear-gradient(#080808, #1d1c1c);
+}
+
+.main-operator-image-style {
+  border-radius: 50%;
+  /* box-shadow: 0px 0px 5px white; */
+  object-fit: cover !important;
+}
+
+.metric-time-range-title{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.metric-time-range-value{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.machine-image {
+  /* margin-left: 20px !important; */
+  max-width: 100% !important;
+  /* object-fit: contain !important; */
+  height: 100px !important; 
+}
+
+.main-machine-status-style {
+  /* style={{ color: "white", textAlign: 'center', marginLeft: 15 }} */
+  color: white;
+  text-align: center;
+  /* font-weight: bold; */
+  word-break: break-all;
+  font-size: 12px;
+}
+
+.main-machine-status-led-container-style {
+  /* background: red; */
+  text-align: center;
+  width: 100%;
+}
+
+.gauge-main-style {
+}
+
+.gauge-main-style-mobile > * text {
+  font-size: 12px !important;
+  transform: translateY(-10px) !important;
+}
+.gauge-main-style-ipad > * text {
+  font-size: 16px !important;
+  transform: translateY(-10px) !important;
+}
+
+
+.calculation-title{
+  width: 100% !important;
+  text-align: left !important;
+  color: white;
+  font-size: 15px;
+}

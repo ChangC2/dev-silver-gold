@@ -1,0 +1,21 @@
+.pdf-util-pie-chart-style {
+    
+}
+
+.circle-shape-style {
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    margin-right: 10px;    
+}
+
+.legentinfo-style {
+    display: inline-block;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+.legend-info-container-style{
+
+}

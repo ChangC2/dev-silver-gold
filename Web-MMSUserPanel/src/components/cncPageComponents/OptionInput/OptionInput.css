@@ -1,0 +1,17 @@
+.app-setting-option-input-container {
+    margin-top: 10px;
+}
+
+.app-setting-option {
+    width: 100% !important;
+
+}
+
+.app-setting-option-item {
+    height: 30px !important;
+
+}
+
+.app-setting-option>* .ant-radio-checked>.ant-radio-inner {
+    border-color: transparent;
+}

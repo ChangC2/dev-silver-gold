@@ -1,0 +1,51 @@
+.notice-icon {
+  cursor: pointer;
+  margin: 0px 10px 0px 0px;
+}
+
+.bell-icon{
+  font-size: 21px;
+  color: white;
+}
+.notice-icon .ant-scroll-number.ant-badge-count {
+  position: absolute;
+  top: 0px;
+}
+.notice-icon .anticon {
+  vertical-align: middle;
+}
+
+.ant-list-item-meta-title{
+  color:white
+}
+
+.ant-list-item-meta-description{
+  color: white
+}
+
+.ant-spin-container .ant-tabs-nav-wrap{
+  background: var(--sidebarColor) !important;
+  padding: 0px 15px !important;
+}
+
+.ant-tabs-content-holder{
+  background: var(--sidebarColor) !important;
+}
+
+.antd-pro-notice-icon-bottomBar{
+  color: rgb(206, 206, 206) !important
+}
+
+.antd-pro-notice-icon-bottomBar div:hover{
+  color: white !important
+}
+
+.antd-pro-notice-icon-list .antd-pro-notice-icon-item:hover{
+  background: black !important;
+}
+
+.antd-pro-notice-icon-notFound{
+  color:white !important
+}
+
+

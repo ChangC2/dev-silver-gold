@@ -1,0 +1,32 @@
+.app-setting-text-input-container {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.app-setting-text-input-title {}
+
+.app-setting-text-input-value {
+    background: transparent !important;
+    border: 0px !important;
+    border-bottom: 1px solid #eeeeee !important;
+    color: #eeeeee !important;
+    width: 100%;
+}
+
+.app-setting-text-input-value.centered-text {
+    text-align: center;
+}
+
+.app-setting-text-input-value>* .ant-input-group-addon {
+    background: transparent !important;
+    color: #eeeeee !important;
+    border: 0px;
+}
+
+/* 
+.app-setting-text-input-value:focus {
+    border: 0px !important;
+    border-bottom: 1px solid #eeeeee !important;
+    box-sizing: content-box !important;
+} */

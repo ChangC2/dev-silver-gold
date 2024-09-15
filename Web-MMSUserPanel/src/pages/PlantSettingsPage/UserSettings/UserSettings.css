@@ -1,0 +1,68 @@
+.user-setting-dialog-style {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.user-setting-dialog-style .ant-modal-header {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+}
+
+.user-setting-dialog-style > * .ant-modal-title {
+  color: #eeeeee;
+}
+
+.user-setting-dialog-style > * .ant-modal-close-x {
+  color: #eeeeee;
+}
+
+.user-setting-dialog-style .ant-modal-body {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  padding-bottom: 15px !important;
+}
+
+.user-setting-dialog-style .ant-modal-footer {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  border: 0 !important;
+  padding: 0px 25px 20px 0px !important;
+  /* border: 1px solid white !important; */
+}
+
+.user-setting-container {
+  height: 97% !important;
+}
+
+.user-setting-page-title {
+  color: #dddddd !important;
+  cursor: pointer;
+  font-weight: bold !important;
+  margin: 30px !important;
+  font-size: 17px !important;
+}
+.user-setting-page-title:hover {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+.user-setting-page-title:active {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+.user-setting-user-table-style {
+  margin: 0px 5px 0px 5px !important;
+}
+
+.user-setting-button-container {
+  text-align: right;
+  margin: 0 5px 5px 0;
+  border-radius: 5px !important;
+}
+
+.user-setting-button-container button {
+  border-radius: 5px !important;
+}

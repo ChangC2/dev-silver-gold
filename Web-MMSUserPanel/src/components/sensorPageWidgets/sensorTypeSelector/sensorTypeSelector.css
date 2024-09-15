@@ -1,0 +1,38 @@
+.sensor-type-selector-container {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.sensor-type-selector-title {}
+
+.sensor-type-selector {
+    width: 100%;
+    color: #eeeeee !important;
+}
+
+.sensor-type-selector>.ant-select-arrow {
+    color: #eeeeee !important;
+}
+
+.sensor-type-selector-dropdown {
+    background-color: #353535 !important;
+    color: black !important;
+}
+
+.sensor-type-selector>.ant-select-selector {
+    background-color: transparent !important;
+}
+
+
+.sensor-type-selector-value {
+    color: #eeeeee !important;
+    background-color: #353535 !important;
+}
+
+.sensor-type-selector-value:hover {
+    background-color: #575757 !important;
+}
+
+.sensor-type-selector-value:active {
+    color: #1e1e1e !important;
+}

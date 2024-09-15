@@ -1,0 +1,23 @@
+.add-cw-button {
+  text-align: right;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px !important;
+}
+
+.add-cw-button button{
+  border-radius: 5px !important;
+}
+
+.cw-widget-container{
+  width: auto;
+  height: 300px;
+  margin: 5px ;
+  border-radius: 8px;
+  background: var(--sidebarColor);
+}
+
+.cw-widget-editing{
+  border: white dashed 1px;
+  margin: 2px;
+}

@@ -1,0 +1,46 @@
+.user-setting-modal-style {}
+
+.user-setting-modal-style>* .ant-modal-close-x {
+    color: #eeeeee !important;
+}
+
+.user-setting-modal-style>* .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.user-setting-modal-style>* .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.user-setting-modal-style>.ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.user-setting-modal-style>* .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+
+.user-security-level-selector-style {
+    width: 150px !important;
+
+}
+
+.user-password-input-style {}
+
+.user-password-input-style>* .ant-input-password-icon {
+    color: white !important;
+}
+.user-password-input-style> .ant-input {
+    color: white !important;
+    background-color: #1e1e1e !important;
+}
+
+.user-password-desc{
+    font-size: 12px;
+    color: red;
+}

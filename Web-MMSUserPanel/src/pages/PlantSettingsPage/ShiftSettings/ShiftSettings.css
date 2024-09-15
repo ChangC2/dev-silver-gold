@@ -1,0 +1,66 @@
+.shift-setting-page-title {
+  color: #dbdbdb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.shift-setting-page-title:hover {
+  color: #ffffff;
+}
+.shift-setting-page-title:active {
+  color: #c2c2c2;
+}
+
+.shift-setting-content-style {
+  margin-left: 50px !important;
+  margin-right: 10px !important;
+}
+
+.shift-title-style {
+  color: #eeeeee !important;
+  display: inline-block;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+
+.shift-value-container-style {
+  display: inline-block;
+  margin-right: 10px !important;
+}
+
+.shift-value-style {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+}
+
+.shift-value-change-button-container-style {
+  display: inline-block;
+}
+.shift-value-change-button {
+  color: green !important;
+  cursor: pointer;
+  font-size: 18px;
+}
+.shift-value-change-button:hover {
+  color: rgb(6, 175, 6) !important;
+}
+.shift-value-change-button:active {
+  color: rgb(2, 85, 2) !important;
+}
+
+.shift-setting-time-picker-style {
+  width: 100% !important;
+  background-color: transparent !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+.shift-setting-update-button {
+  width: 100% !important;
+  height: 40px;
+  border-radius: 5px !important;
+  color: white !important;
+  background-color: #3f3f3f !important ;
+  border-color: #3f3f3f !important ;
+  font-size: 15px;
+  margin: 50px 0px 0px 15px !important;
+}

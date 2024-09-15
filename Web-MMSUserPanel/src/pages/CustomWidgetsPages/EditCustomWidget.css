@@ -1,0 +1,25 @@
+.cd-edit-form-back {
+  border-radius: 8px;
+  padding-bottom: 50px !important;
+  background: var(--sidebarColor);
+}
+
+.delete-widget-button {
+  text-align: right;
+  margin-bottom: 5px;
+  border-radius: 5px !important;
+}
+
+.delete-widget-button span{
+  margin-right: 5px;
+  color: rgb(252, 41, 41);
+}
+
+.delete-widget-button span:hover {
+  color: rgb(252, 56, 56);
+  cursor: pointer;
+}
+
+.ant-popover-message-title{
+  color: white !important
+}

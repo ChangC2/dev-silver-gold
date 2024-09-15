@@ -1,0 +1,111 @@
+$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+
+.green-glow {
+    color: rgb(16, 173, 55) !important;
+    font-size: 80px;
+    line-height: 15px !important;
+    text-align: left;
+    animation: green-glow 1s infinite alternate $easeInOutQuad;
+    position: absolute;
+}
+
+@keyframes green-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, .5),
+            0 0 10px rgba(116, 248, 111, 0.1),
+
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgb(4, 202, 14),
+        0 0 20px rgba(6, 150, 1, 1),
+
+    }
+}
+
+.red-glow {
+    color: rgb(238, 13, 13) !important;
+    font-size: 80px;
+    line-height: 15px !important;
+    text-align: left;
+    animation: red-glow 1s infinite alternate $easeInOutQuad;
+    position: absolute;
+}
+
+@keyframes red-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 149, 149, 1),
+            0 0 10px rgba(255, 44, 44, 0.1),           
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgb(255, 0, 0),
+        0 0 20px rgba(255, 0, 0, 1),       
+    }
+}
+
+.yellow-glow {
+    color: rgb(240, 208, 30) !important;
+    font-size: 80px;
+    line-height: 15px !important;
+    text-align: left;
+    animation: yellow-glow 1s infinite alternate $easeInOutQuad;
+    position: absolute;
+}
+
+@keyframes yellow-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(250, 249, 168, 0.5),
+            0 0 10px rgba(255, 253, 130, 0.5),        
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgb(250, 249, 168),
+        0 0 20px rgba(255, 251, 16, 1),      
+    }
+}
+
+.none-glow {
+    color: rgb(85, 85, 85) !important;
+    font-size: 80px;
+    line-height: 15px !important;
+    text-align: left;    
+    position: absolute;
+    text-shadow: 0 0 20px rgb(82, 82, 82) !important;
+}
+
+
+.col-21a300 {
+    color: #21a300 !important;
+    line-height: 0px !important;
+    text-align: left;
+    animation: col-21a300 1s infinite alternate $easeInOutQuad;
+}
+
+@keyframes col-21a300 {
+    0% {
+        text-shadow: 0 0 5px #21a300f0, 0 0 10px #21a300;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #21a300, 0 0 20px #21a300;
+    }
+}
+
+.border-col-21a300 {
+    //   border: 2px solid #fd0808;
+    animation: border-col-21a300 1s infinite alternate $easeInOutQuad;
+}
+
+@keyframes border-col-21a300 {
+    0% {
+        border: 1px solid #33b912;
+        box-shadow: 1px 1px 2px #33b912, -1px -1px 2px #33b912;
+    }
+
+    100% {
+        border: 1px solid #21a300;
+        box-shadow: 1px 1px 2px #21a300, -1px -1px 2px #21a300;
+    }
+}

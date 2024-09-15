@@ -1,0 +1,52 @@
+.laborcategories {
+  font-size: 21px;
+}
+
+.laborcategories-title {
+  font-size: 21px;
+  margin-left: 10px;
+}
+
+.laborcategories-add-button {
+  text-align: right;
+  color: white !important;
+}
+
+.laborcategories-add-button button {
+  margin-right: 5px;
+  border-radius: 5px !important;
+  text-align: center;
+}
+
+.laborcategories-table-style {
+  margin: 5px !important;
+  border-radius: 5px !important;
+}
+
+.laborcategories-table-style > * .ant-table-thead > tr > th {
+  background-color: #131313 !important;
+  color: #eeeeee !important;
+}
+.laborcategories-table-style > * .ant-table-tbody > tr > td {
+  background-color: #1f1f1f !important;
+  color: #eeeeee !important;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px !important;
+  cursor: pointer !important;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+[data-theme="dark"] .editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #434343;
+}

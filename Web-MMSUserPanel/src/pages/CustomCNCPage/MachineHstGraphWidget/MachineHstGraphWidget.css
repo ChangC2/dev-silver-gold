@@ -1,0 +1,27 @@
+.machine-hst-title{
+    font-size: 21px;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.machine-hst-gragh-back{
+    margin: 20px 10px;
+  /* height: 150px; */
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(#313131, #1b1b1b);
+}
+
+.machine-hst-gragh-total-goods{
+   color: #2ca02c;
+   font-size: 16px;
+}
+
+.machine-hst-gragh-total-bads{
+   color: #d62728;
+   font-size: 16px;
+}
+

@@ -1,0 +1,33 @@
+.update-sensor-modal {
+    /* background-color: #1e1e1e !important; */
+}
+
+.update-sensor-modal>* .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.update-sensor-modal>* .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.update-sensor-modal>.ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.update-sensor-modal>* .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.update-sensor-modal-body-container {
+    width: 100%;
+}
+
+.update-sensor-modal-image-upload-container {
+    min-height: 100px;
+    width: 100% !important;
+    text-align: center !important;
+}

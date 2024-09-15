@@ -1,0 +1,32 @@
+.tanktimes-table-preview-style {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+.tanktimes-table-preview-style > * .ant-table-thead > tr > th {
+  background-color: #ffffff !important;
+  color: black !important;
+}
+.tanktimes-table-preview-style > * .ant-table-tbody > tr > td {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.tanktimes-table-back {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  /* height: 150px; */
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(#313131, #1b1b1b);
+}
+
+.tanktimes-table-preview-title {
+  font-size: 21px;
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

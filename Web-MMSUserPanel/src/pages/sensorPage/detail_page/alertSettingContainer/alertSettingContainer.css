@@ -1,0 +1,39 @@
+.sensor-alert-setting-container {
+  margin: 20px;
+  font-size: 16px;
+  background: #1e1e1e !important;
+  border-color: #dddddd !important;
+  border-width: 1px !important;
+  border-radius: 5px !important;
+  padding: 10px 30px !important;
+}
+
+.sensor-alert-setting-backspace{
+  margin: 0px 5px;
+}
+
+.sensor-alert-setting-title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sensor-alert-setting-limit {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.sensor-alert-setting-limit-title {
+  font-weight: normal;
+}
+
+.sensor-alert-setting-update-button {
+  text-align: center;
+  font-size: 14px !important;
+  height: 35px !important;
+  border-radius: 5px !important;
+  margin: 5px 0px;
+}
+
+.sensor-alert-setting-button-container {
+  margin-left: 20px;
+}

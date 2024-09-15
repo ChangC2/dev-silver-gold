@@ -1,0 +1,113 @@
+.app-setting-dialog-style {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.app-setting-dialog-style .ant-modal-header {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+}
+
+.app-setting-dialog-style > * .ant-modal-title {
+  color: #eeeeee;
+}
+
+.app-setting-dialog-style > * .ant-modal-close-x {
+  color: #eeeeee;
+}
+
+.app-setting-dialog-style .ant-modal-body {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+}
+
+.app-setting-dialog-style .ant-modal-footer {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  /* border: 1px solid white !important; */
+}
+
+.app-setting-group-container {
+  border: 1px solid #b8b8b8;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #414040 0%, #1e1e1e 100%) !important;
+}
+
+.app-setting-group-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.app-setting-show_cycle_help {
+  color: #eeeeee !important;
+  font-size: 21px !important;
+  margin-top: 5px;
+  margin-right: 5%;
+}
+
+.app-setting-select {
+  background: transparent !important;
+  border: 0px !important;
+  border-bottom: 1px solid #eeeeee !important;
+  color: #eeeeee !important;
+  width: 100%;
+}
+
+.app-setting-status-radial-input-container {
+  /* width: 110px; */
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.app-setting-status-radial-input-title {
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+
+.app-setting-status-text-input-container {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.app-setting-status-text-input-value {
+  background: transparent !important;
+  border: 0px !important;
+  border: 1px solid #eeeeee !important;
+  border-radius: 5px;
+  color: #eeeeee !important;
+  width: 100%;
+  text-align: center;
+}
+
+.app-setting-status-color-picker {
+  border: 0px !important;
+  border: 1px solid #eeeeee !important;
+  border-radius: 5px;
+  color: #eeeeee !important;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+
+.app-setting-status-color-picker-container {
+  width: 100%;
+  text-align: center;
+}
+
+.app-setting-status-color-picker-cell {
+  border: 0px !important;
+  border: 1px solid #eeeeee !important;
+  border-radius: 5px;
+  color: #eeeeee !important;
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+}

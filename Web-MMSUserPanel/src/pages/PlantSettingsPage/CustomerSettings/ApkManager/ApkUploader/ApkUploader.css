@@ -1,0 +1,21 @@
+.apk-uploader-title {
+  color: #fff !important;
+  font-size: 17px !important;
+  margin-left: 5px;
+}
+
+.apk-uploader-container {
+  display: inline-block;
+  /* position: absolute; */
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.apk-download-button {
+  border-bottom: #fff 1px solid;
+}
+
+.apk-uploader-icon {
+  color: #ffffff !important;
+  font-size: 17px !important;
+}

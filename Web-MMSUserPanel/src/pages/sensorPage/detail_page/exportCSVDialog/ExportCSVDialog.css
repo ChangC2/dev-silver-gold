@@ -1,0 +1,37 @@
+.export-sensor-csv-modal{
+
+}
+
+.export-sensor-csv-modal {
+    /* background-color: #1e1e1e !important; */
+}
+
+.export-sensor-csv-modal>* .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.export-sensor-csv-modal>* .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.export-sensor-csv-modal>.ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.export-sensor-csv-modal>* .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.export-sensor-csv-modal-body-container {
+    width: 100%;
+}
+
+.export-sensor-csv-modal-image-upload-container {
+    min-height: 100px;
+    width: 100% !important;
+    text-align: center !important;
+}

@@ -1,0 +1,30 @@
+.add-hennig-button-container {
+  margin: 6px;
+  padding: 10px;
+  min-height: 325px;
+  border-radius: 8px;
+  background: var(--sidebarColor);
+  text-align: center;
+}
+
+.add-hennig-button-container:hover {
+  background: linear-gradient(#333333, #222222);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #6793f1;
+}
+
+.add-hennig-button-container:active {
+  background: linear-gradient(#252525, #222222, #252525);
+}
+
+.add-hennig-button {
+  text-align: right;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px !important;
+}
+
+.add-hennig-button button{
+  border-radius: 5px !important;
+}
+

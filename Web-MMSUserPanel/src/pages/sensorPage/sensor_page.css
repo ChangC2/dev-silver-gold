@@ -1,0 +1,12 @@
+.add-sensor-button-title {
+    color: #eeeeee;
+    font-size: 50px;
+    border: 2px dotted #cacaca;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,68 @@
+.time-setting-page-title {
+  color: #dbdbdb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.time-setting-page-title:hover {
+  color: #ffffff;
+}
+.time-setting-page-title:active {
+  color: #c2c2c2;
+}
+
+.time-setting-content-style {
+  margin-left: 50px !important;
+  margin-right: 10px !important;
+  margin-top: 20px !important;
+}
+
+.timezone-title-style {
+  color: #eeeeee !important;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 10px !important;
+}
+
+.timezone-value-container-style {
+  display: inline-block;
+  margin-right: 10px !important;
+}
+
+.timezone-value-style {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+  width: 70px !important;
+}
+
+.timezone-value-change-button-container-style {
+  display: inline-block;
+}
+.timezone-value-change-button {
+  color: green !important;
+  cursor: pointer;
+}
+.timezone-value-change-button:hover {
+  color: rgb(6, 175, 6) !important;
+}
+.timezone-value-change-button:active {
+  color: rgb(2, 85, 2) !important;
+}
+
+.timezone-page-timezone > .ant-select-selector {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+  cursor: pointer !important;
+}
+.timezone-page-timezone > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+.timezone-page-timezone-list {
+  background-color: #1e1e1e !important;
+}
+
+.timezone-page-timezone-list > * .ant-select-item-option > * {
+  color: #eeeeee;
+}
+.timezone-page-timezone-list > * .ant-select-item-option-active {
+  background-color: #555555 !important;
+}

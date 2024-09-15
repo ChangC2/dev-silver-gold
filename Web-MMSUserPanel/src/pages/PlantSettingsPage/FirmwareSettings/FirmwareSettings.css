@@ -1,0 +1,110 @@
+.firmware-setting-container {
+  color: #dbdbdb;
+  border-radius: 5px;
+}
+
+.standard-firmware-title {
+  color: rgb(241, 241, 241);
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.firmware-version-title {
+  color: rgb(241, 241, 241);
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: block;
+}
+
+.firmware-version-input {
+  color: rgb(241, 241, 241);
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline;
+}
+
+.firmware-update-button {
+  color: rgb(243, 243, 243) !important;
+  font-size: 15px;
+  border-radius: 5px !important;
+  width: 170px;
+  height: 40px;
+  margin-top: 40px;
+}
+
+.firmware-select {
+  width: 200px;
+  color: #eeeeee !important;
+}
+
+.firmware-select > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.firmware-select-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.firmware-select > .ant-select-selector {
+  background-color: transparent !important;
+}
+
+.firmware-select-value {
+  color: #eeeeee !important;
+  background-color: #353535 !important;
+}
+
+.firmware-select-value:hover {
+  background-color: #575757 !important;
+}
+
+.firmware-select-value:active {
+  color: #1e1e1e !important;
+}
+
+.firmware-description-style {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+  width: 400px !important;
+}
+
+.firmware-description-title {
+  color: rgb(241, 241, 241);
+  font-size: 16px;
+  margin-right: 10px;
+  display: block;
+  width: 150px !important;
+  margin-bottom: 5px;
+}
+
+
+
+.firmware-upload-button {
+  display: inline;
+  border-bottom: #fff 1px solid;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.firmware-upload-icon {
+  color: #ffffff !important;
+  font-size: 17px !important;
+}
+
+.firmware-setting-container-style {
+  width: 100% !important;
+  margin: 15px 0px 0px 0px;
+  font-size: 17px !important;
+  display: inline-block !important;
+  color: white;
+  padding: 20px 30px 20px 30px;
+  border-radius: 5px;
+  border: #616161 1px solid;
+  background-color: #303030;
+}

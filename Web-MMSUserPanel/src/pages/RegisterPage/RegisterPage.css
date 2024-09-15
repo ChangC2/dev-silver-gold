@@ -1,0 +1,90 @@
+.register-page-background {
+  background-color: #1e1e1e;
+  /* width: 100vh; */
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 0px;
+  text-align: center !important;
+}
+div.RegisterDialog {
+  width: 500px;
+  /* height: 550px; */
+
+  background-image: linear-gradient(#333333, #222222);
+  margin-top: 5%;
+  display: inline-block;
+  box-shadow: 10px 10px 5px #111111;
+  border: 2px solid #444444 !important;
+
+  padding: 30px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.register-page-factory-logo-container {
+  text-align: center;
+  cursor: pointer;
+}
+.register-page-factory-logo-container:hover {
+  opacity: 0.8;
+}
+.register-page-factory-logo-container:active {
+  opacity: 0.5;
+}
+.register-page-factory-logo {
+  height: 100px;
+  max-width: 100%;
+  margin: auto;
+}
+.whiteText {
+  color: #cccccc;
+}
+.register-dlg-button {
+  border-radius: 20px !important;
+  height: 40px !important;
+  padding: 0px 100px !important;
+}
+.register-page-logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.register-page-logo-image {
+  width: 200px !important;
+  margin-bottom: 20px;
+}
+.register-page-title {
+  color: #cccccc;
+  line-height: 12px;
+}
+.register-page-link-text {
+  color: white;
+  margin-top: 30px;
+}
+
+.register-page-timezone > .ant-select-selector {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+  cursor: pointer !important;
+}
+.register-page-timezone > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+.register-page-timezone-list {
+  background-color: #1e1e1e !important;
+}
+
+.register-page-timezone-list > * .ant-select-item-option > * {
+  color: #eeeeee;
+}
+.register-page-timezone-list > * .ant-select-item-option-active {
+  background-color: #555555 !important;
+}
+
+@media only screen and (max-width: 501px) {
+  div.RegisterDialog {
+    width: 100%;
+  }
+  .register-dlg-button {
+    padding: unset;
+  }
+}

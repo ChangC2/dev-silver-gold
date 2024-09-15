@@ -1,0 +1,69 @@
+.no-data {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  margin-top: 20%;
+}
+
+.time-saving-back {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  /* height: 150px; */
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(#313131, #1b1b1b);
+}
+
+.time-saving-select {
+  font-size: 18px;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.time-saving-record-times-container{
+  margin: 40px;
+}
+
+.time-saving-record-times-title{
+  color:white;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  margin: 10px;
+}
+
+.time-saving-record-times{
+  color:white;
+  margin-top: 25px;
+  margin-left: 5px;
+  padding: 10px 20px;
+  background: #242424;
+  border-radius: 10px;
+}
+
+.time-saving-record-times-label{
+  color:white;
+  display: block;
+  font-size: 16px;
+}
+
+.time-saving-record-times-value{
+  color:white;
+  display: block;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.time-saving-record-times-value1{
+  color:white;
+  display: block;
+  font-size: 24px;
+  text-align: center;
+}
+

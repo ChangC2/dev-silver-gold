@@ -1,0 +1,16 @@
+.trend-chart-title {
+  font-size: 21px;
+  color: white;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.trend-chart-back{
+    margin: 20px 10px !important;
+  /* height: 150px; */
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(#313131, #1b1b1b);
+}
+

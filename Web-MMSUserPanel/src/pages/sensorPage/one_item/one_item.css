@@ -1,0 +1,84 @@
+.one-sensor-container {
+  margin: 6px;
+  padding: 15px 10px 15px 15px;
+  min-height: 320px;
+  border-radius: 8px;
+  background: var(--sidebarColor);
+}
+
+.one-sensor-container:hover {
+  background: linear-gradient(#333333, #222222);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #21a300;
+}
+
+.one-sensor-container:active {
+  background: linear-gradient(#080808, #1d1c1c);
+}
+
+.one-sensor-name {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #eeeeee;
+}
+
+.one-sensor-id {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #eeeeee;
+}
+
+.one-sensor-image-style {
+  height: 95px;
+  margin-bottom: 10px;
+  background-color: rgb(175, 175, 175);
+  border-radius: 5px !important;
+}
+
+.one-sensor-image-container-style {
+  text-align: center !important;
+  /* background-color: white; */
+}
+
+.one-sensor-status {
+  font-size: 40px;
+}
+
+.one-sensor-status-online{
+  font-size: 15px;
+  color: green;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.one-sensor-status-offline{
+  font-size: 15px;
+  color: red;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.one-sensor-delete-button {
+  float: right;
+  color: #aaaaaa;
+  font-size: 24px;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+
+.one-sensor-delete-button:hover {
+  color: white;
+}
+.one-sensor-delete-button:active {
+  color: rgb(104, 102, 102);
+}
+
+.sensor-locaion-container {
+    margin-top: 20px !important;
+}

@@ -1,0 +1,36 @@
+body {
+    background: rgb(204, 204, 204) !important;
+}
+
+div[size="A4"] {
+    background: white !important;
+    width: 21cm !important;
+    height: 25.7cm !important;
+    display: block !important;
+    margin: 0 auto !important;
+    margin-bottom: 0.5cm !important;
+    /* box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5) !important; */
+}
+
+@media print {
+
+    body,
+    div[size="A4"] {
+        margin: 0 !important;
+        background: rgb(204, 204, 204) !important;
+    }
+}
+
+.pdf-machine-title-style{
+
+    height: 20% !important;
+}
+.pdf-machine-logo-style{
+    width: 100% !important;
+}
+.pdf-oee-container-style{
+    text-align: center !important;
+}
+.pdf-util-container-style{
+    margin-top: 30px;
+}

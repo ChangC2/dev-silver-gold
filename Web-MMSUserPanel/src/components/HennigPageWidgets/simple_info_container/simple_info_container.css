@@ -1,0 +1,20 @@
+.simple-info-container{
+    color: #eeeeee;
+    width: 100% !important;
+    margin-top: 0px !important;
+}
+.simple-info-container-title{
+    font-size: 14px;
+    height: 30px !important;
+    display: inline-block !important;
+    margin-top: 0px !important;
+    /* float: left; */
+}
+.simple-info-container-value{
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block !important;
+    margin-top: 0px !important;
+    /* float: left; */
+}

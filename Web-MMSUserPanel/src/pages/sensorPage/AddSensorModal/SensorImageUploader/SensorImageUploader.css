@@ -1,0 +1,46 @@
+.sensor-image-dlg-container{
+    height: 100px;
+}
+.sensor-image-dlg-add-button-container {
+    float: left;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.sensor-image-dlg-image-container{
+    float: left;
+}
+
+
+.sensor-image-dlg-add-button-style {
+    margin-left: 10px !important;
+    font-size: 50px !important;
+    cursor: pointer;
+    color: rgb(102, 102, 102) !important;
+
+}
+
+.sensor-image-dlg-add-button-style:hover {
+    color: white !important;
+}
+
+.sensor-image-dlg-add-button-style:active {
+    color: #dddddd !important;
+}
+
+.machine-manage-dialog-avatar-style {
+    height: 100px !important;
+    border: 1px solid white;
+    margin-left: 10px !important;
+}
+
+.logo-image-style {
+    height: 100px !important;
+    margin-left: 10px !important;
+    background-color: white !important;
+}
+
+.sensor-image-dlg-image-style {
+    height: 100px !important;
+    margin-left: 10px !important;
+    background-color: white !important;
+}

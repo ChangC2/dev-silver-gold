@@ -1,0 +1,330 @@
+.ant-menu {
+  background: transparent !important;
+}
+
+.ant-menu-item {
+  background: transparent !important;
+}
+
+.ant-menu-item-selected {
+  background: rgb(82, 82, 82) !important;
+}
+
+.ant-menu-submenu-selected {
+  background: rgb(49, 49, 49) !important;
+}
+
+.ant-menu-item:hover {
+  background: rgb(49, 49, 49);
+}
+
+.ant-layout-header {
+  background-image: linear-gradient(#302f2f, #282828) !important;
+}
+
+.ant-layout-sider-trigger {
+  background: #1b1b1b !important;
+}
+
+.ant-layout-sider-trigger:hover {
+  background: rgb(49, 49, 49) !important;
+}
+
+.ant-layout {
+  background: var(--backgroundColor) !important;
+  overflow: hidden;
+}
+
+.ant-layout-header {
+  line-height: 48px !important;
+}
+
+.ant-breadcrumb-separator {
+  color: white !important;
+}
+
+.breadcrumb-style {
+  height: 60px !important;
+  margin: 0 !important;
+  padding-left: 10px !important;
+  color: white !important;
+  margin-right: 10px !important;
+  background: transparent !important;
+}
+
+.ant-radio-wrapper {
+  color: rgb(155, 155, 155) !important;
+}
+
+.ant-radio-wrapper-checked {
+  color: white !important;
+}
+
+.ant-switch {
+  background: rgb(95, 175, 99) !important;
+  width: 84px !important;
+  margin-top: 5px !important;
+}
+
+.ant-switch-checked {
+  background: rgb(161, 140, 253) !important;
+}
+
+.ant-radio-inner::after {
+  background-color: rgb(89, 55, 238) !important;
+}
+
+.ant-radio-group {
+  margin-top: 5px !important;
+}
+
+.content-scrollbar-style {
+  margin: 0px!important;
+  background: transparent !important;
+}
+
+.content-scrollbar-style::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+  border-radius: 10px;
+  background-color: rgb(192, 192, 192);
+}
+
+.content-scrollbar-style::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+.content-scrollbar-style::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+
+.content-scrollbar-style::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(44, 44, 44);
+}
+
+.customer-logo-image-container {
+  /* text-align: center; */
+  align-items: center;
+  position: relative;
+  /* background: white; */
+}
+.customer-logo-img {
+  max-width: 100%;
+  max-height: 80px;
+  left: 20%;
+  bottom: -30px;
+  /* margin: auto; */
+  text-align: center;
+  position: absolute;
+  border-radius: 4px;
+  background-color: white !important;
+}
+.img {
+  border: 1px solid #ddd;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded border */
+  padding: 5px;
+  /* Some padding */
+
+  background-color: white !important;
+  max-height: 50px;
+}
+
+.img-mobile {
+  border: 1px solid #ddd;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded border */
+  padding: 1px;
+  /* Some padding */
+  background-color: white !important;
+  max-height: 40px;
+}
+
+.sidebar-img {
+  margin: 0px !important;
+  padding: 0px !important;
+  max-width: 80px !important;
+  background-color: white !important;
+}
+
+.ant-radio-button-wrapper {
+  background: transparent !important;
+}
+
+.ant-radio-button-wrapper-checked {
+  background: #767680 !important;
+}
+
+.ant-menu-undefined {
+  background-color: #262626 !important;
+}
+
+.ant-menu {
+  color: white !important;
+}
+
+.feature_request {
+  color: white !important;
+  margin-bottom: 20px !important;
+  width: 100% !important;
+  margin-right: 15% !important;
+  font-size: 12px !important;
+}
+
+.ant-menu-submenu-arrow {
+  color: white !important;
+}
+
+.content-scrolling-controller-style {
+  margin-top: 30px;
+  text-align: left !important;
+  margin-left: 10px;
+  /* overflow-y: scroll !important; */
+}
+
+.content-scrolling-controller-style .ant-switch {
+  /* width: 20px !important; */
+  background: #1e1e1e !important;
+  margin-top: -3px !important;
+}
+
+.content-scrolling-controller-style .ant-switch-checked {
+  background: #441df0 !important;
+}
+
+.content-scrolling-controller-style h2 {
+  color: #eeeeee !important;
+  text-align: left;
+  font-size: 14px !important;
+}
+
+.content-scrolling-controller-style > span {
+  color: #eeeeee !important;
+  font-size: 14px !important;
+}
+
+.setting-button-style {
+  color: white !important;
+  margin-right: 10px !important;
+  border: none !important;
+}
+
+.setting-button-style:hover {
+  color: gray !important;
+  border: 1px solid gray !important;
+}
+
+.report-button-container {
+  text-align: center !important;
+}
+
+.page-changer-style > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.page-changer-style > .ant-select-selector {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+}
+
+.page-changer-style-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.page-changer-item {
+  color: #eeeeee !important;
+  background-color: #353535 !important;
+}
+
+.page-changer-item:hover {
+  background-color: #575757 !important;
+}
+
+.page-changer-item:active {
+  color: #1e1e1e !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: #111111 !important;
+  border: 1px solid #eeeeee !important;
+}
+
+.ant-drawer-header {
+  background-color: #1e1e1e !important;
+}
+.ant-drawer-body {
+  background-color: #1e1e1e !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  overflow-y: scroll !important;
+}
+
+.menu-container {
+  overflow-y: auto;
+}
+
+.language-select-menu {
+  width: 100px;
+}
+
+.language-select-menu > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.language-select-menu > .ant-select-selector {
+  background-color: transparent !important;
+  color: #eeeeee !important;
+}
+
+.language-select-menu-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.ant-layout-sider {
+  max-width: 250px !important;
+  min-width: 250px !important;
+}
+
+
+.ant-spin-text{
+  font-size: 17px !important;
+  color: #eeeeee;
+  margin-top: 5px;
+}
+
+
+.selector {
+  width: 100%;
+  color: #eeeeee !important;
+}
+
+.selector > .ant-select-arrow {
+  color: #eeeeee !important;
+}
+
+.selector-dropdown {
+  background-color: #353535 !important;
+  color: black !important;
+}
+
+.selector > .ant-select-selector {
+  background-color: transparent !important;
+}
+
+.selector-value {
+  color: #eeeeee !important;
+  background-color: #353535 !important;
+}
+
+.selector-value:hover {
+  background-color: #575757 !important;
+}
+
+.selector-value:active {
+  color: #1e1e1e !important;
+}

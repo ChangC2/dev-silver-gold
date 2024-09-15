@@ -1,0 +1,25 @@
+.customer-logo-container{
+    margin: 10px 0px 20px 0px;
+}
+
+.customer-logo-style{
+    height: 100px;
+    width: auto;
+    background-color: aliceblue;
+    border-radius: 5px !important;
+}
+
+.customer-logo-add-button-style {
+    margin-left: 20px !important;
+    font-size: 50px !important;
+    cursor: pointer;
+    color: rgb(102, 102, 102) !important;
+}
+
+.customer-logo-add-button-style:hover {
+    color: white !important;
+}
+
+.customer-logo-add-button-style:active {
+    color: #dddddd !important;
+}

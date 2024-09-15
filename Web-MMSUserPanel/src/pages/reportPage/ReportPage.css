@@ -1,0 +1,11 @@
+.report-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  /* height: 150px; */
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(#313131, #1b1b1b);
+}

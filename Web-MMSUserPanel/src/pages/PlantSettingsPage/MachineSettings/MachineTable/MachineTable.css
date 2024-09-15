@@ -1,0 +1,16 @@
+.machine-table-style {
+}
+
+.machine-table-style > * .ant-table-thead > tr > th {
+  background-color: #131313 !important;
+  color: #eeeeee !important;
+}
+
+.machine-table-style > * .ant-table-tbody > tr > td {
+  background-color: #2b2b2b !important;
+  color: #eeeeee !important;
+}
+
+.machine-picture-style {
+  max-height: 50px !important;
+}

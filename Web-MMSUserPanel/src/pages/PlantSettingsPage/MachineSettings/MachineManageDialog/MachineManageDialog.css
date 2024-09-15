@@ -1,0 +1,41 @@
+.machine-setting-modal-style {}
+
+.machine-setting-modal-style>* .ant-modal-close-x {
+    color: #eeeeee !important;
+}
+
+.machine-setting-modal-style>* .ant-modal-header {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.machine-setting-modal-style>* .ant-modal-title {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.machine-setting-modal-style>.ant-modal-content {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+.machine-setting-modal-style>* .ant-modal-footer {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+
+.machine-security-level-selector-style {
+    width: 150px !important;
+
+}
+
+.machine-password-input-style {}
+
+.machine-password-input-style>* .ant-input-password-icon {
+    color: white !important;
+}
+.machine-password-input-style> .ant-input {
+    color: white !important;
+    background-color: #1e1e1e !important;
+}

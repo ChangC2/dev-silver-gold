@@ -1,0 +1,54 @@
+.cwmachineinfo-logo{
+    position: absolute;
+    top: 105px;
+    right: 50px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.cwmachineinfo-title-container{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.cwmachineinfo-content-container{
+    height: 280px;
+}
+
+.cwmachineinfo-title{
+   color: rgb(230, 230, 230);
+   font-size: 18px;
+   font-weight: bold;
+}
+
+
+.cwmachineinfo-goods{
+   color: #30BF78;
+   font-size: 17px;
+   margin-top: 5px;
+}
+
+.cwmachineinfo-bads{
+   color: #F4664A;
+   font-size: 17px;
+   margin-top: 5px;
+}
+
+.cwmachineinfo-content{
+   color: rgb(230, 230, 230);
+   font-size: 17px;
+   margin-top: 5px;
+}
+
+.cwmachineinfo-title-darkmode{
+   color: rgb(68, 68, 68);
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.cwmachineinfo-content-darkmode{
+   color: rgb(61, 61, 61);
+   font-size: 17px;
+   margin-top: 5px;
+}
+

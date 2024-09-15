@@ -1,0 +1,39 @@
+.machine-image-container {
+    display: inline-block;
+}
+
+.machine-manage-avatar-add-button-container {
+    display: inline-block;
+    /* position: absolute; */
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.machine-manage-avatar-add-button-style {
+    margin-left: 10px !important;
+    font-size: 50px !important;
+    cursor: pointer;
+    color: rgb(102, 102, 102) !important;
+
+}
+
+.machine-manage-avatar-add-button-style:hover {
+    color: white !important;
+}
+
+.machine-manage-avatar-add-button-style:active {
+    color: #dddddd !important;
+}
+
+.machine-manage-dialog-avatar-style {
+    height: 100px !important;
+    border: 1px solid white;
+    margin-left: 10px !important;
+}
+
+.logo-image-style {
+    height: 100px !important;
+    margin-left: 10px !important;
+    background-color: white !important;
+}

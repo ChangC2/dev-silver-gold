@@ -1,0 +1,25 @@
+.machine-setting-page-title {
+    color: #dbdbdb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.machine-setting-page-title:hover{
+    color: #ffffff;
+}
+.machine-setting-page-title:active{
+    color: #c2c2c2;
+}
+
+.machine-setting-machine-table-style{
+    margin-left: 50px !important;
+}
+
+.machine-setting-update-button {
+    border-radius: 5px !important;
+    color: white !important;
+    background-color: #1890ff !important ;
+    border-color: #1890ff !important ;
+    font-size: 18px;
+    margin: 50px 10px !important;
+    padding:0px 30px  !important
+}

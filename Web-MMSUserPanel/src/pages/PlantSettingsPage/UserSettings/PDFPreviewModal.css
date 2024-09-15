@@ -1,0 +1,57 @@
+.user-pdf-container{
+  width: 500px;
+  height: 795px;
+  background-image: url('../../../assets/images/userinfo_back.png');
+  border-color: rgb(151, 151, 151) !important;
+  border: 1px solid;
+  padding: 1px;
+  margin-top: 15px;
+}
+
+.user-pdf-factory-logo{
+  height: 100px;
+  margin-top: 25px;
+  max-width: 400px;
+}
+
+.user-pdf-factory-card{
+  color: white;
+  font-size: 45px;
+}
+
+.user-pdf-factory-name{
+  width: 100%;
+  background: white;
+  align-items: center;
+  font-size: 32px;
+  color: rgb(141, 0, 0);
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+
+
+
+.user-pdf-user-logo{
+  height: 280px;
+  width: 240px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+.user-pdf-user-name{
+  align-items: center;
+  font-size: 42px;
+  color: rgb(48, 4, 4);
+}
+
+.user-pdf-user-operator{
+  align-items: center;
+  font-size: 30px;
+  color: rgb(141, 0, 0);
+}
+
+.user-pdf-user-mmswordidcards{
+  align-items: center;
+  font-size: 16px;
+  color: rgb(66, 66, 66);
+}
