@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_common_dialog"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:padding="@dimen/padding5"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/choose_ble_action"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_5" />
+
+    <TextView
+        android:id="@+id/btnSettings"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding3"
+        android:background="@drawable/selector_blackround"
+        android:gravity="center"
+        android:padding="@dimen/padding2"
+        android:text="@string/goto_ble_settings"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_5" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding3"
+        android:background="@drawable/selector_blackround"
+        android:gravity="center"
+        android:padding="@dimen/padding2"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_5" />
+
+</LinearLayout>

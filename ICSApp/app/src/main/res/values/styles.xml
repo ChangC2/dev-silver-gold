@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowAnimationStyle">@style/push_activity_anima</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/colorPrimary</item>
+
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="AppTheme.Splash">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="push_activity_anima">
+        <item name="android:activityOpenEnterAnimation">@anim/push_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/push_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/push_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/push_right_out</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+
+        <item name="android:textSize">15sp</item><!-- text size in menu-->
+
+        <!-- item size in menu-->
+        <item name="android:listPreferredItemHeightSmall">50dp</item>
+        <item name="listPreferredItemHeightSmall">50dp</item>
+
+        <!-- item padding left in menu-->
+        <item name="android:listPreferredItemPaddingLeft">8dp</item>
+        <item name="listPreferredItemPaddingLeft">8dp</item>
+
+        <!-- item padding right in menu-->
+        <item name="android:listPreferredItemPaddingRight">8dp</item>
+        <item name="listPreferredItemPaddingRight">8dp</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:animation">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+</resources>

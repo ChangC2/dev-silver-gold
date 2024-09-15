@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        tools:showIn="@layout/app_bar_main">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:background="@color/white_trans90" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding1"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:text="VariFlow"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding2">
+
+                <com.cam8.icsapp.views.SquareImageView
+                    android:id="@+id/ivGaugeBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gaugeback_green"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.cam8.icsapp.views.ResizableImageView
+                    android:id="@+id/ivGaugeUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gaugeback_unit_psi"
+                    app:layout_constraintBottom_toBottomOf="@+id/gaugePressure"
+                    app:layout_constraintLeft_toLeftOf="@+id/ivGaugeBack"
+                    app:layout_constraintRight_toRightOf="@+id/ivGaugeBack" />
+
+                <com.cam8.icsapp.views.PressureGauge
+                    android:id="@+id/gaugePressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivGaugeBack"
+                    app:layout_constraintLeft_toLeftOf="@+id/ivGaugeBack"
+                    app:layout_constraintRight_toRightOf="@+id/ivGaugeBack"
+                    app:layout_constraintTop_toTopOf="@+id/ivGaugeBack" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.cam8.icsapp.views.LatoBoldTextView
+                            android:id="@+id/tvPressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white_trans90"
+                            android:textSize="@dimen/font_10"
+                            android:textStyle="bold" />
+
+                        <com.cam8.icsapp.views.LatoBoldTextView
+                            android:id="@+id/tvPressureUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding1"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:text="psi"
+                            android:textColor="@color/white_trans90"
+                            android:textSize="@dimen/font_10"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Pressure"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_gauge" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/txtMachineStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="PLC Disconnected"
+                        android:textColor="@color/color_disconnected"
+                        android:textSize="@dimen/font_9" />
+
+                    <ImageView
+                        android:id="@+id/ivStatus"
+                        android:layout_width="@dimen/padding3"
+                        android:layout_height="@dimen/padding3"
+                        android:layout_marginLeft="@dimen/padding1"
+                        android:layout_marginRight="@dimen/padding1"
+                        android:src="@drawable/gradient_circle_off" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/padding1"
+            android:background="@drawable/gradient_back"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/padding2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/padding21"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/padding1"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Current Pressure"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCurrentPressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_4" />
+
+                        <TextView
+                            android:id="@+id/tvCurrentPressureUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding1"
+                            android:gravity="center"
+                            android:text="psi"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_7" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Pressure Setpoint"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPressureSetPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:text="1000"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_4" />
+
+                        <TextView
+                            android:id="@+id/tvPressureSetPointUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding1"
+                            android:gravity="center"
+                            android:text="psi"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_7" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_trans50"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding1">
+
+                <SeekBar
+                    android:id="@+id/seekPressure"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/padding4"
+                    android:layout_marginTop="@dimen/padding1"
+                    android:layout_weight="1"
+                    android:max="1000"
+                    android:min="0"
+                    android:thumbTint="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/padding1"
+            android:background="@drawable/gradient_back"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/padding2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/padding21"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/padding1"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Status"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:paddingHorizontal="@dimen/padding1"
+                        android:text="IDLE"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/font_5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Elapsed Time"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7" />
+
+                    <TextView
+                        android:id="@+id/tvElapsedTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:text="00:00:00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_4" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_marginBottom="@dimen/padding3"
+            android:background="@drawable/gradient_back"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/padding2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/padding21"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/padding1"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Filter Life"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7" />
+
+                    <TextView
+                        android:id="@+id/tvFilterLife"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:text="23%"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/font_4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Filters Last Changed"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7" />
+
+                    <TextView
+                        android:id="@+id/tvFilterLastChanged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:text="01/09/20"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_4" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

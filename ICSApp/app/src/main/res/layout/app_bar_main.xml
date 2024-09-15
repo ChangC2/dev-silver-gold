@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.cam8.icsapp.views.ResizableImageView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="00dp"
+                    app:srcCompat="@drawable/ic_nav_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/padding1"
+                    android:visibility="gone"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvDataTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/lato_bold"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_8"
+                        android:text="2020-05-02 12:00:01"/>
+
+                    <TextView
+                        android:id="@+id/tvSerialInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/padding1"
+                        android:fontFamily="@font/lato_bold"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_8"
+                        android:text="Serial# : 00001"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

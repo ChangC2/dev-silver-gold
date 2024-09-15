@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/tb_group_main">
+
+        <item
+            android:id="@+id/menu_refresh"
+            android:title=""
+            android:orderInCategory="1"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/menu_scan"
+            android:icon="@drawable/ic_device_search"
+            android:title="Scan"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/menu_stop"
+            android:icon="@drawable/ic_device_stop"
+            android:title="Stop"
+            app:showAsAction="always" />
+
+    </group>
+
+</menu>

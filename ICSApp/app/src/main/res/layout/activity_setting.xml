@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkColor"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding2"
+                android:background="@drawable/gradient_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding9"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/padding21"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding22"
+                        android:layout_marginBottom="@dimen/padding22"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding3"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="left"
+                        android:text="Machine Information"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_5" />
+
+                    <TextView
+                        android:id="@+id/tvAppVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding3"
+                        android:layout_marginRight="@dimen/padding2"
+                        android:gravity="left"
+                        android:text="@string/app_version"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding2"
+                    android:layout_marginTop="@dimen/padding2"
+                    android:layout_marginBottom="@dimen/padding3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Device Address"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_8"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvBTDeviceAddr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_textview_underline"
+                            android:drawableRight="@drawable/ic_device_bluetooth"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingTop="@dimen/padding22"
+                            android:paddingBottom="@dimen/padding22"
+                            android:text="12:34:56:78:90"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_7" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding2"
+                android:background="@drawable/gradient_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding9"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/padding21"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding22"
+                        android:layout_marginBottom="@dimen/padding22"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding3"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="left"
+                        android:text="Unit Settings"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_5" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white_trans50"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding2"
+                    android:layout_marginTop="@dimen/padding2"
+                    android:layout_marginBottom="@dimen/padding1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioUnitPsi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/white"
+                        android:orientation="vertical"
+                        android:text="psi"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radioSUnitBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding2"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/white"
+                        android:orientation="vertical"
+                        android:text="bar"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_7">
+
+                    </RadioButton>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding2"
+                android:background="@drawable/gradient_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding9"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/padding21"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding22"
+                        android:layout_marginBottom="@dimen/padding22"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding3"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="left"
+                        android:text="PLC Updates"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_5" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white_trans50"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding2"
+                    android:layout_marginTop="@dimen/padding2"
+                    android:layout_marginBottom="@dimen/padding3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Version"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_8"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPLCVersion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_textview_underline"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingTop="@dimen/padding22"
+                            android:paddingBottom="@dimen/padding22"
+                            android:text="1.0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_7" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnUpdatePLC"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/padding3"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_whiteround"
+                        android:minHeight="@dimen/padding8"
+                        android:gravity="center"
+                        android:text="Update Available(V1.1)"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/font_6" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSaveSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:background="@drawable/rounded_border_setting"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/padding6"
+                    android:layout_height="@dimen/padding6"
+                    android:layout_marginLeft="@dimen/padding3"
+                    android:src="@drawable/ic_settings" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding8"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/padding3"
+                    android:gravity="center"
+                    android:text="Save Settings"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_4" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
