@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding4"
+        android:layout_marginBottom="@dimen/padding3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding1"
+            android:paddingRight="@dimen/padding1">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.cam8.mmsapp.views.SquareImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gaugeback_green" />
+
+                <com.cam8.mmsapp.views.PercentageGauge
+                    android:id="@+id/gauge_available"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.cam8.mmsapp.views.LatoBoldTextView
+                        android:id="@+id/tvPercentAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_6" />
+
+                    <com.cam8.mmsapp.views.LatoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/available"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_gauge" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.cam8.mmsapp.views.SquareImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gaugeback_red" />
+
+                <com.cam8.mmsapp.views.PercentageGauge
+                    android:id="@+id/gauge_oee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="1dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <com.cam8.mmsapp.views.LatoBoldTextView
+                        android:id="@+id/tvPercentOEE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_6" />
+
+                    <com.cam8.mmsapp.views.LatoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/oee"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_gauge" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding1"
+            android:paddingRight="@dimen/padding1">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.cam8.mmsapp.views.SquareImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gaugeback_green" />
+
+                <com.cam8.mmsapp.views.PercentageGauge
+                    android:id="@+id/gauge_performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="1dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <com.cam8.mmsapp.views.LatoBoldTextView
+                        android:id="@+id/tvPercentPerformance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_6" />
+
+                    <com.cam8.mmsapp.views.LatoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/performance"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_gauge" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.cam8.mmsapp.views.SquareImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gaugeback_orange" />
+
+                <com.cam8.mmsapp.views.PercentageGauge
+                    android:id="@+id/gauge_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.cam8.mmsapp.views.LatoBoldTextView
+                        android:id="@+id/tvPercentQuality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_6" />
+
+                    <com.cam8.mmsapp.views.LatoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/quality"
+                        android:textColor="@color/white_trans90"
+                        android:textSize="@dimen/font_gauge" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:gravity="center"
+        android:text="@string/oee"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_6" />
+</FrameLayout>

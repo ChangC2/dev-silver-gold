@@ -1,0 +1,271 @@
+<resources>
+    <string name="app_name">MMS</string>
+    <string name="app_version">2.1</string>
+    <string name="test_version">Beta</string>
+
+    <string name="job_id">Job ID :</string>
+    <string name="customer">Customer :</string>
+    <string name="program_number">Program Number :</string>
+    <string name="good_parts">Good Parts</string>
+    <string name="bad_parts">Bad Parts</string>
+    <string name="gau_chart">GANTT CHART</string>
+    <string name="in_cycle">In Cycle : </string>
+    <string name="idle">Idle :</string>
+    <string name="uncategorized">Uncategorized :</string>
+
+    <string name="available">Availability</string>
+    <string name="performance">Performance</string>
+    <string name="quality">Quality</string>
+    <string name="oee">OEE</string>
+    <string name="utilization_24hr">24hr Utilization</string>
+
+    <string name="loading">Loading...</string>
+    <string name="saving">Saving...</string>
+    <string name="alert_close">Close</string>
+    <string name="alert_delete">Delete</string>
+    <string name="alert_save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="or">OR</string>
+    <string name="send">Send</string>
+    <string name="noname"></string>
+
+    <string name="title_setting">Settings</string>
+    <string name="title_codescan">Code Scan</string>
+    <string name="title_gantt_chart">Gantt Chart</string>
+
+    <!--Bluetooth-->
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="error_bluetooth_not_enabled">Please allow Bluetooth to use function.</string>
+    <string name="title_devices">Available Devices</string>
+
+    <string name="error_bluetooth_not_connect">Couldn\'t connect with device.\nPlease restart the app.</string>
+
+    <!--BLE Actions-->
+    <string name="choose_ble_action">Device is not available.</string>
+    <string name="goto_test_records">Go To Test Records</string>
+    <string name="goto_ble_settings">Go To Bluetooth Settings</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="title_device_test">Device Test</string>
+
+    <!--MainActivity-->
+    <string name="title_new_version">New Version</string>
+    <string name="description_new_version">New version(%1$s) is available.\nWould you like to update?</string>
+    <string name="msg_server_config_restart_app">Server Configuration was changed, App should restart.</string>
+
+    <string name="title_connected_to_plc">Connected to PLC</string>
+    <string name="title_disconnected_plc">PLC Disconnected</string>
+
+    <string name="title_connected_to_server">Connected to Server</string>
+    <string name="title_disconnected_server">Server Disconnected</string>
+
+    <!-- Login / Logout -->
+    <string name="dialog_login_title">Login</string>
+    <string name="dialog_select_login_mode">Pleae select Login mode</string>
+    <string name="title_input_login_id">Login ID Input</string>
+    <string name="msg_input_login_id">Please input Login ID</string>
+
+    <string name="dialog_logout_title">Confirm logout</string>
+    <string name="dialog_logout_message">Would you like to logout?</string>
+    <string name="dialog_jobid_logout_message">Would you like to logout of current JobID?</string>
+    <string name="title_username">User Name</string>
+    <string name="title_password">Password</string>
+    <string name="msg_invalid_credentials">Invalid credentials!</string>
+    <string name="msg_success_login">Success Login!</string>
+    <string name="input_user_information">Please enter user information</string>
+    <string name="error_server_busy">Server is now busy, please try again later</string>
+    <string name="error_connection_timeout">Server connection timed out, please try again later.</string>
+    <string name="error_network">Please check network connection.</string>
+
+    <string name="msg_ask_admin_for_settings">Please ask admin to goto Settings</string>
+    <string name="msg_setup_factory">Please setup the factory</string>
+
+    <string name="msg_permission_download">Need permissions to download new version</string>
+    <string name="msg_permission_file_log">Need permissions to make local File Logs</string>
+
+    <string name="msg_choose_process_monitor_type">Please choose Process Monitor Type in the Settings menu.</string>
+
+    <string name="dialog_title_rework">Rework?</string>
+    <string name="dialog_msg_rework">Is this job a rework?</string>
+
+    <string name="title_settings">Settings</string>
+
+    <string name="request_permission_hint">Please allow permissions to use function</string>
+    <string name="finish_message">Press again to exit</string>
+
+    <!--Barcode Scanning-->
+    <integer name="viewfinder_border_width">4</integer>
+    <integer name="viewfinder_border_length">60</integer>
+
+    <string name="flash_on">Flash [ON]</string>
+    <string name="flash_off">Flash [OFF]</string>
+    <string name="auto_focus_on">Auto Focus [ON]</string>
+    <string name="auto_focus_off">Auto Focus [OFF]</string>
+    <string name="formats">Formats</string>
+    <string name="choose_formats">Choose Formats</string>
+    <string name="select_camera">Select a Camera</string>
+
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="tap_to_start">Touch for Scan</string>
+
+    <string name="title_download_progress">Downloading file. Please wait...</string>
+    <string name="cancel_download">Cancel Donwloading</string>
+    <string name="error_download">Couldn\'t download file</string>
+
+    <string name="error_no_job_guides">No Job files Data</string>
+
+    <string name="title_view_attaches">View attaches</string>
+
+    <!--Main Menus-->
+    <string name="menu_home">OEE Dashboard</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_install">Install Configuration</string>
+    <string name="menu_maintenance">Maintenance</string>
+    <string name="menu_timelogger">Process Monitor</string>
+    <string name="menu_language">Language</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_select_lang">Please select language</string>
+    <string name="language_default">Default(System)</string>
+    <string name="language_en">ENGLISH</string>
+    <string name="language_cn">中文</string>
+    <string name="language_sp">Española</string>
+
+    <!-- Downtime, Maintenance and Install Config-->
+    <string name="title_cycle_start_interlocked">Cycle Start Interlocked</string>
+    <string name="title_disabledby_admin">App features disabled by admin. Please contact with admin.</string>
+    <string name="title_maintenace_task_due">Maintenance Task Due</string>
+    <string name="title_machine">Machine</string>
+    <string name="title_machine_name">Machine Name</string>
+    <string name="title_serial_number">Serial Number</string>
+    <string name="title_task_name">Task Name</string>
+    <string name="title_task_category">Task Category</string>
+    <string name="title_task_instruction">Task Instruction</string>
+    <string name="title_task_frequency">Frequency(Hrs): </string>
+    <string name="title_cycle_start_interlock">Cycle Start InterLock: </string>
+    <string name="title_user_notes">User Notes</string>
+    <string name="title_complete_task">Complete Task</string>
+    <string name="title_cycle_settings">Cycle Settings</string>
+    <string name="title_incycle_signal">In Cycle Signal</string>
+    <string name="title_cycle_start_interlock_interface">Cycle Start Interlock Interface</string>
+    <string name="title_onoff">On/Off</string>
+    <string name="title_normally_closed_open">Normally Closed/Open</string>
+    <string name="title_save_config">Save Configuration</string>
+    <string name="title_pictures">Pictures</string>
+
+    <string name="title_install_configure">Install Configuration</string>
+
+    <string name="lbl_set_profile_photo">Get Image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+
+    <!--Maintenances Screen-->
+    <string name="title_maintenances">Maintenances</string>
+
+    <!--About Alert Screen-->
+    <string name="title_about_cycle_stop_alert">About Cycle Stop Alert</string>
+    <string name="alert_description">Please enter your email or mobile number. If using mobile number, use the following format according to your carrier.</string>
+
+    <!--Settings Screen-->
+    <string name="title_app_information">App Information</string>
+    <string name="title_current_version">Current Version</string>
+    <string name="msg_version_up_to_date">Your version is up to date.</string>
+    <string name="msg_version_check_error">Couldn\'t check new version info.</string>
+    <string name="msg_new_version_info">Update Available(%1$s)</string>
+    <string name="title_wifi_settings">Open WIFI Settings</string>
+
+    <string name="title_server_information">Server Information</string>
+    <string name="title_user_local_server">Use Custom Server</string>
+    <string name="title_job_information">Job Information</string>
+    <string name="title_use_auto_logout">Use Auto Logout Logic</string>
+    <string name="title_local_server_ip">Custom Server Info(domain or IP)</string>
+
+    <string name="title_incycle_signal_from">In Cycle Signal From</string>
+    <string name="title_plc">PLC</string>
+    <string name="title_process_monitor">Process Monitor</string>
+
+    <string name="title_choose_process_monitor_type">Choose Type For Process Monitor</string>
+    <string name="title_temp_data_source">Temperature Data Source</string>
+
+    <string name="title_machine_information">Machine Information</string>
+    <string name="title_device_address">Device Address</string>
+    <string name="title_account_id">Account ID</string>
+    <string name="msg_input_account_id">Please input Account ID.</string>
+
+
+    <string name="title_downtime_settings">Downtime Settings</string>
+
+    <string name="title_auxdata_title_settings">AuxData Title Settings</string>
+
+    <string name="title_cslock_settings">CSLock Settings</string>
+    <string name="title_enable_alert_sound">Enable Alert Sound</string>
+
+    <string name="title_time_settings">Time Settings</string>
+
+    <string name="title_cycle_stop_alert">Cycle Stop Alert</string>
+    <string name="title_send_alert">Send Alert</string>
+    <string name="title_alert_email1">Alert Email 1</string>
+    <string name="title_alert_email2">Alert Email 2</string>
+    <string name="title_alert_email3">Alert Email 3</string>
+
+    <string name="title_automatic_parts_counter">Automatic Parts Counter</string>
+    <string name="title_automatic_count">Automatic Count</string>
+
+    <string name="title_gantt_chart_settings">Gantt Chart Settings</string>
+    <string name="title_gantt_data_all_time">Show gantt data from 00:00 to 23:59</string>
+    <string name="title_gantt_data_to_currtime">Show gantt data from 00:00 to current time</string>
+    <string name="title_daily_goal_chart">Show Daily Goal Chart</string>
+
+    <string name="title_daily_goal_chart_options">Goal Chart Options</string>
+    <string name="title_daily_goal_title">Title</string>
+    <string name="title_daily_goal_formula">Formula</string>
+    <string name="title_daily_goal_params">Parameter</string>
+    <string name="title_daily_goal_display_unit">Display Units</string>
+    <string name="title_daily_goal_unit">Show Unit</string>
+    <string name="title_daily_goal_percentage">Show %</string>
+    <string name="title_daily_goal_max">Daily Target</string>
+
+    <string name="title_save_settings">Save Settings</string>
+
+    <string name="title_partid">Part ID:</string>
+    <string name="title_login">Login</string>
+    <string name="title_logout">Logout</string>
+    <string name="title_current_part_processing_time">Current Part Processing Time</string>
+    <string name="title_start">Start</string>
+    <string name="title_stop">Stop</string>
+    <string name="title_data_log">Data Log</string>
+
+    <string name="title_assembly_info">Assembly Info</string>
+
+    <string name="title_blast_media_usage">Blast Media Usage</string>
+    <string name="title_before">Before</string>
+    <string name="title_after">After</string>
+    <string name="title_used">Used</string>
+
+    <string name="title_current_part_notes">Current Part Notes</string>
+    <string name="hint_add_notes_here">Add Notes Here</string>
+
+    <string name="title_input_barcode">Barcode</string>
+    <string name="title_input_manual">Manual</string>
+
+    <string name="title_reject_reasons">Reject Reasons</string>
+
+    <string name="title_input_reason_title">Reason Title</string>
+    <string name="msg_input_reason_title">Please input reason title</string>
+
+    <string-array name="stations_quality_issue">
+        <item>No Quality Issue</item>
+        <item>Cleaning</item>
+        <item>Phosphate Line</item>
+        <item>Blast Station</item>
+        <item>Paint</item>
+        <item>Assembly</item>
+    </string-array>
+
+</resources>

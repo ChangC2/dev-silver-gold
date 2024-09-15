@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_border_dark"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding3"
+        android:background="@drawable/gradient_back"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/padding21"
+            android:layout_height="@dimen/padding5"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginBottom="@dimen/padding2"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginTop="@dimen/padding2"
+                android:gravity="center_vertical"
+                android:text="Assembly Usage 1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginTop="@dimen/padding2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Base Plate #11"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tvBasePlat11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20199266_fwd_fuze_line"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv20199266_fwd_fuze_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20199367_aft_fuz_line"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv20199367_aft_fuz_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1265394_fit_chrg_tube"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv1265394_fit_chrg_tube"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1252629_washer_lock_iternal_tooth (2)"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv1252629_washer_lock_iternal_tooth2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4902493_retainer_fuz_liner_aft"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv4902493_retainer_fuz_liner_aft"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1123646_nut_fit_charg_tube(2)"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv1123646_nut_fit_charg_tube2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20199361_fwd_chrg tube"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv20199361_fwd_chrg_tube"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20199361_030 aft_charg_tube"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+                                android:id="@+id/tv20199361_030_aft_charg_tube"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xx"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xx"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xx"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_textview_underline"
+                                android:gravity="center"
+                                android:hint="0.0"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/padding1"
+                                android:paddingBottom="@dimen/padding1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginTop="@dimen/padding2"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <com.cam8.mmsapp.views.LatoBoldTextView
+                    android:id="@+id/btnCloseUsage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/padding4"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:paddingVertical="@dimen/padding22"
+                    android:paddingHorizontal="@dimen/padding5"
+                    android:background="@drawable/rounded_border_setting"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_6" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+

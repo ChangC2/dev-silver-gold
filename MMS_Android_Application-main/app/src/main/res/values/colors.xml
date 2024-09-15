@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1f1f1f</color>
+    <color name="colorPrimaryDark">#1f1f1f</color>
+    <color name="colorAccent">#FF0060</color>
+    <color name="colorPrimaryLight">#1f1f1f</color>
+
+    <color name="darkColor">#18181c</color>
+    <color name="backColor">#121318</color>
+    <color name="red">#ff0000</color>
+    <color name="red_trans90">#c0ff0000</color>
+    <color name="red_trans70">#ddff0000</color>
+    <color name="red_trans50">#33ff0000</color>
+
+    <color name="blue">#1583fe</color>
+    <color name="green">#46c392</color>
+    <color name="green_trans90">#ee46c392</color>
+    <color name="green_trans70">#dd46c392</color>
+    <color name="green_trans50">#3346c392</color>
+    <color name="gray">#808080</color>
+    <color name="alphaBackColor">#50303030</color>
+
+    <color name="white_shadow">#c0ffffff</color>
+
+    <color name="orange">#ffa300</color>
+
+    <color name="colorChart01">#ffec00</color>
+    <color name="colorChart02">#549afc</color>
+    <color name="colorChart03">#c000db</color>
+    <color name="colorChart04">#9898db</color>
+    <color name="colorChart05">#B0E0E6</color>
+    <color name="colorChart06">#6aa786</color>
+    <color name="colorChart07">#c0a0c0</color>
+    <color name="colorChart08">#808080</color>
+    <color name="colorChart09">#000000</color>
+
+    <color name="colorChart10">#FF7F50</color>
+    <color name="colorChart11">#A9A9A9</color>
+    <color name="colorChart12">#483D8B</color>
+    <color name="colorChart13">#DAA520</color>
+    <color name="colorChart14">#ee69B4</color>
+    <color name="colorChart15">#c098db</color>
+    <color name="colorChart16">#00FA9A</color>
+    <color name="colorChart17">#20B2AA</color>
+    <color name="colorChart18">#663399</color>
+    <color name="colorChart19">#FF6347</color>
+    <color name="colorChart20">#CD5C5C</color>
+    <color name="colorChart21">#191970</color>
+    <color name="colorChart22">#BC8F8F</color>
+
+
+    <color name="white">#ffffffff</color>
+    <color name="white_trans90">#eeffffff</color>
+    <color name="white_trans70">#ddffffff</color>
+    <color name="white_trans50">#33ffffff</color>
+    <color name="transparent_color">#00000000</color>
+
+    <color name="color_graph">#09d1ff</color>
+    <color name="color_connected">#00ff00</color>
+    <color name="color_disconnected">#a5ada3</color>
+
+    <color name="colorRecieveText">#00FF00</color>
+    <color name="colorSendText">#82CAFF</color>
+    <color name="colorStatusText">#FFDB58</color>
+
+    <!-- Barcode QRcode -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_border">#ffafed44</color>
+
+    <color name="drag_mask_img_view_bg_color">#70000000</color>
+
+    <color name="color_tank_title">#ffffffff</color>
+    <color name="color_temp">#e91d26</color>
+    <color name="yellow">#FFE5B4</color>
+    <color name="color_reportback">#18509d</color>
+
+</resources>

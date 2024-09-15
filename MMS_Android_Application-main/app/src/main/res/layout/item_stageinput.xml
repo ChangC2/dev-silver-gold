@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/panelBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.cam8.mmsapp.views.LatoBoldTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FA mls"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/padding22"
+            android:paddingHorizontal="@dimen/padding2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_7" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:id="@+id/tvRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1.9-5.7"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/padding22"
+            android:paddingHorizontal="@dimen/padding2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_7" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <com.cam8.mmsapp.views.LatoEditText
+            android:id="@+id/tvResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:paddingVertical="@dimen/padding22"
+            android:paddingHorizontal="@dimen/padding2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_7" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"/>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/white_shadow"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="@string/in_cycle"
+        android:textColor="@color/green"
+        android:textSize="@dimen/font_6" />
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:id="@+id/tvSyncTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding1"
+        android:shadowColor="@color/white_shadow"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="00:00:00"
+        android:textColor="@color/green"
+        android:textSize="@dimen/font_6" />
+
+    <LinearLayout
+        android:id="@+id/panelIdleStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding3"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/white_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="@string/idle"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/font_6" />
+
+        <com.cam8.mmsapp.views.LatoBoldTextView
+            android:id="@+id/tvIdleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding1"
+            android:shadowColor="@color/white_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="00:00:00"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/font_6" />
+    </LinearLayout>
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding3"
+        android:shadowColor="@color/white_shadow"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="@string/uncategorized"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_6" />
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:id="@+id/tvUnCatTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding1"
+        android:shadowColor="@color/white_shadow"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="00:00:00"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_6" />
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020-03-08 06:33"
+        android:textColor="@color/color_graph"
+        android:textSize="@dimen/font_6" />
+</LinearLayout>

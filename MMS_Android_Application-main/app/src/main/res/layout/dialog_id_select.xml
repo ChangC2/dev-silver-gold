@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_common_dialog"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:padding="@dimen/padding4"
+    android:orientation="vertical" >
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding1"
+        android:text="Please select Job ID input mode"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_6" />
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/inputCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="@dimen/padding2"
+        android:text="Manual Input"
+        android:layout_marginTop="@dimen/padding2"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_6" />
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/scanCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="@dimen/padding2"
+        android:text="Scan ID"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_6" />
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="@dimen/padding2"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_6" />
+
+</LinearLayout>

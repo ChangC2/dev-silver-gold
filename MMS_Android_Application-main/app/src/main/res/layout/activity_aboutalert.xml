@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:minWidth="400dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding2">
+
+        <ImageView
+            android:layout_width="@dimen/padding8"
+            android:layout_height="@dimen/padding8"
+            android:src="@drawable/ic_logo_small" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding3"
+            android:paddingRight="@dimen/padding3"
+            android:text="@string/title_about_cycle_stop_alert"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_3" />
+    </LinearLayout>
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/sub_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding3"
+        android:layout_marginTop="@dimen/padding3"
+        android:layout_marginEnd="@dimen/padding3"
+        android:layout_marginBottom="@dimen/padding1"
+        android:text="@string/alert_description"
+        android:textSize="@dimen/font_6"
+        android:textColor="@color/colorPrimaryLight" />
+
+    <ListView
+        android:id="@+id/listCarrier"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </ListView>
+
+    <com.cam8.mmsapp.views.LatoButton
+        android:id="@+id/btnClose"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding2"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:minHeight="@dimen/padding6"
+        android:padding="@dimen/padding2"
+        android:text="@string/alert_close"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_6" />
+
+</LinearLayout>

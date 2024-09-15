@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/width_common_dialog"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:padding="@dimen/padding3"
+    android:orientation="vertical" >
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:gravity="center"
+        android:text="Select your job"
+        android:textColor="@color/darkColor"
+        android:textSize="@dimen/font_4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerJob"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/padding2"/>
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/btnCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="@dimen/padding3"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_6" />
+
+</LinearLayout>

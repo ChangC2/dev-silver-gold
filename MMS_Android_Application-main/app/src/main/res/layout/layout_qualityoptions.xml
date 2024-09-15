@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_border_dark"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding1"
+        android:background="@drawable/gradient_back"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/padding21"
+            android:layout_height="@dimen/padding5"
+            android:layout_marginTop="@dimen/padding2"
+            android:layout_marginBottom="@dimen/padding2"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginTop="@dimen/padding2"
+                android:gravity="center_vertical"
+                android:text="@string/title_reject_reasons"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginTop="@dimen/padding2"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:text="FOD in paint"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="FOD in Bituminous"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Bituminous Separation"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Missing Phosphate"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Damaged Product"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Paperwork not completed"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Paperwork incorrect"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Heavy Coatings"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/padding2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="Rust"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:id="@+id/tvTitleReason10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:text="Light Coatings"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:id="@+id/switchReason10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xx"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <com.cam8.mmsapp.views.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xx"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_7"
+                                android:textStyle="bold" />
+
+                            <com.cam8.mmsapp.views.LatoSwitchCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTint="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.cam8.mmsapp.views.LatoEditText
+                        android:id="@+id/edtComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/padding11"
+                        android:layout_marginTop="@dimen/padding2"
+                        android:background="@drawable/bg_border_white"
+                        android:padding="@dimen/padding1"
+                        android:gravity="left|top"
+                        android:imeOptions="actionDone"
+                        android:hint="Comments"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_8" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding2"
+                        android:gravity="right|center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.cam8.mmsapp.views.LatoBoldTextView
+                            android:id="@+id/btnCloseReasons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rounded_border_setting"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/padding5"
+                            android:paddingVertical="@dimen/padding22"
+                            android:text="@string/ok"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_6" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+

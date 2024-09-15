@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minWidth="@dimen/width_common_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/padding11"
+        android:background="@color/colorPrimaryLight"
+        android:drawablePadding="@dimen/padding2"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding3"
+        android:paddingRight="@dimen/padding3"
+        android:text="Job ID Input"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_3" />
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/sub_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/padding3"
+        android:layout_marginTop="@dimen/padding4"
+        android:layout_marginEnd="@dimen/padding3"
+        android:layout_marginBottom="@dimen/padding1"
+        android:gravity="center_horizontal"
+        android:text="Please input Job ID"
+        android:textColor="@color/colorPrimaryLight"
+        android:textStyle="italic" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding3"
+        android:layout_marginLeft="@dimen/padding3"
+        android:layout_marginEnd="@dimen/padding3"
+        android:layout_marginRight="@dimen/padding3">
+
+        <com.cam8.mmsapp.views.LatoEditText
+            android:id="@+id/edtIDInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_textview_underline_dark"
+            android:inputType="textPersonName|textEmailAddress"
+            android:maxLines="1"
+            android:paddingTop="@dimen/padding1"
+            android:paddingBottom="@dimen/padding1"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/font_6" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/padding2"
+            android:background="@drawable/selector_blueround"
+            android:gravity="center"
+            android:layout_margin="@dimen/padding1"
+            android:padding="@dimen/padding2"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_6" />
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/padding2"
+            android:background="@drawable/selector_blueround"
+            android:gravity="center"
+            android:layout_margin="@dimen/padding1"
+            android:padding="@dimen/padding2"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_6" />
+    </LinearLayout>
+
+</LinearLayout>

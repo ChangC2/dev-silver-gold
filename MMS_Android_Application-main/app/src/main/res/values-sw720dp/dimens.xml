@@ -1,0 +1,69 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">30dp</dimen>
+    <dimen name="activity_vertical_margin">30dp</dimen>
+
+    <dimen name="fab_margin">30dp</dimen>
+
+    <dimen name="padding1">10dp</dimen>
+    <dimen name="padding2">20dp</dimen>
+    <dimen name="padding3">30dp</dimen>
+    <dimen name="padding4">40dp</dimen>
+    <dimen name="padding5">50dp</dimen>
+    <dimen name="padding6">60dp</dimen>
+    <dimen name="padding7">70dp</dimen>
+    <dimen name="padding8">80dp</dimen>
+    <dimen name="padding9">90dp</dimen>
+    <dimen name="padding10">100dp</dimen>
+    <dimen name="padding11">140dp</dimen>
+    <dimen name="padding12">200dp</dimen>
+    <dimen name="padding13">250dp</dimen>
+    <dimen name="padding14">300dp</dimen>
+    <dimen name="padding15">160dp</dimen>
+    <dimen name="padding16">180dp</dimen>
+    <dimen name="padding17">400dp</dimen>
+
+    <dimen name="padding21">5dp</dimen>
+    <dimen name="padding22">12dp</dimen>
+    <dimen name="padding23">75dp</dimen>
+
+    <dimen name="font_1">40.0sp</dimen>
+    <dimen name="font_2">37.0sp</dimen>
+    <dimen name="font_3">35.0sp</dimen>
+    <dimen name="font_4">32.0sp</dimen>
+    <dimen name="font_5">30.0sp</dimen>
+    <dimen name="font_6">28.0sp</dimen>
+    <dimen name="font_7">26.0sp</dimen>
+    <dimen name="font_8">24.0sp</dimen>
+    <dimen name="font_9">20.0sp</dimen>
+    <dimen name="font_gauge">15.0sp</dimen>
+    <dimen name="font_10">45.0sp</dimen>
+    <dimen name="font_11">50.0sp</dimen>
+    <dimen name="font_12">55.0sp</dimen>
+
+    <dimen name="font_20">16.0sp</dimen>
+
+    <dimen name="size_navigation_drawer">450dp</dimen>
+
+    <dimen name="font_setting_item_title">25sp</dimen>
+
+    <dimen name="home_title">32.0sp</dimen>
+
+    <dimen name="width_common_dialog">450dip</dimen>
+
+    <dimen name="width_barcode_window">800dp</dimen>
+    <dimen name="height_barcode_window">600dp</dimen>
+
+    <dimen name="width_top_logo">200dp</dimen>
+    <dimen name="height_top_logo">80dp</dimen>
+
+    <!--Time Duration Picker-->
+    <dimen name="touchable">90dp</dimen>
+    <dimen name="controlHPadding">12dp</dimen>
+    <dimen name="controlVPadding">5dp</dimen>
+
+    <dimen name="font_tank_title">30.0sp</dimen>
+    <dimen name="font_tank_time">34.0sp</dimen>
+    <dimen name="font_tank_temperature">28.0sp</dimen>
+
+</resources>

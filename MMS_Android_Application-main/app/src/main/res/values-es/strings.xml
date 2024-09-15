@@ -1,0 +1,270 @@
+<resources>
+    <string name="app_name">MMS</string>
+    <string name="app_version">2.1</string>
+    <string name="test_version">Beta</string>
+
+    <string name="job_id">ID del trabajo :</string>
+    <string name="customer">Cliente :</string>
+    <string name="program_number">Número de programa :</string>
+    <string name="good_parts">Piezas buenas</string>
+    <string name="bad_parts">Piezas malas</string>
+    <string name="gau_chart">GRÁFICO DE GANTT</string>
+    <string name="in_cycle">En ciclo : </string>
+    <string name="idle">Inactivo :</string>
+    <string name="uncategorized">Sin categorizar :</string>
+
+    <string name="available">Disponibilidad</string>
+    <string name="performance">Rendimiento</string>
+    <string name="quality">Calidad</string>
+    <string name="oee">OEE</string>
+    <string name="utilization_24hr">Utilización de 24 horas</string>
+
+    <string name="loading">Cargando...</string>
+    <string name="saving">Ahorro...</string>
+    <string name="alert_close">Cerca</string>
+    <string name="alert_delete">Borrar</string>
+    <string name="alert_save">Save</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">OK</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="or">O</string>
+    <string name="send">Enviar</string>
+    <string name="noname"></string>
+
+    <string name="title_setting">Configuraciones</string>
+    <string name="title_codescan">Escaneo de código</string>
+    <string name="title_gantt_chart">Diagrama de Gantt</string>
+
+    <!--Bluetooth-->
+    <string name="error_bluetooth_not_supported">Bluetooth no es compatible.</string>
+    <string name="error_bluetooth_not_enabled">Permite Bluetooth para usar la función.</string>
+    <string name="title_devices">Dispositivos disponibles</string>
+
+    <string name="error_bluetooth_not_connect">No se pudo conectar con el dispositivo.\nReinicia la aplicación.</string>
+
+    <!--BLE Actions-->
+    <string name="choose_ble_action">El dispositivo no está disponible.</string>
+    <string name="goto_test_records">Ir a Registros de prueba</string>
+    <string name="goto_ble_settings">Ir a Configuraciones de Bluetooth</string>
+    <string name="unknown_device">Dispositivo desconocido</string>
+    <string name="title_device_test">Prueba de dispositivo</string>
+
+    <!--MainActivity-->
+    <string name="title_new_version">Nueva versión</string>
+    <string name="description_new_version">Hay una nueva versión(%1$s) disponible.\n¿Quieres actualizar?</string>
+    <string name="msg_server_config_restart_app">La configuración del servidor ha cambiado, la aplicación debe reiniciarse.</string>
+
+    <string name="title_connected_to_plc">Conectado a PLC</string>
+    <string name="title_disconnected_plc">Desconectado de PLC</string>
+
+    <string name="title_connected_to_server">Conectado al servidor</string>
+    <string name="title_disconnected_server">Desconectado del servidor</string>
+
+    <!-- Login / Logout -->
+    <string name="dialog_login_title">Iniciar sesión</string>
+    <string name="dialog_select_login_mode">Por favor, seleccione el modo de inicio de sesión</string>
+    <string name="title_input_login_id">Introducción de ID de inicio de sesión</string>
+    <string name="msg_input_login_id">Por favor, introduzca el ID de inicio de sesión</string>
+
+    <string name="dialog_logout_title">Confirmar cierre de sesión</string>
+    <string name="dialog_logout_message">¿Desea cerrar sesión?</string>
+    <string name="dialog_jobid_logout_message">Would you like to logout of current JobID?</string>
+    <string name="title_username">Nombre de usuario</string>
+    <string name="title_password">Contraseña</string>
+    <string name="msg_invalid_credentials">Credenciales inválidas!</string>
+    <string name="msg_success_login">¡Inicio de sesión exitoso!</string>
+    <string name="input_user_information">Por favor ingrese la información del usuario</string>
+    <string name="error_server_busy">El servidor está ocupado en este momento, por favor intente más tarde</string>
+    <string name="error_connection_timeout">Tiempo de espera de conexión al servidor agotado, por favor intente más tarde.</string>
+    <string name="error_network">Por favor verifique la conexión a la red.</string>
+
+    <string name="msg_ask_admin_for_settings">Por favor, pida al administrador que vaya a Configuraciones</string>
+    <string name="msg_setup_factory">Por favor configure la fábrica</string>
+
+    <string name="msg_permission_download">Se necesitan permisos para descargar una nueva versión</string>
+    <string name="msg_permission_file_log">Se necesitan permisos para crear registros de archivos locales</string>
+
+    <string name="msg_choose_process_monitor_type">Por favor, elija el tipo de monitor de proceso en el menú Configuraciones.</string>
+
+    <string name="dialog_title_rework">Rework?</string>
+    <string name="dialog_msg_rework">¿Es un trabajo de rework?</string>
+
+    <string name="title_settings">Configuraciones</string>
+
+    <string name="request_permission_hint">Por favor permita los permisos para usar la función</string>
+    <string name="finish_message">Presione de nuevo para salir</string>
+
+    <!--Barcode Scanning-->
+    <integer name="viewfinder_border_width">4</integer>
+    <integer name="viewfinder_border_length">60</integer>
+
+    <string name="flash_on">Flash [ENCENDIDO]</string>
+    <string name="flash_off">Flash [APAGADO]</string>
+    <string name="auto_focus_on">Enfoque automático [ENCENDIDO]</string>
+    <string name="auto_focus_off">Enfoque automático [APAGADO]</string>
+    <string name="formats">Formatos</string>
+    <string name="choose_formats">Elegir formatos</string>
+    <string name="select_camera">Seleccionar cámara</string>
+
+    <string name="ok_button">ACEPTAR</string>
+    <string name="cancel_button">CANCELAR</string>
+    <string name="tap_to_start">Tocar para escanear</string>
+
+    <string name="title_download_progress">Descargando archivo. Por favor espere...</string>
+    <string name="cancel_download">Cancelar descarga</string>
+    <string name="error_download">No se pudo descargar el archivo</string>
+
+    <string name="error_no_job_guides">No hay datos de archivos de trabajo</string>
+
+    <string name="title_view_attaches">Ver adjuntos</string>
+
+    <!--Main Menus-->
+    <string name="menu_home">Tablero OEE</string>
+    <string name="menu_settings">Ajustes</string>
+    <string name="menu_install">Instalar configuración</string>
+    <string name="menu_maintenance">Mantenimiento</string>
+    <string name="menu_timelogger">Monitoreo de procesos</string>
+    <string name="menu_language">Idiomas</string>
+
+    <string name="navigation_drawer_open">Abrir cajón de navegación</string>
+    <string name="navigation_drawer_close">Cerrar cajón de navegación</string>
+
+    <string name="title_select_lang">Please select language</string>
+    <string name="language_default">Default(System)</string>
+    <string name="language_en">ENGLISH</string>
+    <string name="language_cn">中文</string>
+    <string name="language_sp">Española</string>
+
+    <!-- Downtime, Maintenance and Install Config-->
+    <string name="title_cycle_start_interlocked">Inicio de ciclo con interbloqueo</string>
+    <string name="title_disabledby_admin">Las características de la aplicación están deshabilitadas por el administrador. Por favor, póngase en contacto con el administrador.</string>
+    <string name="title_maintenace_task_due">Tarea de mantenimiento pendiente</string>
+    <string name="title_machine">Máquina</string>
+    <string name="title_machine_name">Nombre de la máquina</string>
+    <string name="title_serial_number">Número de serie</string>
+    <string name="title_task_name">Nombre de la tarea</string>
+    <string name="title_task_category">Categoría de la tarea</string>
+    <string name="title_task_instruction">Instrucción de la tarea</string>
+    <string name="title_task_frequency">Frecuencia (Horas): </string>
+    <string name="title_cycle_start_interlock">Interbloqueo de inicio de ciclo: </string>
+    <string name="title_user_notes">Notas del usuario</string>
+    <string name="title_complete_task">Tarea completada</string>
+    <string name="title_cycle_settings">Ajustes de ciclo</string>
+    <string name="title_incycle_signal">Señal en ciclo</string>
+    <string name="title_cycle_start_interlock_interface">Interfaz de interbloqueo de inicio de ciclo</string>
+    <string name="title_onoff">Encendido/Apagado</string>
+    <string name="title_normally_closed_open">Cerrado normalmente/Abierto</string>
+    <string name="title_save_config">Guardar configuración</string>
+    <string name="title_pictures">Imágenes</string>
+
+    <string name="title_install_configure">Instalar configuración</string>
+
+    <string name="lbl_set_profile_photo">Obtener imagen</string>
+    <string name="lbl_take_camera_picture">Tomar una foto</string>
+    <string name="lbl_choose_from_gallery">Elegir de la galería</string>
+    <string name="toast_image_intent_null">¡Falta la opción de seleccionador de imágenes!</string>
+
+    <!--Maintenances Screen-->
+    <string name="title_maintenances">Mantenimientos</string>
+
+    <!--About Alert Screen-->
+    <string name="title_about_cycle_stop_alert">Sobre la alerta de paro de ciclo</string>
+    <string name="alert_description">Por favor ingrese su correo electrónico o número de teléfono móvil. Si usa el número de teléfono móvil, utilice el siguiente formato según su proveedor.</string>
+
+
+    <!--Settings Screen-->
+    <string name="title_app_information">Información de la aplicación</string>
+    <string name="title_current_version">Versión actual</string>
+    <string name="msg_version_up_to_date">Su versión está actualizada.</string>
+    <string name="msg_version_check_error">No se pudo verificar la información de la nueva versión.</string>
+    <string name="msg_new_version_info">Actualización disponible (%1$s)</string>
+    <string name="title_wifi_settings">Abrir configuraciones de WIFI</string>
+
+    <string name="title_server_information">Información del servidor</string>
+    <string name="title_job_information">Información del job</string>
+    <string name="title_user_local_server">Usar servidor personalizado</string>
+    <string name="title_local_server_ip">Información del servidor(dominio o IP)</string>
+
+    <string name="title_incycle_signal_from">Señal de ciclo desde</string>
+    <string name="title_plc">PLC</string>
+    <string name="title_process_monitor">Monitor de proceso</string>
+
+    <string name="title_choose_process_monitor_type">Elegir tipo para monitor de proceso</string>
+    <string name="title_temp_data_source">Fuente de datos de temperatura</string>
+
+    <string name="title_machine_information">Información de la máquina</string>
+    <string name="title_device_address">Dirección del dispositivo</string>
+    <string name="title_account_id">ID de cuenta</string>
+    <string name="msg_input_account_id">Por favor ingrese ID de cuenta.</string>
+
+    <string name="title_downtime_settings">Configuraciones de tiempo de inactividad</string>
+
+    <string name="title_auxdata_title_settings">Configuraciones de título de AuxData</string>
+
+    <string name="title_cslock_settings">Configuraciones de CSLock</string>
+    <string name="title_enable_alert_sound">Habilitar sonido de alerta</string>
+
+    <string name="title_time_settings">Configuraciones de tiempo</string>
+
+    <string name="title_cycle_stop_alert">Alerta de paro de ciclo</string>
+    <string name="title_send_alert">Enviar alerta</string>
+    <string name="title_alert_email1">Alerta de correo electrónico 1</string>
+    <string name="title_alert_email2">Alerta de correo electrónico 2</string>
+    <string name="title_alert_email3">Alerta de correo electrónico 3</string>
+
+    <string name="title_automatic_parts_counter">Contador automático de piezas</string>
+    <string name="title_automatic_count">Conteo automático</string>
+
+    <string name="title_gantt_chart_settings">Configuración de gráfico de Gantt</string>
+    <string name="title_gantt_data_all_time">Mostrar datos de Gantt desde las 00:00 hasta las 23:59</string>
+    <string name="title_gantt_data_to_currtime">Mostrar datos de Gantt desde las 00:00 hasta la hora actual</string>
+    <string name="title_daily_goal_chart">Mostrar gráfico de objetivos diarios</string>
+
+    <string name="title_daily_goal_chart_options">Opciones de tabla de objetivos</string>
+    <string name="title_daily_goal_title">Título</string>
+    <string name="title_daily_goal_formula">Fórmula</string>
+    <string name="title_daily_goal_params">Parámetro</string>
+    <string name="title_daily_goal_display_unit">Unidades</string>
+    <string name="title_daily_goal_unit">Mostrar unidad</string>
+    <string name="title_daily_goal_percentage">Espectáculo %</string>
+    <string name="title_daily_goal_max">Objetivo diario</string>
+
+    <string name="title_save_settings">Guardar configuración</string>
+
+    <string name="title_partid">ID de pieza:</string>
+    <string name="title_login">Iniciar sesión</string>
+    <string name="title_logout">Cerrar sesión</string>
+    <string name="title_current_part_processing_time">Tiempo de procesamiento de la pieza actual</string>
+    <string name="title_start">Iniciar</string>
+    <string name="title_stop">Detener</string>
+    <string name="title_data_log">Registro de datos</string>
+
+    <string name="title_assembly_info">Información de ensamblaje</string>
+
+    <string name="title_blast_media_usage">Uso de medios de chorro</string>
+    <string name="title_before">Antes</string>
+    <string name="title_after">Después</string>
+    <string name="title_used">Usado</string>
+
+    <string name="title_current_part_notes">Notas de la pieza actual</string>
+    <string name="hint_add_notes_here">Agregue notas aquí</string>
+
+    <string name="title_input_barcode">Barcode</string>
+    <string name="title_input_manual">Manual</string>
+
+    <string name="title_reject_reasons">Razones de rechazo</string>
+
+    <string name="title_input_reason_title">Título de la razón</string>
+    <string name="msg_input_reason_title">Ingrese el título del motivo</string>
+
+    <string-array name="stations_quality_issue">
+        <item>No Quality Issue</item>
+        <item>Cleaning</item>
+        <item>Phosphate Line</item>
+        <item>Blast Station</item>
+        <item>Paint</item>
+        <item>Assembly</item>
+    </string-array>
+
+</resources>

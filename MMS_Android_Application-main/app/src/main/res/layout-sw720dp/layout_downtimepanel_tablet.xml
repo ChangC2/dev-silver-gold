@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelIdleSetUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_nav_logo"
+    android:visibility="visible">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#501583fe" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDownTime1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="Tooling\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnDownTime2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding6"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="Setup\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDownTime3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="Material\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnDownTime4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding6"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="Wait Material\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDownTime5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="No Operator\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnDownTime6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding6"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="PM\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDownTime7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="No Work\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnDownTime8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding6"
+                android:layout_weight="1"
+                android:background="@drawable/selector_whiteround"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:minHeight="50dp"
+                android:text="Repair\n00:00:00"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCloseIdleStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:minHeight="90dp"
+            android:background="@drawable/selector_whiteround"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_main_button_text"
+            android:textSize="25sp" />
+    </LinearLayout>
+</FrameLayout>

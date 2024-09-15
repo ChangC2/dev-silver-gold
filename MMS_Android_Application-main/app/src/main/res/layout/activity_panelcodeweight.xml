@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panelCleaningStation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkColor"
+    android:orientation="vertical">
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titration Results"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding3"
+        android:textColor="@color/green"
+        android:textSize="@dimen/font_3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding3"
+        android:layout_marginTop="@dimen/padding2"
+        android:layout_marginRight="@dimen/padding3"
+        android:layout_marginBottom="@dimen/padding1"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_marginBottom="@dimen/padding1"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Stage1"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minHeight="@dimen/padding8"
+                android:text="Stage2"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minHeight="@dimen/padding8"
+                android:text="Stage3"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_marginBottom="@dimen/padding1"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Stage4"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minHeight="@dimen/padding8"
+                android:text="Stage5"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minHeight="@dimen/padding8"
+                android:text="Stage6"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_marginBottom="@dimen/padding1"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Stage7"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minHeight="@dimen/padding8"
+                android:text="Stage8"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnStage9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_weight="1"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minHeight="@dimen/padding8"
+                android:text="Stage9"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_marginBottom="@dimen/padding1"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnDataLogSheet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.03"
+                android:background="@drawable/selector_titration_button"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Panel Data Log Sheet"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_main_button_text_white"
+                android:textSize="@dimen/font_6" />
+
+            <com.cam8.mmsapp.views.LatoButton
+                android:id="@+id/btnSaveAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.97"
+                android:layout_marginLeft="@dimen/padding3"
+                android:background="@drawable/rounded_border_setting"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Save All Data"
+                android:textAllCaps="false"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_6" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

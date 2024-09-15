@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@drawable/rounded_border_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_topbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/padding1"
+            android:background="@color/white_trans50" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/fragment_timereport"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_trans50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding2"
+            android:paddingTop="@dimen/padding1"
+            android:paddingRight="@dimen/padding2"
+            android:paddingBottom="@dimen/padding2"
+            android:background="@drawable/rounded_border_dark"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <include layout="@layout/layout_infotimes" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "227264269486",
+    "firebase_url": "https://mms-app-82e10.firebaseio.com",
+    "project_id": "mms-app-82e10",
+    "storage_bucket": "mms-app-82e10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227264269486:android:525ceafc0a2d0b7e1ab13f",
+        "android_client_info": {
+          "package_name": "com.cam8.mmsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227264269486-9tnrshilkq7tbitlo0uah2p2mvlkg8vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfTwEUhwJ7lq9vrw38GARG6BlMNKQQTk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227264269486-9tnrshilkq7tbitlo0uah2p2mvlkg8vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

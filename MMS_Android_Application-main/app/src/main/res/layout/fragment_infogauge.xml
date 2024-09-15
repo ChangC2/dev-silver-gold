@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:gravity="center"
+        android:text="OEE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding1"
+        android:paddingRight="@dimen/padding1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.goodiebag.protractorview.SpeedometerView
+                android:id="@+id/gauge_available"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                app:textProgressColor="#FF00"
+                app:tickProgressColor="#abe6" />
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/available"
+                android:textColor="@color/white_trans90"
+                android:textSize="@dimen/font_9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.goodiebag.protractorview.SpeedometerView
+                android:id="@+id/gauge_oee"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                app:textProgressColor="#FF00"
+                app:tickProgressColor="#abe6" />
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/oee"
+                android:textColor="@color/white_trans90"
+                android:textSize="@dimen/font_9" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding1"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding1"
+        android:paddingRight="@dimen/padding1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.goodiebag.protractorview.SpeedometerView
+                android:id="@+id/gauge_performance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                app:textProgressColor="#FF00"
+                app:tickProgressColor="#abe6" />
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/performance"
+                android:textColor="@color/white_trans90"
+                android:textSize="@dimen/font_9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.goodiebag.protractorview.SpeedometerView
+                android:id="@+id/gauge_quality"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                app:textProgressColor="#FF00"
+                app:tickProgressColor="#abe6" />
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/quality"
+                android:textColor="@color/white_trans90"
+                android:textSize="@dimen/font_9" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

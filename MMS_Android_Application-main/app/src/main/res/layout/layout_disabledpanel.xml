@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panelDisabled"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_nav_logo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0808080" />
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/padding11"
+        android:layout_marginRight="@dimen/padding11"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/padding12"
+        android:text="@string/title_disabledby_admin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_1"
+        android:textStyle="bold" />
+</FrameLayout>

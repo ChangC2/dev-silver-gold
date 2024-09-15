@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minWidth="@dimen/width_common_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding10"
+        android:background="@color/colorPrimaryLight"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding3"
+        android:paddingRight="@dimen/padding3"
+        android:text="Record Phosphate Test Info"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/padding2"
+        android:layout_marginHorizontal="@dimen/padding2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <com.cam8.mmsapp.views.LatoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Testing Date"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_8"
+                android:textStyle="italic" />
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:id="@+id/edtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/padding15"
+                android:background="@drawable/bg_textview_underline_dark"
+                android:maxLines="1"
+                android:text="2022-11-02"
+                android:paddingTop="@dimen/padding1"
+                android:paddingBottom="@dimen/padding1"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/padding3"
+            android:orientation="vertical">
+
+            <com.cam8.mmsapp.views.LatoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Time"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_8"
+                android:textStyle="italic" />
+
+            <com.cam8.mmsapp.views.LatoBoldTextView
+                android:id="@+id/edtTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/padding15"
+                android:background="@drawable/bg_textview_underline_dark"
+                android:maxLines="1"
+                android:text="12:00:00"
+                android:paddingTop="@dimen/padding1"
+                android:paddingBottom="@dimen/padding1"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.cam8.mmsapp.views.LatoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Weight"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_8"
+                android:textStyle="italic" />
+
+            <com.cam8.mmsapp.views.LatoEditText
+                android:id="@+id/edtWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/padding11"
+                android:background="@drawable/bg_textview_underline_dark"
+                android:maxLines="1"
+                android:text=""
+                android:hint="0"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/alphaBackColor"
+                android:paddingTop="@dimen/padding1"
+                android:paddingBottom="@dimen/padding1"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_7" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding3"
+        android:layout_gravity="left"
+        android:layout_marginHorizontal="@dimen/padding2"
+        android:orientation="vertical">
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Water Break"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/font_8"
+            android:textStyle="italic" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/padding1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/backColor"
+                android:text="Pass"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_7" />
+
+            <RadioButton
+                android:id="@+id/radioFail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding3"
+                android:buttonTint="@color/backColor"
+                android:text="Fail"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/font_7" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:layout_marginBottom="@dimen/padding2"
+        android:layout_marginHorizontal="@dimen/padding1"
+        android:orientation="horizontal">
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blueround"
+            android:gravity="center"
+            android:padding="@dimen/padding2"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_6" />
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/padding1"
+            android:background="@drawable/selector_blueround"
+            android:gravity="center"
+            android:padding="@dimen/padding2"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_6" />
+
+    </LinearLayout>
+
+</LinearLayout>

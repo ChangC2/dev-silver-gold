@@ -1,0 +1,31 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="ic_device_ip" type="drawable">@drawable/ic_device_ip_png</item>
+    <item name="ic_device_port" type="drawable">@drawable/ic_device_port_png</item>
+    <item name="ic_device_memory" type="drawable">@drawable/ic_device_memory_png</item>
+
+    <item name="ic_search_device" type="drawable">@drawable/ic_device_search_png</item>
+    <item name="ic_stop_scan" type="drawable">@drawable/ic_device_stop_png</item>
+
+    <item name="ic_select_device" type="drawable">@drawable/ic_device_select_png</item>
+    <item name="ic_link_device" type="drawable">@drawable/ic_device_test_png</item>
+
+    <item name="ic_machine_name" type="drawable">@drawable/ic_machine_name_png</item>
+    <item name="ic_device_bluetooth" type="drawable">@drawable/ic_device_bluetooth_png</item>
+    <item name="ic_remove" type="drawable">@drawable/ic_remove_png</item>
+    <item name="ic_send" type="drawable">@drawable/ic_send_png</item>
+
+    <item name="ic_qrcode_scan" type="drawable">@drawable/ic_qrcode_scan_png</item>
+    <item name="ic_check_customerid" type="drawable">@drawable/ic_check_customerid_png</item>
+    <item name="ic_logout_app" type="drawable">@drawable/ic_logout_app_png</item>
+
+
+    <!--Time Duration Picker-->
+    <item name="ic_backspace_light" type="drawable">@drawable/ic_backspace_light_png</item>
+    <item name="ic_backspace" type="drawable">@drawable/ic_backspace_png</item>
+    <item name="ic_clear_light" type="drawable">@drawable/ic_clear_light_png</item>
+    <item name="ic_clear" type="drawable">@drawable/ic_clear_png</item>
+
+    <item name="ic_jobid_edit" type="drawable">@drawable/ic_jobid_edit_png</item>
+
+</resources>

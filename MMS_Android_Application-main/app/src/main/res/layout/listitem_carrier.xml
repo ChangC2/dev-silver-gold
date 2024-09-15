@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding2"
+    android:paddingBottom="@dimen/padding2"
+    android:paddingLeft="@dimen/padding2"
+    android:paddingRight="@dimen/padding2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding2"
+        android:paddingRight="@dimen/padding2"
+        android:orientation="horizontal">
+
+        <com.cam8.mmsapp.views.LatoBoldTextView
+            android:id="@+id/tvCarrierName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:text="Device Name"
+            android:layout_marginLeft="@dimen/padding1"
+            android:textColor="@color/darkColor"
+            android:textSize="@dimen/font_5" />
+
+        <com.cam8.mmsapp.views.LatoTextView
+            android:id="@+id/tvCarrierNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="@dimen/padding1"
+            android:text="12:23:34:45:56:67"
+            android:textColor="@color/darkColor"
+            android:textSize="@dimen/font_7" />
+
+        <com.cam8.mmsapp.views.LatoBoldTextView
+            android:id="@+id/tvCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy"
+            android:textColor="@color/darkColor"
+            android:textSize="@dimen/font_7" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/padding3"
+        android:layout_marginRight="@dimen/padding1"
+        android:layout_marginTop="@dimen/padding1"
+        android:background="@color/gray"/>
+</LinearLayout>

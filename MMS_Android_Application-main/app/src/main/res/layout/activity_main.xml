@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding1"
+        android:background="@drawable/rounded_border_dark"
+        android:keepScreenOn="true"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_topbar" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding1"
+                android:background="@color/white_trans50" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9.5"
+                android:weightSum="9.5"
+                android:layout_marginTop="@dimen/padding1"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginRight="@dimen/padding2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/layout_infopanel" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/padding2"
+                            android:layout_weight="1"
+                            android:background="@drawable/gradient_back"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/layout_infogauge" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnGanttChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/padding1"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/rounded_border_graph"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/padding7"
+                            android:layout_height="@dimen/padding7"
+                            android:layout_marginLeft="@dimen/padding3"
+                            android:layout_marginRight="@dimen/padding1"
+                            android:src="@drawable/ic_fab_cholesterol"
+                            app:tint="@color/color_graph" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.cam8.mmsapp.views.LatoBoldTextView
+                                android:id="@+id/tvGantTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/padding3"
+                                android:gravity="center"
+                                android:text="@string/gau_chart"
+                                android:textColor="@color/color_graph"
+                                android:textSize="@dimen/font_4" />
+
+                            <com.cam8.mmsapp.views.ThinGanttChart
+                                android:id="@+id/ganttChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerTimeReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding1"
+                android:background="@color/white_trans50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/padding2"
+                android:layout_marginTop="@dimen/padding1"
+                android:layout_marginRight="@dimen/padding2"
+                android:layout_marginBottom="@dimen/padding1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <include layout="@layout/layout_infotimes" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_downtimepanel" />
+
+        <include layout="@layout/layout_disabledpanel" />
+
+        <include layout="@layout/layout_maintenancetaskdue" />
+
+    </FrameLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxWidth="@dimen/size_navigation_drawer"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/main_drawer"
+        android:theme="@style/NavigationDrawerStyle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <com.cam8.mmsapp.views.LatoTextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/padding2"
+                android:padding="@dimen/padding1"
+                android:text="V1.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

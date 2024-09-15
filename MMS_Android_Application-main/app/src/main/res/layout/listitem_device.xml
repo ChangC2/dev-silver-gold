@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding2"
+    android:paddingBottom="@dimen/padding2"
+    android:paddingLeft="@dimen/padding2"
+    android:paddingRight="@dimen/padding2"
+    android:orientation="vertical">
+
+    <com.cam8.mmsapp.views.LatoBoldTextView
+        android:id="@+id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device Name"
+        android:textColor="@color/darkColor"
+        android:textSize="@dimen/font_5" />
+
+    <com.cam8.mmsapp.views.LatoTextView
+        android:id="@+id/device_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12:23:34:45:56:67"
+        android:textColor="@color/darkColor"
+        android:textSize="@dimen/font_5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <com.cam8.mmsapp.views.LatoButton
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_blueround"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_select_device"
+            android:paddingLeft="@dimen/padding4"
+            android:paddingRight="@dimen/padding4"
+            android:drawablePadding="@dimen/padding1"
+            android:text="Select"
+            android:textSize="@dimen/font_6"
+            android:textColor="@drawable/selector_main_button_text_white"/>
+
+        <com.cam8.mmsapp.views.LatoButton
+            android:id="@+id/btnTestConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_blueround"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_link_device"
+            android:paddingLeft="@dimen/padding4"
+            android:paddingRight="@dimen/padding4"
+            android:drawablePadding="@dimen/padding1"
+            android:layout_marginLeft="@dimen/padding2"
+            android:textSize="@dimen/font_6"
+            android:textColor="@drawable/selector_main_button_text_white"
+            android:text="Test"/>
+    </LinearLayout>
+
+</LinearLayout>

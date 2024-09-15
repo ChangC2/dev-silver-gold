@@ -1,0 +1,1 @@
+include ':app', ':protractorview', ':modbus4android', ':MPChartLib', ':PdfViewPager'

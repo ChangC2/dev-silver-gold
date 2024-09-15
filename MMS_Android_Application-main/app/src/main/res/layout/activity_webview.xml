@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp"
+        android:background="@android:color/black"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/padding6"
+        android:layout_height="@dimen/padding6"
+        android:layout_margin="@dimen/padding2"
+        app:srcCompat="@drawable/selector_backbtn" />
+
+</FrameLayout>

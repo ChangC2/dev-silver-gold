@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_menu_dashboard"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_timereport"
+            android:icon="@drawable/ic_menu_timereport"
+            android:title="@string/menu_timelogger" />
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_setting"
+            android:title="@string/menu_settings" />
+
+        <item
+            android:id="@+id/nav_install_config"
+            android:icon="@drawable/ic_menu_install"
+            android:title="@string/menu_install" />
+
+        <item
+            android:id="@+id/nav_maintenance"
+            android:icon="@drawable/ic_menu_maintenance"
+            android:title="@string/menu_maintenance" />
+
+        <item
+            android:id="@+id/nav_language"
+            android:icon="@drawable/ic_nav_language"
+            android:title="@string/menu_language" />
+
+    </group>
+</menu>

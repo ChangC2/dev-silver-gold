@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cam8.mmsapp.views.LatoTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding21"
+    android:textColor="@color/white"
+    android:textSize="@dimen/font_7" />
