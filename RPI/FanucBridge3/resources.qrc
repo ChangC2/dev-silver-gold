@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>ic_circle_blue.png</file>
+        <file>ic_circle_green.png</file>
+        <file>ic_circle_red.png</file>
+        <file>ic_logo.png</file>
+        <file>ic_nav.png</file>
+        <file>img_machine.png</file>
+    </qresource>
+</RCC>
