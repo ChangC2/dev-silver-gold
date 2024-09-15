@@ -1,0 +1,68 @@
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe.config
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.pdb
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\EasyModbus.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.FanucBridgeService.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.Resources.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.ProjectInstaller.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.GenerateResource.cache
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CoreCompileInputs.cache
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CopyComplete
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.exe
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.pdb
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbprojAssemblyReference.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe.config
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\EasyModbus.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.AssemblyReference.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.FanucBridgeService.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.Resources.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.ProjectInstaller.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.GenerateResource.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CoreCompileInputs.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CopyComplete
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe.config
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\EasyModbus.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.AssemblyReference.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.FanucBridgeService.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.Resources.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.ProjectInstaller.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.GenerateResource.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CoreCompileInputs.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CopyComplete
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.pdb
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe.config
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.exe
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.pdb
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\FanucBridgeService.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\EasyModbus.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\bin\x86\Debug\Newtonsoft.Json.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.FanucBridgeService.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.Resources.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.ProjectInstaller.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.GenerateResource.cache
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CoreCompileInputs.cache
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.CopyComplete
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.exe
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.pdb
+E:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridgeService\obj\x86\Debug\FanucBridgeService.vbproj.AssemblyReference.cache

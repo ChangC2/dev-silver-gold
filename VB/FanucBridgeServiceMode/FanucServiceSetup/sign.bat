@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\signtool.exe" sign /f "E:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "E:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucServiceSetup\Debug\setup.exe"

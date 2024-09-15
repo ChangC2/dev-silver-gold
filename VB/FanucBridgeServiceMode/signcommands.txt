@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\signtool.exe" sign /f "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "$(TargetDir)$(TargetFileName)"
+
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\signtool.exe" sign /f "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucServiceSetup\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "$(TargetDir)$(TargetFileName)"
+
+
+
+cd C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86
+
+signtool.exe sign /f "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucServiceSetup\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucServiceSetup\Debug\setup.exe"
+
+signtool.exe sign /f "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucServiceSetup\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucServiceSetup\Debug\FanucServiceSetup.msi"
+
+signtool.exe sign /f "f:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucServiceSetup\zzzca.pfx" /p "123456" /t http://timestamp.digicert.com "F:\TOSV2Exe\TOS.exe"

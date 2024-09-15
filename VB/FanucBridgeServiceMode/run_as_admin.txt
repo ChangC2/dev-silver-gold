@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/36570326/windows-vb-net-application-exe-run-as-administrator
+You need to replace asInvoker with requireAdministrator or highestAvailable

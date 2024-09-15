@@ -1,0 +1,9 @@
+Handle closed successfully! - Return code -8
+Connect: 192.168.1.23:8193
+Connection is success, The number of handle is 0
+Windows Library handle error
+Windows Library handle error
+Windows Library handle error
+Windows Library handle error
+Windows Library handle error
+Handle closed successfully! - Return code -8

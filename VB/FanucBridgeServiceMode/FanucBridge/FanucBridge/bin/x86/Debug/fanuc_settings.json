@@ -1,0 +1,41 @@
+﻿{
+  "macroSettings": [
+    {
+      "description": "Monitor",
+      "modbusAddress": 1001,
+      "fanucAddress": 100
+    },
+    {
+      "description": "Tool",
+      "modbusAddress": 1003,
+      "fanucAddress": 101
+    },
+    {
+      "description": "Section",
+      "modbusAddress": 1005,
+      "fanucAddress": 102
+    },
+    {
+      "description": "Channel",
+      "modbusAddress": 1007,
+      "fanucAddress": 103
+    },
+    {
+      "description": "Program Number",
+      "modbusAddress": 1009,
+      "fanucAddress": 104
+    }
+  ],
+  "pmcSettings": [
+    {
+      "description": "Macro Interrupt",
+      "modbusAddress": 1,
+      "fanucAddress": "G53.3"
+    },
+    {
+      "description": "In Cycle",
+      "modbusAddress": 200,
+      "fanucAddress": ""
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe.config
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.pdb
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EasyModbus.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbprojAssemblyReference.cache
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\Interop.VBIDE.dll
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.ResolveComReference.cache
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SettingsForm.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Main.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Resources.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SplashForm.resources
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.GenerateResource.cache
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CoreCompileInputs.cache
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CopyComplete
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.exe
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.xml
+F:\Home\ITSMMS\Fanuc\Projects\FanucBridgeServiceMode\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe.config
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EasyModbus.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\Interop.VBIDE.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.ResolveComReference.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SettingsForm.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Main.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Resources.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SplashForm.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.GenerateResource.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CoreCompileInputs.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CopyComplete
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(Visual Studio)\FanucBridgeServiceMode(2023-09-28)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe.config
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.pdb
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EasyModbus.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.AssemblyReference.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\Interop.VBIDE.dll
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.ResolveComReference.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SettingsForm.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Main.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Resources.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SplashForm.resources
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.GenerateResource.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CoreCompileInputs.cache
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CopyComplete
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.exe
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.xml
+e:\MMS\Xian\MMSProjects2\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.pdb
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe.config
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.exe
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.pdb
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\FanucBridge.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EasyModbus.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\EntityFramework.SqlServer.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\bin\x86\Debug\Newtonsoft.Json.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.AssemblyReference.cache
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\Interop.VBIDE.dll
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.ResolveComReference.cache
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SettingsForm.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Main.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.Resources.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.SplashForm.resources
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.GenerateResource.cache
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CoreCompileInputs.cache
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.vbproj.CopyComplete
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.exe
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.xml
+e:\MMS\Fanuc(VisualStudio)\FanucBridgeServiceMode\FanucBridge\FanucBridge\obj\x86\Debug\FanucBridge.pdb

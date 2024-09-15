@@ -1,0 +1,3 @@
+- FanucBridge sign
+Select Project / My Project / Compile tab / Build Events button
+FanucServiceSetup->PostBuildEvent
