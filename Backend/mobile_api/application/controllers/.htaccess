@@ -1,0 +1,11 @@
+php_value upload_max_filesize 20000M
+php_value post_max_size 20000M
+php_value max.execution_time 3000
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+RewriteRule ^ ./index.html
+</IfModule>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>SLYTRACKR</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+	<!-- Material Design Bootstrap -->
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet"> -->
+
+
+	<link href="https://api.slymms.com/assets/css/style_detailPage-email.css?v=1.15" rel="stylesheet">
+	<!-- <link href="https://192.168.0.58/mms/assets/css/style_detailPage-email.css?v=1.02" rel="stylesheet"> -->
+
+	<style>
+		/* Style the tab */
+		.main-content{
+			border: 1px solid gray;
+			background-color: white;
+		}
+
+		.main-header-title{
+			position: absolute;
+			left: 36px;
+    		height: 70px;
+			line-height: 70px;
+			font-size: 21px;
+			font-weight: bold;
+			color: #2fa5f3;
+		}
+
+		.main-header-date{
+			position: absolute;
+			right: 36px;
+    		height: 70px;
+			line-height: 70px;
+			font-size: 14px;
+			color:black;
+		}
+
+		.main-header-logo{
+			display: flex;
+    		height: 70px;
+    		align-items: center;
+		}
+
+		.tab {
+			overflow: hidden;
+			border: 1px solid #dfdede;
+			background-color: rgb(245, 245, 245);
+			padding: 10px 20px 10px 20px;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			cursor: pointer;
+			padding: 5px 5px;
+			transition: 0.3s;
+			font-size: 15px;
+			outline: none;
+			border: none;
+			margin-right: 10px;
+			border-radius: 5px;
+    		padding-left: 10px;
+    		padding-right: 10px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #2fa5f3;
+    		color: white;
+		}
+
+		@media only screen and (max-width:600px) {
+			.tab button {
+				font-size: 12px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<style>
+		.tooltip {
+			position: absolute;
+			line-height: 1;
+			font-size: 12px;
+			padding: 4px 5px;
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			border-radius: 2px;
+			pointer-events: none;
+			font-weight: bold;
+			max-width: 300px;
+		}
+
+		.tooltip:after {
+			box-sizing: border-box;
+			display: inline;
+			font-size: 12px;
+			width: 100%;
+			line-height: 1;
+			color: rgba(0, 0, 0, 0.8);
+			content: "\25BC";
+			position: absolute;
+			text-align: center;
+			margin: -1px 0 0 0;
+			top: 100%;
+			left: 0;
+		}
+	</style>
+	<div id="tooltip" class="tooltip" style="opacity: 0">
+		<p><span id="tooltip-time"></span></p>
+		<p>Status:&nbsp;<span id="tooltip-status"></span></p>
+		<p>Duration:&nbsp;<span id="tooltip-duration"></span></p>
+	</div>
+
+	<div class="container main-content">
+		<div class="row">
+			<!-- Header -->
+			<div class="row" style="padding-top: 5px;padding-bottom: 5px;">
+				<div class="col-xs-3">
+					<a class="main-header-title"  id="machine_id"></a>
+				</div>
+				<div class="col-xs-6">
+					<img class='center-image img img-thumbnail' id='title_logo'>
+				</div>
+				<div class="col-xs-3">
+					<a class="main-header-date" id="txtCurrentDate"></a>
+				</div>
+			</div>
+			<div class="tab" id="tabs">
+			</div>
+			
+			<div id="machine_content">
+				<!-- Key Performance Indicators -->
+				<div class="row KeyPerformance" id="key_indicator_container" style="margin:0; margin-top:5px;border: 0;">
+					<div style="margin-left:25px; margin-top:10px">
+						<a style="font-size:16px; font-weight:bold;">Key Performance Indicators</a>
+					</div>
+					<div class="row" style="margin:10px;">
+						<!-- OEE Gauge -->
+						<div class="col-xs-4" class="gauge_container">
+							<div style="display: flex; justify-content: center;">
+								<canvas id="gauge_oee"></canvas>
+							</div>
+							<div class="gauge_oee_text_container">
+								<a class="gauge_text gauge_text_oee_up" id="gauge_oee_text"></a>
+								<br>
+								<a class="gauge_text gauge_text_oee_down" style=" margin-top:10px;">OEE</a>
+							</div>
+						</div>
+
+						<!-- Small Gauge -->
+						<div class="col-xs-8" style="margin-top:20px">
+							<div class="row">
+								<!-- AVA Gauge -->
+								<div class="col-xs-4 gauge_container">
+									<div style="display: flex; justify-content: center;">
+										<canvas class="gauge_canvas" id="gauge_ava"></canvas>
+									</div>
+									<div class="gauge_text_container">
+										<a class="gauge_text gauge_text_up" id="gauge_ava_text"></a>
+										<br>
+										<a class="gauge_text gauge_text_down">AVA</a>
+									</div>
+								</div>
+								<!-- QUA Gauge -->
+								<div class="col-xs-4 gauge_container">
+									<div style="display: flex; justify-content: center;">
+										<canvas class="gauge_canvas" id="gauge_qua"></canvas>
+									</div>
+									<div class="gauge_text_container">
+										<a class="gauge_text gauge_text_up" id="gauge_qua_text"></a>
+										<br>
+										<a class="gauge_text gauge_text_down">QUA</a>
+									</div>
+								</div>
+								<!-- PER Gauge -->
+								<div class="col-xs-4 gauge_container">
+									<div style="display: flex; justify-content: center;">
+										<canvas class="gauge_canvas" id="gauge_per"></canvas>
+									</div>
+									<div class="gauge_text_container">
+										<a class="gauge_text gauge_text_up" id="gauge_per_text"></a>
+										<br>
+										<a class="gauge_text gauge_text_down">PER</a>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Pie Chart and Aux -->
+				<div class="row" style="margin:20px">
+					<div>
+						<a style="font-size:16px; font-weight:bold;">Utilization</a>
+					</div>
+					<!-- Pie Chart -->
+					<div class="col-xs-6" id="pie_chart_container">
+						<div class="relative">
+							<div id="pie_chart_detail" style="margin-top:0"></div>
+						</div>
+					</div>
+
+					<!-- Aux Data -->
+					<div class="col-xs-6 center-AuxText" style="padding-top:60px; padding-left:50px">
+						<div class="row" style="margin:0px; padding:0px; margin-top:3px">
+							<strong class="AuxText" id="title_status_aux1"></strong>
+							<strong class="AuxText" id="status_aux1"></strong>
+						</div>
+						<div class="row" style="margin:0px; padding:0px; margin-top:3px">
+							<strong class="AuxText" style="color:red" id="title_status_aux2"></strong>
+							<strong style="color:red" class="AuxText" id="status_aux2"></strong>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gantt Chart -->
+				<div class="row" style="margin:20px;">
+					<div>
+						<a style="margin-top:20px;font-size:16px; font-weight:bold;">TimeLine</a>
+					</div>
+					<div style="display: block;padding-right:20px;" id="gantt_chart_detail">
+					</div>
+				</div>
+
+				<!-- Bar Chart -->
+				<div class="row" style="margin:20px">
+					<div>
+						<a style="margin-top:20px;font-size:16px; font-weight:bold;">Utilization History</a>
+					</div>
+					<div id="chart_div" style="height: 300px; display: block; padding: 0px 0px 0px 0px"></div>
+				</div>
+			</div>
+
+			<div id="total_parts_content" style="padding: 30px 50px 30px 50px;min-height: 600px;">
+				
+			</div>
+		</div>
+		
+		<div class="row" style="margin:20px">
+			<div style="text-align: center;"><img
+					src="https://www.slytrackr.com/uploads/2/4/3/3/24335298/published/1446941887.png?1539790071" alt=""
+					height="40" /></div>
+		</div>
+	</div>
+
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+	</script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script> -->
+
+
+	<script src="https://api.slymms.com/d3_assets/d3.v3.min.js"></script>
+	<script src="https://api.slymms.com/d3_assets/gantt-chart-d3-email.js?v=1.03"></script>
+	<script src="https://api.slymms.com/gauge_assets/Gauge.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
+	<!-- Bar Chart -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<!-- For modal dialog -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+	<script>
+		var diff_time = 0;
+		d = new Date();
+		localTime = d.getTime();
+		localOffset = d.getTimezoneOffset() * 60000;
+
+		String.prototype.toHHMMSS = function () {
+			var sec_num = parseInt(this, 10); // don't forget the second param
+			var hours = Math.floor(sec_num / 3600);
+			var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+			var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+			if (hours < 10) {
+				hours = "0" + hours;
+			}
+			if (minutes < 10) {
+				minutes = "0" + minutes;
+			}
+			if (seconds < 10) {
+				seconds = "0" + seconds;
+			}
+			var res = "";
+
+			if (hours > 0)
+				res = hours + 'hour(s) ' + minutes + 'minute(s) ' + seconds;
+			else if (minutes > 0)
+				res = minutes + 'minute(s) ' + seconds;
+			else
+				res = seconds;
+
+			return res + "second(s)";
+		}
+	</script>
+
+	<script>
+		var factory_timezone;
+		$(document).ready(function () {
+			//m_gantt = m_gantt[0];
+			//m_status = m_status[0];
+			//m_hst = m_hst[0];
+			factory_timezone = m_info['timezone'];
+			// showing logo image.
+			$('#title_logo').attr('src', m_info['logo']);
+			// showing current date
+
+			// Showing Tabs
+			var tabString = "";
+			for (var i = 0; i < m_status.length; i++) {
+				if (i == 0) {
+					tabString += `<button class="tablinks active" onclick="onClickMachine(this, event, ` + i + `)">` +
+						m_status[i][0][
+							'machine_id'
+						] + `</button>`;
+				} else {
+					tabString += `<button class="tablinks" onclick="onClickMachine(this, event, ` + i + `)">` +
+						m_status[i][0][
+							'machine_id'
+						] + `</button>`;
+				}
+			}
+			tabString += `<button class="tablinks" onclick="onClickTotal(this, event)">Total Parts</button>`;
+			$('#tabs').html(tabString);
+
+			google.charts.load('current', {
+				'packages': ['corechart']
+			});
+			ShowMachine(0);
+		});
+
+		function onClickMachine(btnThis, event, no) {
+			$('#machine_content').show();
+			$('#total_parts_content').hide();
+			if(m_hst[no].length == 0){
+				alert("Sorry, there's no data");
+				return;
+			}
+			$('.tablinks').map(function () {
+				$(this).removeClass('active');
+			})
+			$(btnThis).addClass("active");
+			ShowMachine(no);
+		}
+
+		function onClickTotal(btnThis, event) {
+			$('#machine_content').hide();
+			$('#total_parts_content').show();
+			$('.tablinks').map(function () {
+				$(this).removeClass('active');
+			})
+			$(btnThis).addClass("active");
+			showTotalParts();
+		}
+
+		function showTotalParts(){
+			var goodString = ``;
+			var badString = ``;
+			var totalGoodParts = 0;
+			var totalBadParts = 0;
+			for (var i = 0; i < m_status.length; i++) {
+				try {
+					goodString += `<div style="margin-left:30px;color:green;font-size: 18px;">` + m_status[i][0]['machine_id'] + ` : ` + m_hst[i][0].goodParts + `</div>`; 
+					totalGoodParts += parseInt(m_hst[i][0].goodParts);
+				} catch (err) {}
+				
+			}
+			var totalGoodString = `<div style="color:green;font-size: 21px;font-weight:bold;">Total Good Parts : `+totalGoodParts+`</div>`;
+
+			for (var i = 0; i < m_status.length; i++) {
+				try {
+					badString += `<div style="margin-left:30px;color:red;font-size: 18px;">` + m_status[i][0]['machine_id'] + ` : ` + m_hst[i][0].badParts + `</div>`; 
+					totalBadParts += parseInt(m_hst[i][0].badParts);
+				} catch (err) {}
+			}
+			var totalBadString = `<div style="color:red;font-size: 21px;font-weight:bold;">Total Bad Parts : `+totalBadParts+`</div>`;
+			$('#total_parts_content').html(totalGoodString + goodString + totalBadString + badString);
+		}
+	</script>
+
+	<script>
+		function ShowMachine(no) {
+			
+			// console.log(no, timezone, currentDate);
+			try {
+				$('#txtCurrentDate').html(m_hst[no][0]['date']);
+			} catch (e) {
+			}
+			
+			$('#machine_id').html(m_status[no][0]['machine_id']);
+			try {
+				DrawKeyPerformanceSection(no);
+			} catch (err) {}
+			
+			try {
+				DrawPieChartSection(no);
+			} catch (err) {}
+			
+			try {				
+				DrawGanttChartSection(no, m_info['timezone'], m_hst[no][0]['date']);				
+			} catch (err) {}
+			try {
+				DrawBarChartSection(no);
+			} catch (err) {}
+		}
+
+		function DrawKeyPerformanceSection(no) {
+			DrawGauge_one('gauge_oee', m_hst[no][0].oee);
+			DrawGauge_one('gauge_ava', m_hst[no][0].availability);
+			DrawGauge_one('gauge_qua', m_hst[no][0].quality);
+			DrawGauge_one('gauge_per', m_hst[no][0].performance);
+		}
+
+		function DrawPieChartSection(no) {
+			//DrawPieChart(m_hst[no], m_status[no]);			
+			DrawPieChart(m_gantt[no]);
+			//console.log(m_hst[no]);
+
+			$('#status_aux1').html(m_hst[no][0].goodParts);
+			$('#status_aux2').html(m_hst[no][0].badParts);
+			$('#title_status_aux1').html("Good Parts:");
+			$('#title_status_aux2').html("Bad  Parts:");
+
+		}
+
+		function DrawGanttChartSection(no, timezone, currentDate) {		
+			
+			DrawGanttChart(m_gantt[no], timezone, currentDate);
+		}
+
+		function DrawBarChartSection(no) {
+			DrawBarChart(m_hstList[no]);
+		}
+	</script>
+
+	<script>
+		function DrawGauge_one(gauge_id, value) {
+			//console.log(gaugeArray[gauge_id]);
+
+			var opts = {
+				angle: -0.5,
+				lineWidth: 0.15,
+				pointer: {
+					length: 0.6,
+					strokeWidth: 0.02,
+					color: '#000000'
+				},
+				limitMax: 'true',
+				//percentColors: [[0.0, "#a9d70b" ], [0.50, "#f9c802"], [1.0, "#ff0000"]], // !!!!
+				percentColors: [
+					[0.0, "#ff0000"],
+					[0.399, "#ff0000"],
+					[0.4, "#ff0000"],
+					[0.599, "#FFFF00"],
+					[0.749, "#FFFF00"],
+					[0.75, "#5DB501"],
+					[0.1, "#5DB501"]
+				], // !!!!
+				strokeColor: '#E0E0E0',
+				generateGradient: true
+			};
+			var target = document.getElementById(gauge_id); // your canvas element
+			var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+
+			gauge.maxValue = 100; // set max gauge value
+			gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+			gauge.animationSpeed = 11; // set animation speed (32 is default value)
+			gauge.set(value); // set actual value
+
+
+			$('#' + gauge_id + '_text').html(value + "%");
+		}
+
+		function DrawPieChart(data) {
+			// console.log(data.map(x=>x.start));
+			var pie_values = extractHstFromGantt(data);
+			// console.log(pie_values);
+
+			if (pie_values == null) {
+				$("#pie_chart_detail").html("<div><strong>No Data</strong></div>");
+				return;
+			} else {
+				$("#pie_chart_detail").html("");
+			}
+
+			var pie_chart_value_array = pie_values.map((x) => x.duration);
+			var pie_chart_label_array = pie_values.map((x) => x.status);
+			var pie_chart_color_array = pie_values.map((x) => x.color);
+
+			// Convert second to hour
+			var sum = 0;
+			for (i = 0; i < pie_chart_value_array.length; i++) {
+				pie_chart_value_array[i] = pie_chart_value_array[i].toFixed(2);
+			}
+			const onlineTime = pie_chart_value_array.map((item) => parseFloat(item)).reduce((a, b) => a + b, 0);
+			const totalTime = 24.0;
+			if (onlineTime < 24.0) {
+				pie_chart_value_array.push(totalTime - onlineTime);
+				pie_chart_label_array.push("Offline");
+				pie_chart_color_array.push('#000000');
+			}
+
+
+			var digits = 1;
+			var rounded_values = [];
+			for (var i = 0; i < pie_chart_value_array.length; i += 1) {
+				rounded_values.push(Math.round(pie_chart_value_array[i] / totalTime * 100 * 10 * digits) / 10 * digits + '%');
+			}
+
+			var text = rounded_values.map((v, i) =>
+				`${pie_chart_label_array[i]}<br>${pie_chart_value_array[i]} hr(s)<br>${rounded_values[i]}`);
+
+			var data = [{
+				values: pie_chart_value_array,
+				labels: pie_chart_label_array,
+				type: 'pie',
+				sort: true,
+				marker: {
+					colors: pie_chart_color_array
+				},
+				//text: text,
+				hovertext: text,
+				hoverinfo: 'text',
+				//textinfo: 'none'
+			}];
+
+			var layout = {
+				paper_bgcolor: "transparent",
+				margin: {
+					l: 20,
+					r: 20,
+					b: 0,
+					t: 0,
+				},
+				pieStartAngle: 180,
+				showlegend: true,
+				height: 210,
+				legend: {
+					font: 8,
+					orientation: "h"
+				},
+			};
+			if ($(window).width() < 768)
+				layout['showlegend'] = false;
+
+			//console.log(pie_chart_value_array);
+			if (plot == undefined) {
+				var plot = Plotly.newPlot('pie_chart_detail', data, layout, {
+					displayModeBar: false
+				});
+			} else {
+				plot.data = data;
+			}
+		}
+
+		function GetCustomerCurrentTime(customerTimezone) {
+			var currentTime = Math.floor(Date.now() / 1000);
+			var offset = new Date().getTimezoneOffset() * 60;
+			currentTime += offset;
+			currentTime += parseInt(customerTimezone) * 3600;
+			return new Date(currentTime * 1000);
+		}
+
+		function FilterOneMachineGanttData(_ganttInfo) {
+			let tmpList = [];
+			// remove overrided times
+			for (var i = 0; i < _ganttInfo.length - 1; i++) {
+				if (_ganttInfo[i].end > _ganttInfo[i + 1].start) {
+					_ganttInfo[i].end = _ganttInfo[i + 1].start;
+				}
+			}
+
+			// connect continuous data
+			for (var i = 0; i < _ganttInfo.length; i++) {
+				var connected = false;
+
+				if (i < _ganttInfo.length - 1 &&
+					_ganttInfo[i].status.toUpperCase() == _ganttInfo[i + 1].status.toUpperCase() &&
+					(_ganttInfo[i].end == _ganttInfo[i + 1].start)) {
+					_ganttInfo[i + 1].start = _ganttInfo[i].start;
+					connected = true;
+				}
+
+				if (connected == false) {
+					tmpList.push(_ganttInfo[i]);
+				}
+			}
+			return tmpList;
+		}
+
+		function DrawGanttChart(ganttData, timezone, currentDate) {
+			var tmpData = JSON.parse(JSON.stringify(ganttData));
+
+
+			var tasks = [];
+			if (tmpData.length == 0) {
+				$('#gantt_chart_detail').html("<div><strong>No Data</strong></div>");
+				return;
+			} else {
+				$('#gantt_chart_detail').html("");
+			}
+
+			var updated_data = FilterOneMachineGanttData(tmpData);
+
+			for (i = 0; i < updated_data.length; i++) {
+				var item = {
+					//"startDate": new Date((parseInt(updated_data[i].start) + diff_time) * 1000 + localOffset),
+					//"endDate": new Date((parseInt(updated_data[i].end) + diff_time) * 1000 + localOffset),
+					"startDate": new Date((parseInt(updated_data[i].start)) * 1000 + localOffset + factory_timezone *
+						3600 * 1000),
+					"endDate": new Date((parseInt(updated_data[i].end)) * 1000 + localOffset + factory_timezone * 3600 *
+						1000),
+					"color": updated_data[i].color,
+					"taskName": updated_data[i].machine_id,
+					"status": updated_data[i].status
+				};
+				tasks.push(item);
+			}
+
+			tasks.sort(function (a, b) {
+				if (a.endDate > b.endDate) {
+					return 1;
+				}
+				if (a.endDate < b.endDate) {
+					return -1;
+				}
+				return 0;
+			});
+
+			let startDate = new Date(currentDate);
+			let endDate = new Date(currentDate);
+			endDate.setDate(endDate.getDate() + 1);
+
+			if (startDate.getTime() < tasks[0].startDate.getTime()) {
+				var taskName = tasks[0].taskName;
+				var item = {
+					"startDate": startDate,
+					"endDate": startDate,
+					"color": "white",
+					"taskName": taskName,
+					"status": "start"
+				}
+				tasks = [item].concat(tasks);
+			}
+			if (endDate.getTime() > tasks[tasks.length - 1].endDate.getTime()) {
+				var taskName = tasks[tasks.length - 1].taskName;
+				var item = {
+					"startDate": endDate,
+					"endDate": endDate,
+					"color": "white",
+					"taskName": taskName,
+					"status": "end"
+				}
+				tasks.push(item);
+			}
+
+
+			var taskNames = ["ONE"];
+
+
+			var format = "%H:%M";
+			//console.log($("#chartContainer_" + id).width());
+			var margin = {
+				top: 0,
+				right: 10,
+				bottom: 30,
+				left: 10
+			};
+
+
+			var gantt = d3.gantt("#gantt_chart_detail", $("#gantt_chart_detail").width())
+				.width($("#gantt_chart_detail").width())
+				.Container("#gantt_chart_detail")
+				.taskTypes(taskNames)
+				.tickFormat(format)
+				.margin(margin);
+			gantt(tasks);
+		}
+
+
+		function extractHstFromGantt(_ganttInfo) {
+			var _additionalHst = [];
+
+			for (var i = 0; i < _ganttInfo.length; i++) {
+
+				if (_additionalHst.length == 0 || _additionalHst.filter((x) => x.status === _ganttInfo[i].status).length ==
+					0) {
+					_additionalHst.push({
+						status: _ganttInfo[i].status,
+						color: _ganttInfo[i].color,
+						duration: parseFloat(parseFloat(_ganttInfo[i].end) - parseFloat(_ganttInfo[i].start))
+					});
+				} else {
+					var _hst = _additionalHst.filter((x) => x.status === _ganttInfo[i].status)[0];
+					_hst.duration += parseFloat(parseFloat(_ganttInfo[i].end) - parseFloat(_ganttInfo[i].start));
+				}
+			}
+
+			for (var i = 0; i < _additionalHst.length; i++) {
+				_additionalHst[i].duration = _additionalHst[i].duration / 3600;
+			}
+
+			// calculate offline time
+			if (_ganttInfo.length > 0) {
+
+				var totalTime = 24.0;
+				// calculate sum of duration in _additionalHst
+				const onlineTime = _additionalHst.map((item) => item.duration).reduce((a, b) => a + b, 0);
+
+				var offlineTime = Math.floor(totalTime / 3600 - onlineTime);
+
+				// console.log("timestamps", startDate.getTime(), endDate.getTime());
+				if (offlineTime > 0) {
+					_additionalHst.push({
+						status: "Offline",
+						color: "#000000",
+						duration: offlineTime
+					});
+				}
+
+			} else {
+				return null;
+			}
+			return _additionalHst;
+		}
+
+		function DrawBarChart(hstList) {
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			function drawVisualization() {
+				var dataList = [];
+				dataList.push(['Day', 'In Cycle', 'Not In Cycle', 'In Cycle Trend']);
+				for (var i = hstList.length - 1; i >= 0 && hstList.length - i < 30; i--) {
+					var idle = 0;
+					idle += parseFloat(hstList[i]['uncat']);
+					idle += parseFloat(hstList[i]['r1t']);
+					idle += parseFloat(hstList[i]['r2t']);
+					idle += parseFloat(hstList[i]['r3t']);
+					idle += parseFloat(hstList[i]['r4t']);
+					idle += parseFloat(hstList[i]['r5t']);
+					idle += parseFloat(hstList[i]['r6t']);
+					idle += parseFloat(hstList[i]['r7t']);
+					idle += parseFloat(hstList[i]['r8t']);
+					idle += parseFloat(hstList[i]['offline']);
+
+					var incycle = parseFloat(hstList[i]['inCycle']);
+					var day = new Date(hstList[i]['date']);
+
+					var item = [day, incycle / 3600 / 24 * 100, idle / 3600 / 24 * 100, incycle / 3600 / 24 * 100];
+					dataList.push(item);
+				}
+				var data = google.visualization.arrayToDataTable(dataList);
+
+				var options = {
+					backgroundColor: "transparent",
+					title: '',
+					vAxis: {
+						title: 'Utilization %'
+					},
+					hAxis: {
+						title: 'Day'
+					},
+					seriesType: 'bars',
+					series: {
+						2: {
+							type: 'line'
+						}
+					},
+					chartArea: {
+						width: '92%'
+					},
+					legend: {
+						position: 'bottom'
+					},
+					width: '100%',
+					colors: ['#10ce79', '#ce101d', '#10ce79']
+				};
+
+				var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+				chart.draw(data, options);
+			}
+		}
+	</script>
+
+
+	</script>
+</body>
+
+</html>
+
+<script>
+var m_status=[[{"id":"1","machine_id":"Phosphate Line 1","machine_picture_url":"20220610145030_Phosphate Line.jpg","Operator":"John R.","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.73","created_at":"2022-06-09 12:07:37.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1654798057","time_stamp_ms":"1654798057","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"2","machine_id":"Phosphate Line 2","machine_picture_url":"20221020110011_Phosphate Line.jpg","Operator":"David Hobbs","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.75","created_at":"2022-08-24 01:48:29.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1661370509","time_stamp_ms":"1661370509","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"3","machine_id":"Cleaning Station","machine_picture_url":"20221108112127_clean.png","Operator":"Unattended","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2022-10-20 11:14:17.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1666286057","time_stamp_ms":"1666286057","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"4","machine_id":"Blast Booth","machine_picture_url":"20221025125234_Sand Blast.jpg","Operator":"Daniel Aguilar Martinez","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2022-10-20 11:14:34.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1666286074","time_stamp_ms":"1666286074","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"5","machine_id":"Paint Booth","machine_picture_url":"20221025123254_Paint Gun.png","Operator":"Curtis M.","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2022-10-20 11:14:41.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1666286081","time_stamp_ms":"1666286081","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"6","machine_id":"Assembly Blu\/137","machine_picture_url":"20221025123534_Assembly.png","Operator":"Cailum Fryman","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2022-10-20 11:15:57.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1666286157","time_stamp_ms":"1666286157","machine_name":"Assyyyy","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"7","machine_id":"Assembly Blu\/136","machine_picture_url":"20221025124134_Assembly.png","Operator":"Jamie E.","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2022-10-20 11:16:08.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1666286168","time_stamp_ms":"1666286168","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"8","machine_id":"Frag Cell","machine_picture_url":"20221025122527_Robot Arm.png","Operator":"Unattended","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.75","created_at":"2022-10-25 12:12:43.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1666721563","time_stamp_ms":"1666721563","machine_name":"Frag Cell","serial_number":"","cycle_signal":"3608A is the 24v input","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"9","machine_id":"Assembly Sub","machine_picture_url":"20221108112725_20221025124134_Assembly.png","Operator":"Jay R.","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2022-11-08 11:22:49.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1667931769","time_stamp_ms":"1667931769","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"10","machine_id":"Assembly Blu\/137-2","machine_picture_url":"20230118121433_Assembly.png","Operator":"Cailum Fryman","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2023-01-18 12:33:27.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1674070407","time_stamp_ms":"1674070407","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"11","machine_id":"Assembly Blu\/136-2","machine_picture_url":"20230118124733_Assembly.png","Operator":"Cailum Fryman","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2023-01-18 12:33:49.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1674070429","time_stamp_ms":"1674070429","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"12","machine_id":"Assembly Blu\/136-3","machine_picture_url":"20230216071049_man-assembly-line-icon-simple-style-vector.jpg","Operator":"Jamie E.","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2023-02-16 07:44:27.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1676558667","time_stamp_ms":"1676558667","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"13","machine_id":"Assembly Blu\/136-4","machine_picture_url":"20230216072249_man-assembly-line-icon-simple-style-vector.jpg","Operator":"Cailum Fryman","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.72","created_at":"2023-02-16 07:44:36.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1676558676","time_stamp_ms":"1676558676","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"14","machine_id":"Quality Control","machine_picture_url":"20230228061929_quality-5547976.jpg","Operator":"Sharon Hammond","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.74","created_at":"2023-02-16 07:50:44.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1676559044","time_stamp_ms":"1676559044","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"15","machine_id":"Cleaning Station 2","machine_picture_url":"20230223135016_clean.png","Operator":"Austin Stevens","operator_picture_url":null,"Utilization":null,"status":"Online","app_version":"8.68","created_at":"2023-02-23 01:09:12.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1677182952","time_stamp_ms":"1677182952","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}],[{"id":"16","machine_id":"fanuc1","machine_picture_url":"blank machine.png","Operator":null,"operator_picture_url":null,"Utilization":null,"status":null,"app_version":null,"created_at":"2023-04-25 02:03:47.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"time_stamp":"1682453027","time_stamp_ms":"1682453027","machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0"}]];
+var m_hst=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
+var m_gantt=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
+var m_info={"id":"1","logo":"https:\/\/slymms.com\/backend\/\/images\/photo\/20220503193800_Faxon Machining Logo.png","name":"Faxon","created_at":"2022-05-05 12:01:48.000000","timezone":"-4","emails":"roy.b@slytekinc.com;justin.mcrill@faxon-machining.com;jason.morville@faxon-machining.com","report_days":"123546","shift1_start":"06:00","shift1_end":"17:00","shift2_start":"17:00","shift2_end":"20:00","shift3_start":"21:30","shift3_end":"05:00"};
+var m_hstList=[[{"id":"","updatedAt":"2023-05-09 21:00:03","Utilization":"7","inCycle":"6138","uncat":"1085","date":"05\/10\/2023","offline":"1","r1t":"931","r2t":"0","r3t":"18332","r4t":"1417","r5t":"51787","r6t":"0","r7t":"0","r8t":"6684","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"33","availability":"21","quality":"100","performance":"155","goodParts":"3","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:04","Utilization":"8","inCycle":"6135","uncat":"1130","date":"05\/11\/2023","offline":"1","r1t":"934","r2t":"0","r3t":"1985","r4t":"4399","r5t":"33893","r6t":"0","r7t":"0","r8t":"22703","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"33","availability":"21","quality":"100","performance":"155","goodParts":"3","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 03:54:47","Utilization":"7","inCycle":"6141","uncat":"1157","date":"05\/12\/2023","offline":"24885","r1t":"965","r2t":"0","r3t":"37783","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"15427","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"33","availability":"21","quality":"100","performance":"155","goodParts":"3","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"86370","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"86367","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"59588","r4t":"1583","r5t":"25183","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:03","Utilization":"7","inCycle":"6145","uncat":"1151","date":"05\/16\/2023","offline":"1","r1t":"986","r2t":"0","r3t":"12618","r4t":"5231","r5t":"48888","r6t":"0","r7t":"0","r8t":"11344","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"33","availability":"21","quality":"100","performance":"155","goodParts":"3","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:04","Utilization":"2","inCycle":"2049","uncat":"363","date":"05\/17\/2023","offline":"1","r1t":"310","r2t":"0","r3t":"22491","r4t":"1993","r5t":"49005","r6t":"0","r7t":"0","r8t":"10139","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"11","availability":"7","quality":"100","performance":"155","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:02","Utilization":"18","inCycle":"12329","uncat":"2123","date":"05\/18\/2023","offline":"0","r1t":"1494","r2t":"0","r3t":"1646","r4t":"3415","r5t":"29935","r6t":"0","r7t":"0","r8t":"16592","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"85","availability":"42","quality":"100","performance":"200","goodParts":"14","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 03:58:20","Utilization":"2","inCycle":"2046","uncat":"381","date":"05\/19\/2023","offline":"25100","r1t":"303","r2t":"0","r3t":"22574","r4t":"6","r5t":"25800","r6t":"0","r7t":"0","r8t":"10151","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"11","availability":"7","quality":"100","performance":"155","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86351","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86355","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:01","Utilization":"9","inCycle":"8248","uncat":"1145","date":"05\/22\/2023","offline":"1","r1t":"616","r2t":"0","r3t":"19729","r4t":"1575","r5t":"49563","r6t":"0","r7t":"0","r8t":"5479","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"47","availability":"28","quality":"100","performance":"167","goodParts":"23","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:06","Utilization":"11","inCycle":"10270","uncat":"1599","date":"05\/23\/2023","offline":"19464","r1t":"531","r2t":"293","r3t":"7340","r4t":"2582","r5t":"29146","r6t":"0","r7t":"0","r8t":"15158","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"41","availability":"35","quality":"100","performance":"116","goodParts":"20","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:00","Utilization":"1","inCycle":"603","uncat":"76","date":"05\/24\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"25508","r5t":"23308","r6t":"0","r7t":"0","r8t":"3711","machine_id":"Phosphate Line 1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"2","availability":"2","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:04","Utilization":"4","inCycle":"4090","uncat":"826","date":"05\/10\/2023","offline":"774","r1t":"686","r2t":"0","r3t":"10999","r4t":"9376","r5t":"48835","r6t":"0","r7t":"0","r8t":"10777","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"35","availability":"22","quality":"100","performance":"155","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:03","Utilization":"10","inCycle":"6136","uncat":"1290","date":"05\/11\/2023","offline":"2","r1t":"988","r2t":"0","r3t":"10610","r4t":"6203","r5t":"21327","r6t":"0","r7t":"0","r8t":"11693","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"53","availability":"34","quality":"100","performance":"155","goodParts":"3","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 02:14:49","Utilization":"4","inCycle":"4092","uncat":"883","date":"05\/12\/2023","offline":"46344","r1t":"730","r2t":"0","r3t":"2153","r4t":"6298","r5t":"3500","r6t":"0","r7t":"0","r8t":"22349","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"35","availability":"22","quality":"100","performance":"155","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:01:20","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"86392","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:02:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"86362","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:31","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"19214","r1t":"0","r2t":"0","r3t":"35161","r4t":"6787","r5t":"25222","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:05","Utilization":"4","inCycle":"4097","uncat":"844","date":"05\/16\/2023","offline":"25906","r1t":"685","r2t":"0","r3t":"16888","r4t":"7486","r5t":"23059","r6t":"0","r7t":"0","r8t":"7399","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"35","availability":"22","quality":"100","performance":"155","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:03:03","Utilization":"4","inCycle":"4095","uncat":"792","date":"05\/17\/2023","offline":"18235","r1t":"715","r2t":"0","r3t":"17298","r4t":"6668","r5t":"30777","r6t":"0","r7t":"0","r8t":"7765","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"35","availability":"22","quality":"100","performance":"155","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:03","Utilization":"7","inCycle":"6159","uncat":"1266","date":"05\/18\/2023","offline":"3937","r1t":"1064","r2t":"0","r3t":"3138","r4t":"2879","r5t":"43499","r6t":"7","r7t":"0","r8t":"24418","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"53","availability":"34","quality":"100","performance":"154","goodParts":"3","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:01","Utilization":"4","inCycle":"4091","uncat":"939","date":"05\/19\/2023","offline":"0","r1t":"321","r2t":"0","r3t":"18964","r4t":"7201","r5t":"49152","r6t":"0","r7t":"0","r8t":"5685","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"45","availability":"22","quality":"100","performance":"200","goodParts":"6","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86358","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86364","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:01","Utilization":"4","inCycle":"4099","uncat":"734","date":"05\/22\/2023","offline":"8","r1t":"524","r2t":"586","r3t":"16754","r4t":"6754","r5t":"49626","r6t":"0","r7t":"0","r8t":"7292","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"45","availability":"22","quality":"100","performance":"200","goodParts":"6","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:06","Utilization":"7","inCycle":"6145","uncat":"1301","date":"05\/23\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"11985","r4t":"6319","r5t":"43489","r6t":"0","r7t":"0","r8t":"17138","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"43","availability":"34","quality":"100","performance":"126","goodParts":"13","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/24\/2023","offline":"746","r1t":"0","r2t":"0","r3t":"28577","r4t":"5767","r5t":"18105","r6t":"0","r7t":"0","r8t":"0","machine_id":"Phosphate Line 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-10 05:57:20","Utilization":"9","inCycle":"8039","uncat":"0","date":"05\/10\/2023","offline":"32299","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"46008","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"4","availability":"27","quality":"100","performance":"14","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/11\/2023","offline":"2","r1t":"0","r2t":"1685","r3t":"0","r4t":"1","r5t":"0","r6t":"0","r7t":"1","r8t":"60047","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 07:50:23","Utilization":"0","inCycle":"242","uncat":"29","date":"05\/12\/2023","offline":"39083","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"28556","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 06:00:39","Utilization":"10","inCycle":"8957","uncat":"32","date":"05\/17\/2023","offline":"33388","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"230","r6t":"0","r7t":"0","r8t":"43775","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"8","availability":"31","quality":"100","performance":"26","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/18\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86383","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:06","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/19\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86346","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86369","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86367","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:03","Utilization":"2","inCycle":"1812","uncat":"0","date":"05\/22\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"84549","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"8","availability":"6","quality":"100","performance":"132","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:06","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/23\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86390","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/24\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"53163","machine_id":"Cleaning Station","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-10 05:22:09","Utilization":"7","inCycle":"6834","uncat":"8","date":"05\/10\/2023","offline":"30150","r1t":"0","r2t":"0","r3t":"8565","r4t":"0","r5t":"970","r6t":"0","r7t":"0","r8t":"39861","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"41","availability":"23","quality":"100","performance":"175","goodParts":"5","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:05","Utilization":"11","inCycle":"10324","uncat":"94","date":"05\/11\/2023","offline":"4","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"75965","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"58","availability":"35","quality":"100","performance":"162","goodParts":"7","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:03","Utilization":"7","inCycle":"6535","uncat":"0","date":"05\/12\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"79816","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"33","availability":"22","quality":"100","performance":"146","goodParts":"4","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"5351","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 07:57:07","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"86325","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:04","Utilization":"12","inCycle":"10819","uncat":"0","date":"05\/16\/2023","offline":"20411","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"55120","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"50","availability":"37","quality":"100","performance":"133","goodParts":"6","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:02","Utilization":"2","inCycle":"2413","uncat":"0","date":"05\/17\/2023","offline":"3","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"83962","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"16","availability":"8","quality":"100","performance":"198","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:04","Utilization":"12","inCycle":"10965","uncat":"0","date":"05\/18\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"75379","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"66","availability":"38","quality":"100","performance":"175","goodParts":"8","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:03","Utilization":"4","inCycle":"1985","uncat":"0","date":"05\/19\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"47300","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"8","availability":"6","quality":"100","performance":"120","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 06:10:02","Utilization":"5","inCycle":"2592","uncat":"46","date":"05\/22\/2023","offline":"33037","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"8349","machine_id":"Blast Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"8","availability":"9","quality":"100","performance":"92","goodParts":"1","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-10 03:06:07","Utilization":"19","inCycle":"11822","uncat":"40","date":"05\/10\/2023","offline":"23265","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"25938","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"60","availability":"32","quality":"100","performance":"182","goodParts":"12","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 03:16:04","Utilization":"22","inCycle":"13906","uncat":"28","date":"05\/11\/2023","offline":"26524","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"20115","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"29","availability":"38","quality":"100","performance":"77","goodParts":"6","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 03:41:30","Utilization":"32","inCycle":"19599","uncat":"76","date":"05\/12\/2023","offline":"25486","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"15871","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"55","availability":"54","quality":"100","performance":"101","goodParts":"11","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 03:01:47","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"24885","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"35869","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 02:37:51","Utilization":"5","inCycle":"4346","uncat":"0","date":"05\/16\/2023","offline":"27372","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"48721","r6t":"0","r7t":"0","r8t":"1487","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"5","availability":"12","quality":"100","performance":"41","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 04:01:41","Utilization":"17","inCycle":"14952","uncat":"34","date":"05\/17\/2023","offline":"25588","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"23981","r6t":"0","r7t":"0","r8t":"21790","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"20","availability":"41","quality":"100","performance":"48","goodParts":"4","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:04","Utilization":"10","inCycle":"8934","uncat":"0","date":"05\/18\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"58497","r6t":"0","r7t":"0","r8t":"18935","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"24","availability":"24","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:04","Utilization":"25","inCycle":"15369","uncat":"25","date":"05\/19\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"45943","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"55","availability":"42","quality":"100","performance":"128","goodParts":"11","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 04:18:07","Utilization":"4","inCycle":"2544","uncat":"0","date":"05\/22\/2023","offline":"26350","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"32066","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"4","availability":"7","quality":"100","performance":"70","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 04:19:58","Utilization":"33","inCycle":"20250","uncat":"295","date":"05\/23\/2023","offline":"26870","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"13876","r6t":"0","r7t":"0","r8t":"0","machine_id":"Paint Booth","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"112","availability":"56","quality":"100","performance":"200","goodParts":"42","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:01:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/10\/2023","offline":"23380","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"62985","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/11\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86344","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/12\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"77741","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 04:59:29","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/18\/2023","offline":"86386","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:01:12","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/19\/2023","offline":"86355","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:02:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"86330","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:33","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"86347","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:39","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/22\/2023","offline":"86384","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:01:48","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/23\/2023","offline":"86386","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:01:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/24\/2023","offline":"53204","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/137","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:01","Utilization":"8","inCycle":"7548","uncat":"0","date":"05\/10\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"78789","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"26","availability":"26","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:00","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/11\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86367","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/12\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86366","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86369","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:00:06","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86370","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86374","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/16\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86371","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:02","Utilization":"6","inCycle":"5789","uncat":"0","date":"05\/17\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"80606","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"20","availability":"20","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:02","Utilization":"12","inCycle":"11131","uncat":"0","date":"05\/18\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"75234","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"38","availability":"38","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:03","Utilization":"10","inCycle":"9297","uncat":"0","date":"05\/19\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"77065","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"32","availability":"32","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86368","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86368","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:03","Utilization":"21","inCycle":"18134","uncat":"0","date":"05\/22\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"68210","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"62","availability":"62","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/23\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86368","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:05","Utilization":"31","inCycle":"16970","uncat":"0","date":"05\/24\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"36201","machine_id":"Assembly Blu\/136","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"58","availability":"58","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-10 08:17:40","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/10\/2023","offline":"84623","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:14:25","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/11\/2023","offline":"85942","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:18:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/12\/2023","offline":"86395","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:24:30","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"86355","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:12:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"86320","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:11:53","Utilization":"11","inCycle":"6798","uncat":"8771","date":"05\/15\/2023","offline":"37878","r1t":"0","r2t":"2764","r3t":"0","r4t":"28","r5t":"0","r6t":"0","r7t":"0","r8t":"4945","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"37","availability":"23","quality":"100","performance":"158","goodParts":"8","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 03:50:43","Utilization":"27","inCycle":"13654","uncat":"4249","date":"05\/17\/2023","offline":"23917","r1t":"416","r2t":"110","r3t":"1640","r4t":"99","r5t":"0","r6t":"0","r7t":"0","r8t":"5402","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"93","availability":"47","quality":"100","performance":"197","goodParts":"20","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 07:11:21","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/18\/2023","offline":"86194","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:27:04","Utilization":"29","inCycle":"14115","uncat":"4211","date":"05\/19\/2023","offline":"23960","r1t":"1008","r2t":"345","r3t":"0","r4t":"346","r5t":"0","r6t":"0","r7t":"0","r8t":"4676","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"98","availability":"49","quality":"100","performance":"200","goodParts":"22","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 06:38:08","Utilization":"13","inCycle":"11874","uncat":"40446","date":"05\/22\/2023","offline":"33945","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"117","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"41","availability":"41","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:12:36","Utilization":"32","inCycle":"16608","uncat":"29114","date":"05\/23\/2023","offline":"1","r1t":"2370","r2t":"736","r3t":"165","r4t":"501","r5t":"0","r6t":"0","r7t":"0","r8t":"1507","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"115","availability":"57","quality":"100","performance":"200","goodParts":"26","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-24 06:19:18","Utilization":"13","inCycle":"5949","uncat":"3350","date":"05\/24\/2023","offline":"32799","r1t":"525","r2t":"714","r3t":"0","r4t":"140","r5t":"0","r6t":"0","r7t":"0","r8t":"95","machine_id":"Frag Cell","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"41","availability":"20","quality":"100","performance":"200","goodParts":"22","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:02","Utilization":"38","inCycle":"33636","uncat":"0","date":"05\/10\/2023","offline":"2","r1t":"0","r2t":"29535","r3t":"0","r4t":"0","r5t":"23192","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"116","availability":"116","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/11\/2023","offline":"27238","r1t":"0","r2t":"59160","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:04","Utilization":"24","inCycle":"21514","uncat":"0","date":"05\/12\/2023","offline":"1","r1t":"0","r2t":"39984","r3t":"0","r4t":"0","r5t":"24842","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"74","availability":"74","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86369","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:00:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86369","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"1","r1t":"0","r2t":"45695","r3t":"0","r4t":"0","r5t":"40674","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:02","Utilization":"3","inCycle":"3423","uncat":"0","date":"05\/16\/2023","offline":"1","r1t":"0","r2t":"56752","r3t":"0","r4t":"0","r5t":"26174","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"11","availability":"11","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/17\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86390","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/18\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86346","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/19\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"65499","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 02:04:21","Utilization":"24","inCycle":"20906","uncat":"0","date":"05\/22\/2023","offline":"18256","r1t":"0","r2t":"0","r3t":"0","r4t":"4474","r5t":"42720","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"72","availability":"72","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:03","Utilization":"15","inCycle":"8244","uncat":"0","date":"05\/23\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"45906","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"28","availability":"28","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-24 02:05:54","Utilization":"8","inCycle":"4694","uncat":"0","date":"05\/24\/2023","offline":"18353","r1t":"0","r2t":"0","r3t":"0","r4t":"7351","r5t":"22802","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Sub","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"16","availability":"16","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[],[{"id":"","updatedAt":"2023-05-18 07:33:50","Utilization":"12","inCycle":"8982","uncat":"0","date":"05\/18\/2023","offline":"38186","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"12788","r6t":"0","r7t":"0","r8t":"13539","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"18","availability":"31","quality":"100","performance":"60","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 03:49:16","Utilization":"22","inCycle":"19039","uncat":"10","date":"05\/19\/2023","offline":"48481","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"1660","r6t":"0","r7t":"0","r8t":"17179","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"18","availability":"66","quality":"100","performance":"28","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:01:19","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"86320","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:07","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"86318","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:09","Utilization":"22","inCycle":"19721","uncat":"4","date":"05\/22\/2023","offline":"27653","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"25224","r6t":"0","r7t":"0","r8t":"13779","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"18","availability":"68","quality":"100","performance":"27","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/23\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"54692","r6t":"0","r7t":"0","r8t":"31654","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:04","Utilization":"31","inCycle":"16627","uncat":"21","date":"05\/24\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"24540","r6t":"0","r7t":"0","r8t":"11998","machine_id":"Assembly Blu\/136-2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"18","availability":"57","quality":"100","performance":"32","goodParts":"1","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:05","Utilization":"8","inCycle":"7548","uncat":"27621","date":"05\/10\/2023","offline":"4","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"51176","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"26","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:01","Utilization":"0","inCycle":"0","uncat":"59613","date":"05\/11\/2023","offline":"26734","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:12","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/12\/2023","offline":"86356","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:01:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"86387","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:03:11","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"86393","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:02:25","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"86391","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:54","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/16\/2023","offline":"86308","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:50","Utilization":"6","inCycle":"5789","uncat":"17","date":"05\/17\/2023","offline":"55113","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"25457","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"20","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:03","Utilization":"12","inCycle":"11131","uncat":"0","date":"05\/18\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"75230","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"38","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:03","Utilization":"10","inCycle":"9297","uncat":"0","date":"05\/19\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"77054","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"32","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:04","Utilization":"0","inCycle":"0","uncat":"22701","date":"05\/20\/2023","offline":"5","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"63643","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:05","Utilization":"0","inCycle":"0","uncat":"86345","date":"05\/21\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:01","Utilization":"20","inCycle":"18132","uncat":"22459","date":"05\/22\/2023","offline":"6","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"45795","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"62","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:03","Utilization":"9","inCycle":"8510","uncat":"0","date":"05\/23\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"25602","r6t":"0","r7t":"0","r8t":"52276","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"29","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:05","Utilization":"31","inCycle":"16969","uncat":"0","date":"05\/24\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"26066","r6t":"0","r7t":"0","r8t":"10135","machine_id":"Assembly Blu\/136-3","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"58","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:00","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/10\/2023","offline":"86374","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:35","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/11\/2023","offline":"86334","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:07","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/12\/2023","offline":"86251","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:15","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"86368","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:01:33","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"86355","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:22","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"86377","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:42","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/16\/2023","offline":"86360","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:01:09","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/17\/2023","offline":"86320","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:41","Utilization":"10","inCycle":"8985","uncat":"0","date":"05\/18\/2023","offline":"37844","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"25640","r6t":"0","r7t":"0","r8t":"13885","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"31","quality":"100","performance":"0","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:05","Utilization":"24","inCycle":"21485","uncat":"0","date":"05\/19\/2023","offline":"24512","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"25442","r6t":"0","r7t":"0","r8t":"14907","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"74","quality":"100","performance":"0","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86353","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:00","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"86353","r6t":"0","r7t":"0","r8t":"0","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:04","Utilization":"37","inCycle":"32315","uncat":"0","date":"05\/22\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"53172","r6t":"0","r7t":"0","r8t":"876","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"112","quality":"100","performance":"0","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:01","Utilization":"19","inCycle":"17048","uncat":"0","date":"05\/23\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"54752","r6t":"0","r7t":"0","r8t":"14546","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"59","quality":"100","performance":"0","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:03","Utilization":"35","inCycle":"18794","uncat":"9","date":"05\/24\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"24529","r6t":"0","r7t":"0","r8t":"9852","machine_id":"Assembly Blu\/136-4","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"65","quality":"100","performance":"0","goodParts":"1","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:01","Utilization":"9","inCycle":"8632","uncat":"152","date":"05\/10\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"77573","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"13","availability":"29","quality":"80","performance":"57","goodParts":"4","badParts":"1","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:02","Utilization":"7","inCycle":"6644","uncat":"0","date":"05\/11\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"79709","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"3","availability":"23","quality":"33","performance":"45","goodParts":"1","badParts":"2","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:03","Utilization":"62","inCycle":"54170","uncat":"160","date":"05\/12\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"32048","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"6","availability":"188","quality":"28","performance":"12","goodParts":"2","badParts":"5","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:01","Utilization":"100","inCycle":"86380","uncat":"0","date":"05\/13\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"299","availability":"299","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:00:01","Utilization":"99","inCycle":"86376","uncat":"0","date":"05\/14\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"299","availability":"299","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:04","Utilization":"99","inCycle":"86379","uncat":"0","date":"05\/15\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"299","availability":"299","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:03","Utilization":"26","inCycle":"22629","uncat":"0","date":"05\/16\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"63719","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"3","availability":"78","quality":"50","performance":"8","goodParts":"1","badParts":"1","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:05","Utilization":"6","inCycle":"5947","uncat":"0","date":"05\/17\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"80397","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"6","availability":"20","quality":"0","performance":"33","goodParts":"0","badParts":"2","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:02","Utilization":"7","inCycle":"6363","uncat":"176","date":"05\/18\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"79807","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"26","availability":"22","quality":"60","performance":"200","goodParts":"9","badParts":"6","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:00:05","Utilization":"2","inCycle":"2016","uncat":"0","date":"05\/19\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"84373","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"3","availability":"7","quality":"100","performance":"49","goodParts":"1","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:01","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86398","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86341","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/22\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"86341","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-22 21:00:03","Utilization":"10","inCycle":"7534","uncat":"321","date":"05\/23\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"65483","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"17","availability":"26","quality":"100","performance":"66","goodParts":"5","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-24 06:29:26","Utilization":"2","inCycle":"1318","uncat":"204","date":"05\/24\/2023","offline":"39155","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"12478","machine_id":"Quality Control","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"9","availability":"4","quality":"100","performance":"200","goodParts":"5","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-09 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/10\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"50528","r6t":"0","r7t":"0","r8t":"35849","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-10 21:00:05","Utilization":"3","inCycle":"3185","uncat":"0","date":"05\/11\/2023","offline":"2","r1t":"0","r2t":"45842","r3t":"0","r4t":"0","r5t":"31270","r6t":"0","r7t":"0","r8t":"6081","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"22","availability":"11","quality":"100","performance":"200","goodParts":"6","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-11 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/12\/2023","offline":"1","r1t":"0","r2t":"86393","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-12 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/13\/2023","offline":"1","r1t":"0","r2t":"86381","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-13 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/14\/2023","offline":"0","r1t":"0","r2t":"86331","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-14 21:00:13","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/15\/2023","offline":"1","r1t":"0","r2t":"86394","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/16\/2023","offline":"1","r1t":"0","r2t":"86395","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:02","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/17\/2023","offline":"2","r1t":"0","r2t":"86353","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-17 21:00:06","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/18\/2023","offline":"70480","r1t":"0","r2t":"15907","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-18 21:01:49","Utilization":"0","inCycle":"3","uncat":"0","date":"05\/19\/2023","offline":"23929","r1t":"0","r2t":"57785","r3t":"1","r4t":"0","r5t":"0","r6t":"0","r7t":"1","r8t":"4627","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"100","performance":"200","goodParts":"2","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:03","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/20\/2023","offline":"1","r1t":"0","r2t":"86397","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:05","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/21\/2023","offline":"2","r1t":"0","r2t":"25177","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 03:39:35","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/23\/2023","offline":"23974","r1t":"0","r2t":"37698","r3t":"0","r4t":"0","r5t":"24694","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:04","Utilization":"0","inCycle":"0","uncat":"0","date":"05\/24\/2023","offline":"0","r1t":"0","r2t":"29745","r3t":"0","r4t":"0","r5t":"23411","r6t":"0","r7t":"0","r8t":"0","machine_id":"Cleaning Station 2","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}],[{"id":"","updatedAt":"2023-05-15 12:41:10","Utilization":"0","inCycle":"0","uncat":"29914","date":"05\/15\/2023","offline":"56434","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-15 21:00:09","Utilization":"0","inCycle":"0","uncat":"86381","date":"05\/16\/2023","offline":"0","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-16 21:00:42","Utilization":"0","inCycle":"0","uncat":"42227","date":"05\/17\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 08:54:11","Utilization":"0","inCycle":"0","uncat":"43561","date":"05\/19\/2023","offline":"42794","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-19 21:00:16","Utilization":"0","inCycle":"0","uncat":"86376","date":"05\/20\/2023","offline":"1","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-20 21:00:38","Utilization":"0","inCycle":"0","uncat":"86337","date":"05\/21\/2023","offline":"3","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-21 21:00:02","Utilization":"0","inCycle":"0","uncat":"52296","date":"05\/22\/2023","offline":"2","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 08:23:21","Utilization":"0","inCycle":"0","uncat":"45417","date":"05\/23\/2023","offline":"40945","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"},{"id":"","updatedAt":"2023-05-23 21:00:23","Utilization":"0","inCycle":"0","uncat":"53153","date":"05\/24\/2023","offline":"3","r1t":"0","r2t":"0","r3t":"0","r4t":"0","r5t":"0","r6t":"0","r7t":"0","r8t":"0","machine_id":"fanuc1","aux1data":null,"aux2data":null,"aux3data":null,"gantt_data":"","time_stamp":"","time_stamp_ms":"","oee":"0","availability":"0","quality":"0","performance":"0","goodParts":"0","badParts":"0","square_inch":"0.00"}]];
+</script>
+

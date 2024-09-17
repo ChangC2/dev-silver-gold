@@ -1,0 +1,28 @@
+{
+    "remotePath": "./public_html",
+    "host": "slymms.com",
+    "username": "cuntianhong@slymms.com",
+    "password": "dhgidsusDHGIDSUS-3.16",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\application\\config"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ".js",".php",".css",".html"
+        ],
+        "path": "./public_html"
+    }
+}

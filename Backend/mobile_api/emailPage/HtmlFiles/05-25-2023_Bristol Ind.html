@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>SLYTRACKR</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+	<!-- Material Design Bootstrap -->
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet"> -->
+
+
+	<link href="https://api.slymms.com/assets/css/style_detailPage-email.css?v=1.15" rel="stylesheet">
+	<!-- <link href="https://192.168.0.58/mms/assets/css/style_detailPage-email.css?v=1.02" rel="stylesheet"> -->
+
+	<style>
+		/* Style the tab */
+		.main-content{
+			border: 1px solid gray;
+			background-color: white;
+		}
+
+		.main-header-title{
+			position: absolute;
+			left: 36px;
+    		height: 70px;
+			line-height: 70px;
+			font-size: 21px;
+			font-weight: bold;
+			color: #2fa5f3;
+		}
+
+		.main-header-date{
+			position: absolute;
+			right: 36px;
+    		height: 70px;
+			line-height: 70px;
+			font-size: 14px;
+			color:black;
+		}
+
+		.main-header-logo{
+			display: flex;
+    		height: 70px;
+    		align-items: center;
+		}
+
+		.tab {
+			overflow: hidden;
+			border: 1px solid #dfdede;
+			background-color: rgb(245, 245, 245);
+			padding: 10px 20px 10px 20px;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			cursor: pointer;
+			padding: 5px 5px;
+			transition: 0.3s;
+			font-size: 15px;
+			outline: none;
+			border: none;
+			margin-right: 10px;
+			border-radius: 5px;
+    		padding-left: 10px;
+    		padding-right: 10px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #2fa5f3;
+    		color: white;
+		}
+
+		@media only screen and (max-width:600px) {
+			.tab button {
+				font-size: 12px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<style>
+		.tooltip {
+			position: absolute;
+			line-height: 1;
+			font-size: 12px;
+			padding: 4px 5px;
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			border-radius: 2px;
+			pointer-events: none;
+			font-weight: bold;
+			max-width: 300px;
+		}
+
+		.tooltip:after {
+			box-sizing: border-box;
+			display: inline;
+			font-size: 12px;
+			width: 100%;
+			line-height: 1;
+			color: rgba(0, 0, 0, 0.8);
+			content: "\25BC";
+			position: absolute;
+			text-align: center;
+			margin: -1px 0 0 0;
+			top: 100%;
+			left: 0;
+		}
+	</style>
+	<div id="tooltip" class="tooltip" style="opacity: 0">
+		<p><span id="tooltip-time"></span></p>
+		<p>Status:&nbsp;<span id="tooltip-status"></span></p>
+		<p>Duration:&nbsp;<span id="tooltip-duration"></span></p>
+	</div>
+
+	<div class="container main-content">
+		<div class="row">
+			<!-- Header -->
+			<div class="row" style="padding-top: 5px;padding-bottom: 5px;">
+				<div class="col-xs-3">
+					<a class="main-header-title"  id="machine_id"></a>
+				</div>
+				<div class="col-xs-6">
+					<img class='center-image img img-thumbnail' id='title_logo'>
+				</div>
+				<div class="col-xs-3">
+					<a class="main-header-date" id="txtCurrentDate"></a>
+				</div>
+			</div>
+			<div class="tab" id="tabs">
+			</div>
+			
+			<div id="machine_content">
+				<!-- Key Performance Indicators -->
+				<div class="row KeyPerformance" id="key_indicator_container" style="margin:0; margin-top:5px;border: 0;">
+					<div style="margin-left:25px; margin-top:10px">
+						<a style="font-size:16px; font-weight:bold;">Key Performance Indicators</a>
+					</div>
+					<div class="row" style="margin:10px;">
+						<!-- OEE Gauge -->
+						<div class="col-xs-4" class="gauge_container">
+							<div style="display: flex; justify-content: center;">
+								<canvas id="gauge_oee"></canvas>
+							</div>
+							<div class="gauge_oee_text_container">
+								<a class="gauge_text gauge_text_oee_up" id="gauge_oee_text"></a>
+								<br>
+								<a class="gauge_text gauge_text_oee_down" style=" margin-top:10px;">OEE</a>
+							</div>
+						</div>
+
+						<!-- Small Gauge -->
+						<div class="col-xs-8" style="margin-top:20px">
+							<div class="row">
+								<!-- AVA Gauge -->
+								<div class="col-xs-4 gauge_container">
+									<div style="display: flex; justify-content: center;">
+										<canvas class="gauge_canvas" id="gauge_ava"></canvas>
+									</div>
+									<div class="gauge_text_container">
+										<a class="gauge_text gauge_text_up" id="gauge_ava_text"></a>
+										<br>
+										<a class="gauge_text gauge_text_down">AVA</a>
+									</div>
+								</div>
+								<!-- QUA Gauge -->
+								<div class="col-xs-4 gauge_container">
+									<div style="display: flex; justify-content: center;">
+										<canvas class="gauge_canvas" id="gauge_qua"></canvas>
+									</div>
+									<div class="gauge_text_container">
+										<a class="gauge_text gauge_text_up" id="gauge_qua_text"></a>
+										<br>
+										<a class="gauge_text gauge_text_down">QUA</a>
+									</div>
+								</div>
+								<!-- PER Gauge -->
+								<div class="col-xs-4 gauge_container">
+									<div style="display: flex; justify-content: center;">
+										<canvas class="gauge_canvas" id="gauge_per"></canvas>
+									</div>
+									<div class="gauge_text_container">
+										<a class="gauge_text gauge_text_up" id="gauge_per_text"></a>
+										<br>
+										<a class="gauge_text gauge_text_down">PER</a>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Pie Chart and Aux -->
+				<div class="row" style="margin:20px">
+					<div>
+						<a style="font-size:16px; font-weight:bold;">Utilization</a>
+					</div>
+					<!-- Pie Chart -->
+					<div class="col-xs-6" id="pie_chart_container">
+						<div class="relative">
+							<div id="pie_chart_detail" style="margin-top:0"></div>
+						</div>
+					</div>
+
+					<!-- Aux Data -->
+					<div class="col-xs-6 center-AuxText" style="padding-top:60px; padding-left:50px">
+						<div class="row" style="margin:0px; padding:0px; margin-top:3px">
+							<strong class="AuxText" id="title_status_aux1"></strong>
+							<strong class="AuxText" id="status_aux1"></strong>
+						</div>
+						<div class="row" style="margin:0px; padding:0px; margin-top:3px">
+							<strong class="AuxText" style="color:red" id="title_status_aux2"></strong>
+							<strong style="color:red" class="AuxText" id="status_aux2"></strong>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gantt Chart -->
+				<div class="row" style="margin:20px;">
+					<div>
+						<a style="margin-top:20px;font-size:16px; font-weight:bold;">TimeLine</a>
+					</div>
+					<div style="display: block;padding-right:20px;" id="gantt_chart_detail">
+					</div>
+				</div>
+
+				<!-- Bar Chart -->
+				<div class="row" style="margin:20px">
+					<div>
+						<a style="margin-top:20px;font-size:16px; font-weight:bold;">Utilization History</a>
+					</div>
+					<div id="chart_div" style="height: 300px; display: block; padding: 0px 0px 0px 0px"></div>
+				</div>
+			</div>
+
+			<div id="total_parts_content" style="padding: 30px 50px 30px 50px;min-height: 600px;">
+				
+			</div>
+		</div>
+		
+		<div class="row" style="margin:20px">
+			<div style="text-align: center;"><img
+					src="https://www.slytrackr.com/uploads/2/4/3/3/24335298/published/1446941887.png?1539790071" alt=""
+					height="40" /></div>
+		</div>
+	</div>
+
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+	</script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script> -->
+
+
+	<script src="https://api.slymms.com/d3_assets/d3.v3.min.js"></script>
+	<script src="https://api.slymms.com/d3_assets/gantt-chart-d3-email.js?v=1.03"></script>
+	<script src="https://api.slymms.com/gauge_assets/Gauge.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
+	<!-- Bar Chart -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<!-- For modal dialog -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+	<script>
+		var diff_time = 0;
+		d = new Date();
+		localTime = d.getTime();
+		localOffset = d.getTimezoneOffset() * 60000;
+
+		String.prototype.toHHMMSS = function () {
+			var sec_num = parseInt(this, 10); // don't forget the second param
+			var hours = Math.floor(sec_num / 3600);
+			var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+			var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+			if (hours < 10) {
+				hours = "0" + hours;
+			}
+			if (minutes < 10) {
+				minutes = "0" + minutes;
+			}
+			if (seconds < 10) {
+				seconds = "0" + seconds;
+			}
+			var res = "";
+
+			if (hours > 0)
+				res = hours + 'hour(s) ' + minutes + 'minute(s) ' + seconds;
+			else if (minutes > 0)
+				res = minutes + 'minute(s) ' + seconds;
+			else
+				res = seconds;
+
+			return res + "second(s)";
+		}
+	</script>
+
+	<script>
+		var factory_timezone;
+		$(document).ready(function () {
+			//m_gantt = m_gantt[0];
+			//m_status = m_status[0];
+			//m_hst = m_hst[0];
+			factory_timezone = m_info['timezone'];
+			// showing logo image.
+			$('#title_logo').attr('src', m_info['logo']);
+			// showing current date
+
+			// Showing Tabs
+			var tabString = "";
+			for (var i = 0; i < m_status.length; i++) {
+				if (i == 0) {
+					tabString += `<button class="tablinks active" onclick="onClickMachine(this, event, ` + i + `)">` +
+						m_status[i][0][
+							'machine_id'
+						] + `</button>`;
+				} else {
+					tabString += `<button class="tablinks" onclick="onClickMachine(this, event, ` + i + `)">` +
+						m_status[i][0][
+							'machine_id'
+						] + `</button>`;
+				}
+			}
+			tabString += `<button class="tablinks" onclick="onClickTotal(this, event)">Total Parts</button>`;
+			$('#tabs').html(tabString);
+
+			google.charts.load('current', {
+				'packages': ['corechart']
+			});
+			ShowMachine(0);
+		});
+
+		function onClickMachine(btnThis, event, no) {
+			$('#machine_content').show();
+			$('#total_parts_content').hide();
+			if(m_hst[no].length == 0){
+				alert("Sorry, there's no data");
+				return;
+			}
+			$('.tablinks').map(function () {
+				$(this).removeClass('active');
+			})
+			$(btnThis).addClass("active");
+			ShowMachine(no);
+		}
+
+		function onClickTotal(btnThis, event) {
+			$('#machine_content').hide();
+			$('#total_parts_content').show();
+			$('.tablinks').map(function () {
+				$(this).removeClass('active');
+			})
+			$(btnThis).addClass("active");
+			showTotalParts();
+		}
+
+		function showTotalParts(){
+			var goodString = ``;
+			var badString = ``;
+			var totalGoodParts = 0;
+			var totalBadParts = 0;
+			for (var i = 0; i < m_status.length; i++) {
+				try {
+					goodString += `<div style="margin-left:30px;color:green;font-size: 18px;">` + m_status[i][0]['machine_id'] + ` : ` + m_hst[i][0].goodParts + `</div>`; 
+					totalGoodParts += parseInt(m_hst[i][0].goodParts);
+				} catch (err) {}
+				
+			}
+			var totalGoodString = `<div style="color:green;font-size: 21px;font-weight:bold;">Total Good Parts : `+totalGoodParts+`</div>`;
+
+			for (var i = 0; i < m_status.length; i++) {
+				try {
+					badString += `<div style="margin-left:30px;color:red;font-size: 18px;">` + m_status[i][0]['machine_id'] + ` : ` + m_hst[i][0].badParts + `</div>`; 
+					totalBadParts += parseInt(m_hst[i][0].badParts);
+				} catch (err) {}
+			}
+			var totalBadString = `<div style="color:red;font-size: 21px;font-weight:bold;">Total Bad Parts : `+totalBadParts+`</div>`;
+			$('#total_parts_content').html(totalGoodString + goodString + totalBadString + badString);
+		}
+	</script>
+
+	<script>
+		function ShowMachine(no) {
+			
+			// console.log(no, timezone, currentDate);
+			try {
+				$('#txtCurrentDate').html(m_hst[no][0]['date']);
+			} catch (e) {
+			}
+			
+			$('#machine_id').html(m_status[no][0]['machine_id']);
+			try {
+				DrawKeyPerformanceSection(no);
+			} catch (err) {}
+			
+			try {
+				DrawPieChartSection(no);
+			} catch (err) {}
+			
+			try {				
+				DrawGanttChartSection(no, m_info['timezone'], m_hst[no][0]['date']);				
+			} catch (err) {}
+			try {
+				DrawBarChartSection(no);
+			} catch (err) {}
+		}
+
+		function DrawKeyPerformanceSection(no) {
+			DrawGauge_one('gauge_oee', m_hst[no][0].oee);
+			DrawGauge_one('gauge_ava', m_hst[no][0].availability);
+			DrawGauge_one('gauge_qua', m_hst[no][0].quality);
+			DrawGauge_one('gauge_per', m_hst[no][0].performance);
+		}
+
+		function DrawPieChartSection(no) {
+			//DrawPieChart(m_hst[no], m_status[no]);			
+			DrawPieChart(m_gantt[no]);
+			//console.log(m_hst[no]);
+
+			$('#status_aux1').html(m_hst[no][0].goodParts);
+			$('#status_aux2').html(m_hst[no][0].badParts);
+			$('#title_status_aux1').html("Good Parts:");
+			$('#title_status_aux2').html("Bad  Parts:");
+
+		}
+
+		function DrawGanttChartSection(no, timezone, currentDate) {		
+			
+			DrawGanttChart(m_gantt[no], timezone, currentDate);
+		}
+
+		function DrawBarChartSection(no) {
+			DrawBarChart(m_hstList[no]);
+		}
+	</script>
+
+	<script>
+		function DrawGauge_one(gauge_id, value) {
+			//console.log(gaugeArray[gauge_id]);
+
+			var opts = {
+				angle: -0.5,
+				lineWidth: 0.15,
+				pointer: {
+					length: 0.6,
+					strokeWidth: 0.02,
+					color: '#000000'
+				},
+				limitMax: 'true',
+				//percentColors: [[0.0, "#a9d70b" ], [0.50, "#f9c802"], [1.0, "#ff0000"]], // !!!!
+				percentColors: [
+					[0.0, "#ff0000"],
+					[0.399, "#ff0000"],
+					[0.4, "#ff0000"],
+					[0.599, "#FFFF00"],
+					[0.749, "#FFFF00"],
+					[0.75, "#5DB501"],
+					[0.1, "#5DB501"]
+				], // !!!!
+				strokeColor: '#E0E0E0',
+				generateGradient: true
+			};
+			var target = document.getElementById(gauge_id); // your canvas element
+			var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+
+			gauge.maxValue = 100; // set max gauge value
+			gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+			gauge.animationSpeed = 11; // set animation speed (32 is default value)
+			gauge.set(value); // set actual value
+
+
+			$('#' + gauge_id + '_text').html(value + "%");
+		}
+
+		function DrawPieChart(data) {
+			// console.log(data.map(x=>x.start));
+			var pie_values = extractHstFromGantt(data);
+			// console.log(pie_values);
+
+			if (pie_values == null) {
+				$("#pie_chart_detail").html("<div><strong>No Data</strong></div>");
+				return;
+			} else {
+				$("#pie_chart_detail").html("");
+			}
+
+			var pie_chart_value_array = pie_values.map((x) => x.duration);
+			var pie_chart_label_array = pie_values.map((x) => x.status);
+			var pie_chart_color_array = pie_values.map((x) => x.color);
+
+			// Convert second to hour
+			var sum = 0;
+			for (i = 0; i < pie_chart_value_array.length; i++) {
+				pie_chart_value_array[i] = pie_chart_value_array[i].toFixed(2);
+			}
+			const onlineTime = pie_chart_value_array.map((item) => parseFloat(item)).reduce((a, b) => a + b, 0);
+			const totalTime = 24.0;
+			if (onlineTime < 24.0) {
+				pie_chart_value_array.push(totalTime - onlineTime);
+				pie_chart_label_array.push("Offline");
+				pie_chart_color_array.push('#000000');
+			}
+
+
+			var digits = 1;
+			var rounded_values = [];
+			for (var i = 0; i < pie_chart_value_array.length; i += 1) {
+				rounded_values.push(Math.round(pie_chart_value_array[i] / totalTime * 100 * 10 * digits) / 10 * digits + '%');
+			}
+
+			var text = rounded_values.map((v, i) =>
+				`${pie_chart_label_array[i]}<br>${pie_chart_value_array[i]} hr(s)<br>${rounded_values[i]}`);
+
+			var data = [{
+				values: pie_chart_value_array,
+				labels: pie_chart_label_array,
+				type: 'pie',
+				sort: true,
+				marker: {
+					colors: pie_chart_color_array
+				},
+				//text: text,
+				hovertext: text,
+				hoverinfo: 'text',
+				//textinfo: 'none'
+			}];
+
+			var layout = {
+				paper_bgcolor: "transparent",
+				margin: {
+					l: 20,
+					r: 20,
+					b: 0,
+					t: 0,
+				},
+				pieStartAngle: 180,
+				showlegend: true,
+				height: 210,
+				legend: {
+					font: 8,
+					orientation: "h"
+				},
+			};
+			if ($(window).width() < 768)
+				layout['showlegend'] = false;
+
+			//console.log(pie_chart_value_array);
+			if (plot == undefined) {
+				var plot = Plotly.newPlot('pie_chart_detail', data, layout, {
+					displayModeBar: false
+				});
+			} else {
+				plot.data = data;
+			}
+		}
+
+		function GetCustomerCurrentTime(customerTimezone) {
+			var currentTime = Math.floor(Date.now() / 1000);
+			var offset = new Date().getTimezoneOffset() * 60;
+			currentTime += offset;
+			currentTime += parseInt(customerTimezone) * 3600;
+			return new Date(currentTime * 1000);
+		}
+
+		function FilterOneMachineGanttData(_ganttInfo) {
+			let tmpList = [];
+			// remove overrided times
+			for (var i = 0; i < _ganttInfo.length - 1; i++) {
+				if (_ganttInfo[i].end > _ganttInfo[i + 1].start) {
+					_ganttInfo[i].end = _ganttInfo[i + 1].start;
+				}
+			}
+
+			// connect continuous data
+			for (var i = 0; i < _ganttInfo.length; i++) {
+				var connected = false;
+
+				if (i < _ganttInfo.length - 1 &&
+					_ganttInfo[i].status.toUpperCase() == _ganttInfo[i + 1].status.toUpperCase() &&
+					(_ganttInfo[i].end == _ganttInfo[i + 1].start)) {
+					_ganttInfo[i + 1].start = _ganttInfo[i].start;
+					connected = true;
+				}
+
+				if (connected == false) {
+					tmpList.push(_ganttInfo[i]);
+				}
+			}
+			return tmpList;
+		}
+
+		function DrawGanttChart(ganttData, timezone, currentDate) {
+			var tmpData = JSON.parse(JSON.stringify(ganttData));
+
+
+			var tasks = [];
+			if (tmpData.length == 0) {
+				$('#gantt_chart_detail').html("<div><strong>No Data</strong></div>");
+				return;
+			} else {
+				$('#gantt_chart_detail').html("");
+			}
+
+			var updated_data = FilterOneMachineGanttData(tmpData);
+
+			for (i = 0; i < updated_data.length; i++) {
+				var item = {
+					//"startDate": new Date((parseInt(updated_data[i].start) + diff_time) * 1000 + localOffset),
+					//"endDate": new Date((parseInt(updated_data[i].end) + diff_time) * 1000 + localOffset),
+					"startDate": new Date((parseInt(updated_data[i].start)) * 1000 + localOffset + factory_timezone *
+						3600 * 1000),
+					"endDate": new Date((parseInt(updated_data[i].end)) * 1000 + localOffset + factory_timezone * 3600 *
+						1000),
+					"color": updated_data[i].color,
+					"taskName": updated_data[i].machine_id,
+					"status": updated_data[i].status
+				};
+				tasks.push(item);
+			}
+
+			tasks.sort(function (a, b) {
+				if (a.endDate > b.endDate) {
+					return 1;
+				}
+				if (a.endDate < b.endDate) {
+					return -1;
+				}
+				return 0;
+			});
+
+			let startDate = new Date(currentDate);
+			let endDate = new Date(currentDate);
+			endDate.setDate(endDate.getDate() + 1);
+
+			if (startDate.getTime() < tasks[0].startDate.getTime()) {
+				var taskName = tasks[0].taskName;
+				var item = {
+					"startDate": startDate,
+					"endDate": startDate,
+					"color": "white",
+					"taskName": taskName,
+					"status": "start"
+				}
+				tasks = [item].concat(tasks);
+			}
+			if (endDate.getTime() > tasks[tasks.length - 1].endDate.getTime()) {
+				var taskName = tasks[tasks.length - 1].taskName;
+				var item = {
+					"startDate": endDate,
+					"endDate": endDate,
+					"color": "white",
+					"taskName": taskName,
+					"status": "end"
+				}
+				tasks.push(item);
+			}
+
+
+			var taskNames = ["ONE"];
+
+
+			var format = "%H:%M";
+			//console.log($("#chartContainer_" + id).width());
+			var margin = {
+				top: 0,
+				right: 10,
+				bottom: 30,
+				left: 10
+			};
+
+
+			var gantt = d3.gantt("#gantt_chart_detail", $("#gantt_chart_detail").width())
+				.width($("#gantt_chart_detail").width())
+				.Container("#gantt_chart_detail")
+				.taskTypes(taskNames)
+				.tickFormat(format)
+				.margin(margin);
+			gantt(tasks);
+		}
+
+
+		function extractHstFromGantt(_ganttInfo) {
+			var _additionalHst = [];
+
+			for (var i = 0; i < _ganttInfo.length; i++) {
+
+				if (_additionalHst.length == 0 || _additionalHst.filter((x) => x.status === _ganttInfo[i].status).length ==
+					0) {
+					_additionalHst.push({
+						status: _ganttInfo[i].status,
+						color: _ganttInfo[i].color,
+						duration: parseFloat(parseFloat(_ganttInfo[i].end) - parseFloat(_ganttInfo[i].start))
+					});
+				} else {
+					var _hst = _additionalHst.filter((x) => x.status === _ganttInfo[i].status)[0];
+					_hst.duration += parseFloat(parseFloat(_ganttInfo[i].end) - parseFloat(_ganttInfo[i].start));
+				}
+			}
+
+			for (var i = 0; i < _additionalHst.length; i++) {
+				_additionalHst[i].duration = _additionalHst[i].duration / 3600;
+			}
+
+			// calculate offline time
+			if (_ganttInfo.length > 0) {
+
+				var totalTime = 24.0;
+				// calculate sum of duration in _additionalHst
+				const onlineTime = _additionalHst.map((item) => item.duration).reduce((a, b) => a + b, 0);
+
+				var offlineTime = Math.floor(totalTime / 3600 - onlineTime);
+
+				// console.log("timestamps", startDate.getTime(), endDate.getTime());
+				if (offlineTime > 0) {
+					_additionalHst.push({
+						status: "Offline",
+						color: "#000000",
+						duration: offlineTime
+					});
+				}
+
+			} else {
+				return null;
+			}
+			return _additionalHst;
+		}
+
+		function DrawBarChart(hstList) {
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			function drawVisualization() {
+				var dataList = [];
+				dataList.push(['Day', 'In Cycle', 'Not In Cycle', 'In Cycle Trend']);
+				for (var i = hstList.length - 1; i >= 0 && hstList.length - i < 30; i--) {
+					var idle = 0;
+					idle += parseFloat(hstList[i]['uncat']);
+					idle += parseFloat(hstList[i]['r1t']);
+					idle += parseFloat(hstList[i]['r2t']);
+					idle += parseFloat(hstList[i]['r3t']);
+					idle += parseFloat(hstList[i]['r4t']);
+					idle += parseFloat(hstList[i]['r5t']);
+					idle += parseFloat(hstList[i]['r6t']);
+					idle += parseFloat(hstList[i]['r7t']);
+					idle += parseFloat(hstList[i]['r8t']);
+					idle += parseFloat(hstList[i]['offline']);
+
+					var incycle = parseFloat(hstList[i]['inCycle']);
+					var day = new Date(hstList[i]['date']);
+
+					var item = [day, incycle / 3600 / 24 * 100, idle / 3600 / 24 * 100, incycle / 3600 / 24 * 100];
+					dataList.push(item);
+				}
+				var data = google.visualization.arrayToDataTable(dataList);
+
+				var options = {
+					backgroundColor: "transparent",
+					title: '',
+					vAxis: {
+						title: 'Utilization %'
+					},
+					hAxis: {
+						title: 'Day'
+					},
+					seriesType: 'bars',
+					series: {
+						2: {
+							type: 'line'
+						}
+					},
+					chartArea: {
+						width: '92%'
+					},
+					legend: {
+						position: 'bottom'
+					},
+					width: '100%',
+					colors: ['#10ce79', '#ce101d', '#10ce79']
+				};
+
+				var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+				chart.draw(data, options);
+			}
+		}
+	</script>
+
+
+	</script>
+</body>
+
+</html>
+
+<script>
+var m_status=[[{"id":"1","machine_id":"1804","machine_picture_url":"20230317111327_industrial_robot.png","Operator":null,"operator_picture_url":null,"Utilization":null,"status":null,"app_version":null,"created_at":"2023-03-17 11:27:23.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0","time_stamp":"1679074043","time_stamp_ms":"1679074043"}],[{"id":"2","machine_id":"1765","machine_picture_url":"20230317113627_png-clipart-industrial-robot-industry-computer-icons-robotics-robot-angle-electronics-thumbnail.png","Operator":null,"operator_picture_url":null,"Utilization":null,"status":null,"app_version":null,"created_at":"2023-03-17 11:27:40.000000","r1":null,"r2":null,"r3":null,"r4":null,"r5":null,"r6":null,"r7":null,"r8":null,"aux1":null,"aux2":null,"aux3":null,"machine_name":"","serial_number":"","cycle_signal":"","cycle_interlock_interface":"","cycle_interlock_on":"0","cycle_interlock_open":"0","time_stamp":"1679074060","time_stamp_ms":"1679074060"}]];
+var m_hst=[[],[]];
+var m_gantt=[[],[]];
+var m_info={"id":"1","logo":"https:\/\/slymms.com\/backend\/images\/logos\/20230317110822_1464868.png","name":"Bristol Ind","created_at":null,"timezone":"-7","emails":null,"report_days":"123456","shift1_start":"","shift1_end":"","shift2_start":"","shift2_end":"","shift3_start":"","shift3_end":""};
+var m_hstList=[[],[]];
+</script>
+
