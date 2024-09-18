@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/round_stroke_grey_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_darkgray_back"/>
+
+        <TextView
+            style="@style/TextStyleNormalRegular"
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Bookmark Category"
+            android:textSize="18sp"
+            android:textColor="@color/md_grey_800"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerStores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytSlide2"
+    android:orientation="vertical">
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--adding a radio button -->
+        <RadioButton
+            style="@style/TextStyleNormalRegular"
+            android:id="@+id/rdPromotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:paddingStart="@dimen/margin_10"
+            android:text="@string/txt_promotion"
+            android:textAlignment="textStart"/>
+
+        <RadioButton
+            style="@style/TextStyleNormalRegular"
+            android:id="@+id/rdMissDeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:paddingStart="@dimen/padding_10"
+            android:text="@string/txt_cant_miss_deal"
+            android:textAlignment="textStart"/>
+        <RadioButton
+            style="@style/TextStyleNormalRegular"
+            android:id="@+id/rdBestDeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:paddingStart="@dimen/padding_10"
+            android:text="@string/txt_best_deal"
+            android:textAlignment="textStart"/>
+        <RadioButton
+            style="@style/TextStyleNormalRegular"
+            android:id="@+id/rdExDeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:paddingStart="@dimen/padding_10"
+            android:text="@string/txt_exclusive_deal"
+            android:textAlignment="textStart"/>
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_top_round_main"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_30"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="@dimen/margin_100"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/main_blue_color"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_20"
+        android:paddingBottom="@dimen/margin_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lytUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_25"
+                    android:alpha="0.9"
+                    android:src="@drawable/ic_bottom_menu_user_profile" />
+
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="@string/txt_user_profile"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytVendorProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_25"
+                    android:alpha="0.9"
+                    android:src="@drawable/ic_bottom_menu_store_profile" />
+
+                <TextView
+                    android:id="@+id/txtProfile"
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="@string/vendor_profile"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytBankDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_25"
+                    android:alpha="0.9"
+                    android:src="@drawable/ic_bottom_menu_payment" />
+
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="@string/bank_detail"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/md_grey_300" />
+
+            <LinearLayout
+                android:id="@+id/lytLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_25"
+                    android:alpha="0.9"
+                    android:src="@drawable/ic_bottom_menu_logout" />
+
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="@string/txt_logout"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

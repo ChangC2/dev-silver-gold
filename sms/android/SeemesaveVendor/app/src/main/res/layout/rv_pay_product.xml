@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="@dimen/margin_10"
+    android:background="@drawable/bk_round_grey_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="@dimen/margin_200"
+            android:layout_height="@dimen/margin_150"
+            app:riv_border_color="@color/grey_white"
+            app:riv_border_width="1px"
+            app:riv_corner_radius="10dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignBottom="@+id/imgProduct"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold"
+                />
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:id="@+id/txtPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

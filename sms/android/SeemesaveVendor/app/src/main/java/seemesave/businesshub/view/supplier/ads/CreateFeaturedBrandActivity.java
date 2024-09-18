@@ -1,0 +1,604 @@
+package seemesave.businesshub.view.supplier.ads;
+
+import static seemesave.businesshub.utils.TimeUtils.getDateDiff;
+
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.material.textfield.TextInputEditText;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+import com.koushikdutta.ion.builder.Builders;
+import com.luck.picture.lib.config.PictureMimeType;
+import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.instagram.InsGallery;
+import com.luck.picture.lib.listener.OnResultCallbackListener;
+import com.makeramen.roundedimageview.RoundedImageView;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import seemesave.businesshub.R;
+import seemesave.businesshub.adapter.OneSelectionAdapter;
+import seemesave.businesshub.adapter.PlacesAutoCompleteAdapter;
+import seemesave.businesshub.api.ads.AdsApi;
+import seemesave.businesshub.api.brand.BrandApi;
+import seemesave.businesshub.api.common.CommonApi;
+import seemesave.businesshub.api.store.StoreApi;
+import seemesave.businesshub.application.App;
+import seemesave.businesshub.base.BaseActivity;
+import seemesave.businesshub.model.common.BrandModel;
+import seemesave.businesshub.model.common.CurrencyModel;
+import seemesave.businesshub.model.common.PostModel;
+import seemesave.businesshub.model.common.StoreModel;
+import seemesave.businesshub.model.res.BaseInfoRes;
+import seemesave.businesshub.model.res.BrandListRes;
+import seemesave.businesshub.model.res.PostRes;
+import seemesave.businesshub.model.res.RateListRes;
+import seemesave.businesshub.model.res.StoreListRes;
+import seemesave.businesshub.sqlite.DatabaseQueryClass;
+import seemesave.businesshub.utils.G;
+import seemesave.businesshub.utils.GsonUtils;
+import seemesave.businesshub.widget.imagePicker.GlideCacheEngine;
+import seemesave.businesshub.widget.imagePicker.GlideEngine;
+
+public class CreateFeaturedBrandActivity extends BaseActivity implements PlacesAutoCompleteAdapter.ClickListener {
+    private CreateFeaturedBrandActivity activity;
+
+    @BindView(R.id.txtTitle)
+    TextView txtTitle;
+
+    @BindView(R.id.edtStart)
+    TextInputEditText edtStart;
+
+    @BindView(R.id.edtEnd)
+    TextInputEditText edtEnd;
+
+    @BindView(R.id.spinnerBrand)
+    Spinner spinnerBrand;
+    private ArrayAdapter<BrandModel> storeAdapter;
+
+    @BindView(R.id.areaRecyclerView)
+    RecyclerView areaRecyclerView;
+
+    @BindView(R.id.places_recycler_view)
+    RecyclerView placeRecyclerView;
+
+    @BindView(R.id.edtLocation)
+    TextInputEditText edtLocation;
+
+    private ArrayList<String> areaList = new ArrayList<>();
+    private ArrayList<String> locationList = new ArrayList<>();
+    private OneSelectionAdapter areaAdapter;
+    private PlacesAutoCompleteAdapter mAutoCompleteAdapter;
+
+    @BindView(R.id.spinnerBudget)
+    Spinner spinnerBudget;
+    private ArrayAdapter<CurrencyModel> budgetAdapter;
+    private ArrayList<CurrencyModel> budgetList = new ArrayList<>();
+    private String selBudget = "ZAR";
+    private double dailyAmount = 10;
+
+    @BindView(R.id.txtPrice)
+    TextView txtPrice;
+    @BindView(R.id.txtPrice1)
+    TextView txtPrice1;
+    @BindView(R.id.txtPrice2)
+    TextView txtPrice2;
+    @BindView(R.id.txtPrice3)
+    TextView txtPrice3;
+    @BindView(R.id.txtPrice4)
+    TextView txtPrice4;
+    @BindView(R.id.seekbar)
+    SeekBar seekbar;
+
+
+    final Calendar myCalendar = Calendar.getInstance();
+
+    private ArrayList<BrandModel> brandList = new ArrayList<>();
+    private int selBrand = -1;
+
+    private RateListRes rateInfo = new RateListRes();
+    private double currency_rate = 1.0;
+    private int post_id = -1;
+    private boolean is_active = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_featured_brand);
+        ButterKnife.bind(this);
+        activity = this;
+        post_id = getIntent().getIntExtra("id", -1);
+        initView();
+    }
+
+    private void initView() {
+        setUpPlaceAutoComplete();
+        brandList.clear();
+        budgetList.clear();
+        seekbar.setMax(900);
+        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // TODO Auto-generated method stub
+                initProgress(progress);
+            }
+        });
+        setAreaAdapter();
+        getLocalCurrencyList();
+        BrandApi.getBrandList(0, 1000, "");
+        CommonApi.getRateList(selBudget);
+
+
+
+    }
+    private void setAreaAdapter() {
+        areaAdapter = new OneSelectionAdapter(activity, areaList, new OneSelectionAdapter.OneSelectionRecyclerListener() {
+            @Override
+            public void onItemClicked(int pos, String model) {
+                areaList.remove(pos);
+                locationList.remove(pos);
+                areaAdapter.setData(areaList);
+            }
+
+        });
+        areaRecyclerView.setAdapter(areaAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false);
+        areaRecyclerView.setLayoutManager(linearLayoutManager);
+    }
+    private TextWatcher filterTextWatcher = new TextWatcher() {
+        public void afterTextChanged(Editable s) {
+            if (!s.toString().equals("")) {
+                mAutoCompleteAdapter.getFilter().filter(s.toString());
+                if (placeRecyclerView.getVisibility() == View.GONE) {
+                    placeRecyclerView.setVisibility(View.VISIBLE);
+                }
+            } else {
+                if (placeRecyclerView.getVisibility() == View.VISIBLE) {
+                    placeRecyclerView.setVisibility(View.GONE);
+                }
+            }
+        }
+
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+    };
+    private void setUpPlaceAutoComplete() {
+        Places.initialize(this, getResources().getString(R.string.google_maps_key));
+        edtLocation.addTextChangedListener(filterTextWatcher);
+        mAutoCompleteAdapter = new PlacesAutoCompleteAdapter(this);
+        placeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mAutoCompleteAdapter.setClickListener(this);
+        placeRecyclerView.setAdapter(mAutoCompleteAdapter);
+        mAutoCompleteAdapter.notifyDataSetChanged();
+    }
+    private void initData(PostModel model) {
+        txtTitle.setText(getString(R.string.txt_edit_featured_brand));
+        is_active = model.isActive();
+        edtStart.setText(model.getStart_date());
+        edtEnd.setText(model.getEnd_date());
+        selBrand = model.getBrand().getId();
+        spinnerBrand.setSelection(getBrandIndex());
+
+        for (int i = 0; i < model.getLocationList().size(); i++) {
+            areaList.add(model.getLocationList().get(i).getFull_address());
+            locationList.add(model.getLocationList().get(i).getPlace_id());
+            areaAdapter.setData(areaList);
+        }
+
+        spinnerBrand.setEnabled(false);
+        spinnerBudget.setEnabled(false);
+        seekbar.setEnabled(false);
+        edtStart.setEnabled(false);
+        edtEnd.setEnabled(false);
+
+    }
+
+
+    private void initProgress(int progress) {
+        int step = 1;
+        double min = 10;
+        if (progress <= 890) {
+            dailyAmount = min + ((progress - 1) * step) + 1;
+        } else {
+            dailyAmount = progress * step;
+        }
+        dailyAmount = dailyAmount * currency_rate;
+        setBudgetAmount();
+    }
+
+    private void setBudgetAmount() {
+        txtPrice.setText(String.format(java.util.Locale.US, "%.2f", Float.valueOf(String.valueOf(dailyAmount))));
+        if (rateInfo != null && rateInfo.isStatus()) {
+            float rateVal = rateInfo.getRateList().getFeaturedbrand();
+            float cpc = rateInfo.getCpcValue();
+            float cpl = rateInfo.getCplValue();
+            float cpm = rateInfo.getCpmValue();
+            float cph = rateInfo.getCphValue();
+            float cpr = rateInfo.getCprValue();
+            double price1_min = dailyAmount / ((cpc + cpl + cpm / 50) * rateVal);
+            double price1_max = dailyAmount / (cpm / 50 * rateVal);
+            double price2_min = dailyAmount / ((cpc + cpl + cph + cpr) * rateVal);
+            double price2_max = dailyAmount / (cpl * rateVal);
+            if (price1_min > 100) {
+                txtPrice1.setText(String.format(java.util.Locale.US, "Estimated %.2f K", price1_min / 1000));
+            } else {
+                txtPrice1.setText(String.format(java.util.Locale.US, "Estimated %.2f", price1_min));
+            }
+            if (price1_max > 100) {
+                txtPrice2.setText(String.format(java.util.Locale.US, "%.2f K", price1_max / 1000));
+            } else {
+                txtPrice2.setText(String.format(java.util.Locale.US, "%.2f", price1_max));
+            }
+            txtPrice3.setText(String.format(java.util.Locale.US, "Estimated %.2f", price2_min));
+            txtPrice4.setText(String.format(java.util.Locale.US, "%.2f", price2_max));
+
+        }
+    }
+
+
+    private void getLocalCurrencyList() {
+        try {
+            String data = DatabaseQueryClass.getInstance().getData(App.getUserID(), "BaseInfo", "");
+            if (!TextUtils.isEmpty(data)) {
+                BaseInfoRes localRes = GsonUtils.getInstance().fromJson(data, BaseInfoRes.class);
+                budgetList.addAll(localRes.getCurrencyList());
+                setBudgetAdapter();
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setBudgetAdapter() {
+        spinnerBudget.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selBudget = budgetList.get(position).getIso();
+                if (selBudget.equalsIgnoreCase("ZAR")) {
+                    currency_rate = 1;
+                    seekbar.setMax(900);
+                } else {
+                    currency_rate = 0.06;
+                    seekbar.setMax(1000);
+                }
+                showLoadingDialog();
+                CommonApi.getRateList(selBudget);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        budgetAdapter = new ArrayAdapter<CurrencyModel>(activity, R.layout.custom_spinner, budgetList);
+        budgetAdapter.setDropDownViewResource(R.layout.custom_spinner_combo);
+        spinnerBudget.setAdapter(budgetAdapter);
+        spinnerBudget.setSelection(getBudgetIndex());
+    }
+
+    private int getBudgetIndex() {
+        for (int i = 0; i < budgetList.size(); i++) {
+            if (budgetList.get(i).getIso().equalsIgnoreCase(selBudget)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private void setBrandAdapter() {
+        spinnerBrand.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selBrand = brandList.get(position).getId();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        storeAdapter = new ArrayAdapter<BrandModel>(activity, R.layout.custom_spinner, brandList);
+        storeAdapter.setDropDownViewResource(R.layout.custom_spinner_combo);
+        spinnerBrand.setAdapter(storeAdapter);
+        spinnerBrand.setSelection(getBrandIndex());
+    }
+
+    private int getBrandIndex() {
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).getId() == selBrand) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private void showDatePickDlg(String type) {
+        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                String selMonth = String.valueOf(monthOfYear + 1);
+                if (monthOfYear < 9) {
+                    selMonth = "0" + selMonth;
+                }
+                String selDay = String.valueOf(dayOfMonth);
+                if (dayOfMonth < 10) {
+                    selDay = "0" + selDay;
+                }
+                String selDate = String.format(java.util.Locale.US, "%s-%s-%s", year, selMonth, selDay);
+                if (type.equalsIgnoreCase("start")) {
+                    edtStart.setText(selDate);
+                } else {
+                    edtEnd.setText(selDate);
+                }
+            }
+
+        };
+        new DatePickerDialog(activity, date, myCalendar
+                .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
+
+    private void onCreateAds() {
+
+        if (TextUtils.isEmpty(edtStart.getText().toString()) || TextUtils.isEmpty(edtEnd.getText().toString())) {
+            Toast.makeText(activity, R.string.msg_valid_info, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (selBrand == -1) {
+            Toast.makeText(activity, R.string.msg_select_brand, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (locationList.size() == 0) {
+            Toast.makeText(activity, R.string.msg_select_location, Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
+
+        String start_date = edtStart.getText().toString();
+        String end_date = edtEnd.getText().toString();
+        @SuppressLint("SimpleDateFormat") int dateDifference = (int) getDateDiff(new SimpleDateFormat("yyyy-MM-dd"), start_date, end_date);
+        if (dateDifference < 0) {
+            Toast.makeText(activity, R.string.msg_select_end_date, Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        String place_id_list = locationList.get(0);
+        for (int i = 1; i < locationList.size(); i++) {
+            place_id_list += "," + locationList.get(i);
+        }
+
+        double total_money = dailyAmount * (dateDifference + 1);
+
+        showLoadingDialog();
+        Ion.with(activity)
+                .load(G.CreateFeaturedBrand)
+                .addHeader("Authorization", App.getToken())
+                .addHeader("Content-Language", App.getPortalToken())
+                .setMultipartParameter("start_date", start_date)
+                .setMultipartParameter("end_date", end_date)
+                .setMultipartParameter("brand_id", String.valueOf(selBrand))
+                .setMultipartParameter("place_id_list", place_id_list)
+                .setMultipartParameter("total_money", String.valueOf(total_money))
+                .setMultipartParameter("currency", selBudget)
+                .setMultipartParameter("need_data", "true")
+                .asString()
+                .setCallback(new FutureCallback<String>() {
+                    @Override
+                    public void onCompleted(Exception e, String result) {
+                        hideLoadingDialog();
+                        if (e != null) {
+                            Toast.makeText(activity, R.string.msg_something_wrong, Toast.LENGTH_LONG).show();
+                        } else {
+                            try {
+                                JSONObject jsonObject = new JSONObject(result);
+                                if (jsonObject.getBoolean("status")) {
+                                    Toast.makeText(activity, "Featured Brand " + getString(R.string.msg_created_successfully), Toast.LENGTH_LONG).show();
+                                    finish();
+                                } else {
+                                    Toast.makeText(activity, jsonObject.optString("message"), Toast.LENGTH_LONG).show();
+                                }
+                            } catch (JSONException jsonException) {
+                            }
+                        }
+                    }
+                });
+
+    }
+
+    private void onEditAds() {
+        if (locationList.size() == 0) {
+            Toast.makeText(activity, R.string.msg_select_location, Toast.LENGTH_LONG).show();
+            return;
+        }
+        String place_id_list = locationList.get(0);
+        for (int i = 1; i < locationList.size(); i++) {
+            place_id_list += "," + locationList.get(i);
+        }
+        showLoadingDialog();
+        Builders.Any.B builder = Ion.with(activity)
+                .load("PUT", G.UpdateFeaturedBrand);
+        builder.addHeader("Authorization", App.getToken())
+                .addHeader("Content-Language", App.getPortalToken());
+        builder.setMultipartParameter("id", String.valueOf(post_id))
+                .setMultipartParameter("place_id_list", place_id_list);
+        builder.asString()
+                .setCallback(new FutureCallback<String>() {
+                    @Override
+                    public void onCompleted(Exception e, String result) {
+                        hideLoadingDialog();
+                        if (e != null) {
+                            Toast.makeText(activity, R.string.msg_something_wrong, Toast.LENGTH_LONG).show();
+                        } else {
+                            try {
+                                JSONObject jsonObject = new JSONObject(result);
+                                if (jsonObject.getBoolean("status")) {
+                                    Toast.makeText(activity, "Featured Brand " + getString(R.string.msg_updated_successfully), Toast.LENGTH_LONG).show();
+                                    finish();
+                                } else {
+                                    Toast.makeText(activity, jsonObject.optString("message"), Toast.LENGTH_LONG).show();
+                                }
+                            } catch (JSONException jsonException) {
+                                Toast.makeText(activity, R.string.msg_something_wrong, Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    }
+                });
+
+    }
+
+    @OnClick({R.id.btBack, R.id.btnCreate, R.id.imgDelete, R.id.edtStart, R.id.edtEnd})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnCreate:
+                if (post_id == -1) {
+                    onCreateAds();
+                } else {
+                    onEditAds();
+                }
+                break;
+            case R.id.btBack:
+                finish();
+                break;
+            case R.id.edtStart:
+                showDatePickDlg("start");
+                break;
+            case R.id.edtEnd:
+                showDatePickDlg("end");
+                break;
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onSuccessRateInfo(RateListRes res) {
+        hideLoadingDialog();
+        if (res.isStatus()) {
+            rateInfo.setRateList(res.getRateList());
+            rateInfo.setCpcValue(res.getCpcValue());
+            rateInfo.setCphValue(res.getCphValue());
+            rateInfo.setCplValue(res.getCplValue());
+            rateInfo.setCprValue(res.getCprValue());
+            rateInfo.setCurrency(res.getCurrency());
+            rateInfo.setCpmValue(res.getCpmValue());
+            rateInfo.setStatus(true);
+            setBudgetAmount();
+        } else {
+            rateInfo.setStatus(false);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onSuccessStoreList(BrandListRes res) {
+        if (res.isStatus()) {
+            BrandModel emptyStore = new BrandModel();
+            emptyStore.setId(-1);
+            emptyStore.setName("");
+            brandList.add(emptyStore);
+            brandList.addAll(res.getData());
+            setBrandAdapter();
+            if (post_id != -1) {
+                showLoadingDialog();
+                AdsApi.getFeaturedBrandDetail(post_id);
+            }
+        }
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onSuccessAdsDetail(PostRes res) {
+        hideLoadingDialog();
+        if (res.isStatus()) {
+            initData(res.getData());
+        } else {
+            if (!TextUtils.isEmpty(res.getMessage())) {
+                Toast.makeText(activity, res.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public void click(Place place) {
+        areaList.add(place.getName());
+        locationList.add(place.getId());
+        areaAdapter.setData(areaList);
+        placeRecyclerView.setVisibility(View.GONE);
+        edtLocation.setText("");
+        G.hideSoftKeyboard(activity);
+    }
+}

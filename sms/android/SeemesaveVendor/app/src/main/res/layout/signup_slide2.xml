@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rdVendor"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="@string/txt_vendor"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_17" />
+        <RadioButton
+            android:id="@+id/rdSupplier"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="@string/txt_supplier"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_17" />
+        <LinearLayout
+            android:id="@+id/lytType"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_100"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_20"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/margin_10"
+            >
+            <TextView
+                android:id="@+id/txtTypeLabel"
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                />
+            <TextView
+                android:id="@+id/txtTypeInfo"
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_30"
+        app:layout_constraintBottom_toTopOf="@+id/lytSign">
+
+        <LinearLayout
+            android:id="@+id/btnNext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/bk_blue_rect_10"
+            android:clickable="true"
+            android:elevation="@dimen/margin_1"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_12"
+                android:text="@string/txt_next"
+                android:textColor="@color/white_color" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

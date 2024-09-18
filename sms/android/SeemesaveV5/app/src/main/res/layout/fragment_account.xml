@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_blue_color"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_20">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgUser"
+                            android:layout_width="@dimen/margin_100"
+                            android:layout_height="@dimen/margin_100"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:src="@drawable/ic_avatar" />
+
+                        <ImageView
+                            android:id="@+id/imgEdit"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_50"
+                            android:layout_alignEnd="@+id/imgUser"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="-25dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/margin_10"
+                            android:src="@drawable/ic_edit" />
+
+                        <ImageView
+                            android:id="@+id/imgMenu"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_50"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/margin_15"
+                            android:src="@drawable/ic_menu"
+                            app:tint="@color/white_color" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            style="@style/TextStyleLargeRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/white_color" />
+
+                        <TextView
+                            android:id="@+id/txtEmail"
+                            style="@style/TextStyleNormalRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/white_color" />
+
+                        <TextView
+                            android:id="@+id/txtPhone"
+                            style="@style/TextStyleNormalRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/white_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/lytLike"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtLike"
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/txt_likes"
+                                android:textColor="@color/white_color" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/margin_1"
+                            android:layout_height="@dimen/margin_40"
+                            android:background="@color/white_color" />
+
+                        <LinearLayout
+                            android:id="@+id/lytFriend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtFriend"
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/txt_friends"
+                                android:textColor="@color/white_color" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/margin_1"
+                            android:layout_height="@dimen/margin_40"
+                            android:background="@color/white_color" />
+
+                        <LinearLayout
+                            android:id="@+id/lytFollowing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtFollowing"
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/txt_following"
+                                android:textColor="@color/white_color" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10">
+
+                    <TextView
+                        android:id="@+id/txtDashboard"
+                        style="@style/TextStyleNormalRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:text="@string/txt_dashboard"
+                        android:textColor="@color/main_blue_color"
+                        android:textSize="@dimen/margin_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPost"
+                        style="@style/TextStyleNormalRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_20"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:text="@string/txt_my_post"
+                        android:textColor="@color/md_grey_500"
+                        android:textSize="@dimen/margin_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtBookmark"
+                        style="@style/TextStyleNormalRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_20"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:text="@string/txt_bookmark"
+                        android:textColor="@color/md_grey_500"
+                        android:textSize="@dimen/margin_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lytDashboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/li_store"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="@dimen/margin_5"
+                                android:text="@string/txt_top_store"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="@dimen/text_14" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerStoreView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10" />
+
+                            <com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
+                                android:id="@+id/storeIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_8"
+                                app:dotColor="@color/md_grey_300"
+                                app:selectedDotColor="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/li_brand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_15"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="@dimen/margin_5"
+                                android:text="@string/txt_top_brand"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="@dimen/text_14" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerBrandView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10" />
+
+                            <com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
+                                android:id="@+id/brandIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_3"
+                                app:dotColor="@color/md_grey_300"
+                                app:selectedDotColor="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/li_product"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_15"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="@dimen/margin_5"
+                                android:text="@string/txt_top_product"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="@dimen/text_14" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerProductView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10" />
+
+                            <com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
+                                android:id="@+id/productIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingBottom="@dimen/margin_10"
+                                app:dotColor="@color/md_grey_300"
+                                app:selectedDotColor="@color/colorAccent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/lytDashboardEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_120"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/txt_no_result"
+                                android:textSize="@dimen/text_15" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lytPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgAddPost"
+                            android:layout_width="@dimen/margin_70"
+                            android:layout_height="@dimen/margin_70"
+                            android:layout_marginStart="@dimen/margin_20"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/ic_add_post" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerPostView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:id="@+id/lytPostEmpty"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/margin_50"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    style="@style/TextStyleNormalRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/txt_no_result"
+                                    android:textSize="@dimen/text_15" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lytFeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerFeedView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/margin_10"
+                            android:paddingEnd="@dimen/margin_10" />
+
+                        <LinearLayout
+                            android:id="@+id/lytFeedEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_50"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/txt_no_result"
+                                android:textSize="@dimen/text_15" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

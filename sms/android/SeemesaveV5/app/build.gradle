@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'realm-android'
+
+android {
+    compileSdk 34
+    namespace 'com.mobile.seemesave'
+    defaultConfig {
+        applicationId "com.mobile.seemesave"
+        minSdk 23
+        targetSdk 34
+        versionCode 123
+        versionName "5.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0', 'META-INF/*.kotlin_module']
+        }
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation "androidx.multidex:multidex:2.0.1"
+//    implementation 'com.victor:lib:1.0.4'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.github.valkriaine:Bouncy:2.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    implementation platform('com.google.firebase:firebase-bom:30.0.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:23.4.0'
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.6.0'
+
+    //ionic
+    implementation 'com.koushikdutta.ion:ion:3.1.0'
+    //phone number input
+    implementation 'com.hbb20:ccp:2.5.0'
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //round image view
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //loading
+//    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //rating
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+    //badge image view
+//    implementation 'com.github.nikartm:image-support:1.0.5'
+    implementation 'io.github.nikartm:image-support:2.0.0'
+    //indicator
+    implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.1'
+    //exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.15.0'
+    implementation 'com.github.MasayukiSuda:Mp4Composer-android:v0.4.1'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:2.0.24'
+    //like button
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    //image slider
+//    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    //camera
+    implementation 'androidx.camera:camera-core:1.0.0-beta07'
+    implementation "androidx.camera:camera-camera2:1.0.0-beta07"
+
+    //uxcam
+//    implementation 'com.uxcam:uxcam:3.3.5@aar'
+    implementation 'com.jsibbold:zoomage:1.3.1'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // Mapbox dependencies
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.7.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-turf:5.5.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:5.5.0'
+//    // Mapbox plugins
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-building-v9:0.7.0'
+//    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0') {
+//        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-telemetry'
+//        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+//        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-sdk-core'
+//    }
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-localization-v9:0.12.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-traffic-v9:0.10.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-markerview-v9:0.4.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v9:0.9.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-scalebar-v9:0.5.0'
+
+    implementation project(':contactfetcher')
+    implementation project(':social_textview')
+    implementation project(':picture_library')
+    implementation project(':ucrop')
+    implementation project(':loading_lib')
+    implementation project(':autoimageslider')
+}

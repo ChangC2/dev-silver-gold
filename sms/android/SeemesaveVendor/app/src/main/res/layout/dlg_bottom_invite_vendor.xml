@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bk_top_round_main"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/text_18"
+            android:text="@string/invite_vendor"
+            android:textColor="@color/grey_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_20"
+        android:paddingEnd="@dimen/margin_20"
+        android:paddingBottom="@dimen/margin_10">
+        <LinearLayout
+            android:id="@+id/lytEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextStyle"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                app:boxCornerRadiusTopStart="@dimen/margin_10"
+                app:boxStrokeColor="@color/black_color"
+                app:boxStrokeWidthFocused="@dimen/pixel_4"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_transparent"
+                app:hintTextColor="@color/grey_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_45"
+                    android:drawableStart="@drawable/ic_profile_email"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:hint="@string/txt_email_address"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/text_13" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/lytDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+            <ImageView
+                android:layout_width="@dimen/margin_25"
+                android:layout_height="@dimen/margin_25"
+                android:src="@drawable/ic_bank_ac_number"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_15"
+                app:tint="@color/grey_dark" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextStyle"
+                app:hintTextColor="@color/grey_light"
+                app:boxStrokeColor="@color/black_color"
+                app:boxStrokeWidthFocused="@dimen/pixel_4"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
+                app:boxCornerRadiusBottomStart="@dimen/margin_8"
+                app:boxCornerRadiusTopEnd="@dimen/margin_8"
+                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="@string/txt_description"
+                    android:inputType="text|textMultiLine"
+                    android:minLines="5"
+                    android:importantForAutofill="no"
+                    android:paddingTop="@dimen/margin_8"
+                    android:paddingBottom="@dimen/margin_8"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    android:drawableStart="@drawable/ic_transparent"
+                    android:textSize="@dimen/text_12"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:textColor="@color/grey_dark"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btnInvite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/bk_blue_rect_10"
+            android:clickable="true"
+            android:elevation="@dimen/margin_1"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtSend"
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="@string/send_invite"
+                android:textColor="@color/white_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

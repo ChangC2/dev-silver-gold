@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/margin_10"
+    android:orientation="vertical"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_150">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_7"
+            app:riv_border_color="@color/md_grey_300"
+            app:riv_border_width="@dimen/margin_1"
+            app:riv_mutate_background="true"
+            android:background="@color/white_color"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_80"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_7"
+            android:layout_marginEnd="@dimen/margin_7"
+            android:layout_marginBottom="@dimen/margin_7"
+            android:background="@drawable/bk_gradient_cover"
+            app:riv_mutate_background="true" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_105"
+            android:padding="@dimen/margin_7"
+            android:textColor="@color/white_color"
+            android:maxLines="2"
+            android:textSize="@dimen/text_14"
+            android:layout_gravity="start"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

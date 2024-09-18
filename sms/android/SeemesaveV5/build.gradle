@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+//        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+//        maven { url  'https://dl.bintray.com/sysdata/maven' }
+//        maven { url 'https://repo.pageturner-reader.org' }
+        maven { url "https://maven.google.com" }
+        maven{ url 'https://sdk.uxcam.com/android/' }
+        maven { url 'https://jitpack.io' }
+//        maven {
+//            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+//            authentication {
+//                basic(BasicAuthentication)
+//            }
+//            credentials {
+//                username = "mapbox"
+//                password = project.hasProperty('MAPBOX_DOWNLOADS_TOKEN') ? project.property('MAPBOX_DOWNLOADS_TOKEN') : System.getenv('MAPBOX_DOWNLOADS_TOKEN')
+//            }
+//        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
+        classpath 'io.realm:realm-gradle-plugin:10.10.1'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

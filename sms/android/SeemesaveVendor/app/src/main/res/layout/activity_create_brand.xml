@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_create_brand"
+            android:textColor="@color/grey_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/margin_20"
+        android:paddingEnd="@dimen/margin_20"
+        android:paddingBottom="@dimen/margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dotted"
+                    >
+                    <ImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="@dimen/margin_200"
+                        android:layout_height="@dimen/margin_120"
+                        android:src="@drawable/ic_placeholder"
+                        android:padding="@dimen/margin_5" />
+                    <ImageView
+                        android:id="@+id/imgPhotoEdit"
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_alignRight="@+id/imgProduct"
+                        android:layout_alignBottom="@+id/imgProduct"
+                        android:padding="@dimen/margin_7"
+                        android:src="@drawable/ic_profile_edit" />
+                </RelativeLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:theme="@style/EditTextStyle"
+                    app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                    app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                    app:boxCornerRadiusTopStart="@dimen/margin_10"
+                    app:boxStrokeColor="@color/md_grey_800"
+                    app:boxStrokeWidthFocused="@dimen/pixel_4"
+                    app:hintTextColor="@color/grey_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_45"
+                        android:drawableStart="@drawable/ic_bank_ac_number"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:hint="@string/txt_name"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/margin_15"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="@dimen/text_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextStyle"
+                    android:layout_marginTop="@dimen/margin_10"
+                    app:hintTextColor="@color/grey_light"
+                    app:boxStrokeColor="@color/black_color"
+                    app:boxStrokeWidthFocused="@dimen/pixel_4"
+                    app:boxCornerRadiusBottomEnd="@dimen/margin_8"
+                    app:boxCornerRadiusBottomStart="@dimen/margin_8"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_8"
+                    app:boxCornerRadiusTopStart="@dimen/margin_8"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_40"
+                        android:hint="@string/txt_tags"
+                        android:inputType="text"
+                        android:importantForAutofill="no"
+                        android:paddingTop="@dimen/margin_8"
+                        android:paddingBottom="@dimen/margin_8"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10"
+                        android:textSize="@dimen/text_12"
+                        android:imeOptions="actionDone"
+                        android:drawableTint="@color/grey_dark"
+                        android:drawableStart="@drawable/ic_tag"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:textColor="@color/grey_dark"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tagRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_3"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_20"
+        >
+        <LinearLayout
+            android:id="@+id/btnCreate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bk_blue_rect_10"
+            android:clickable="true"
+            android:elevation="@dimen/margin_1"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtCreate"
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_12"
+                android:text="@string/create"
+                android:textColor="@color/white_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

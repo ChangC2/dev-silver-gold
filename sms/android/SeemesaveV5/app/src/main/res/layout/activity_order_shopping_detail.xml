@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_order_details"
+            android:textColor="@color/grey_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        >
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lytStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/round_stroke_grey"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgPhoto"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:riv_corner_radius="7dp"
+                        android:scaleType="fitCenter"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="15dp"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/TextStyleNormalRegular"
+                            android:id="@+id/txtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Store Name"
+                            android:textSize="@dimen/text_14"
+                            android:lines="1"
+                            android:textColor="@color/md_grey_800"
+                            />
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:isIndicator="true"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginLeft="-3dp"
+                            android:layout_marginRight="-3dp"
+                            android:rating="5"
+                            app:mrb_progressTint="@color/yellow_color"
+                            app:mrb_secondaryProgressTint="@color/md_grey_300"
+                            style="@style/Widget.MaterialRatingBar.RatingBar" />
+                        <TextView
+                            style="@style/TextStyleNormalRegular"
+                            android:id="@+id/txtDist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="12.5Km"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/md_grey_600"
+                            android:textSize="@dimen/text_11"
+                            android:visibility="visible" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:id="@+id/txtTPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="@string/total_price_dot"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text_14"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/btnFollow"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_5"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                                android:background="@drawable/bk_blue_rect_20">
+                                <TextView
+                                    android:id="@+id/txt_follow"
+                                    style="@style/TextStyleNormalRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/margin_5"
+                                    android:gravity="center"
+                                    android:textColor="@color/white_color"
+                                    android:text="@string/txt_following"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btnRate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5"
+                                android:layout_weight="1"
+                                android:background="@drawable/bk_white_rect_20"
+                                android:clickable="true"
+                                android:elevation="@dimen/margin_1"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                                android:gravity="center">
+
+                                <TextView
+                                    style="@style/TextStyleNormalRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_5"
+                                    android:text="@string/txt_rate"
+                                    android:textColor="@color/grey_dark" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_time"/>
+                        <TextView
+                            android:id="@+id/txtPick"
+                            style="@style/TextStyleNormalRegular"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/pickup_time"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/text_13"
+                            android:maxLines="1"
+                            android:textColor="@color/md_grey_800"
+                            />
+                        <TextView
+                            style="@style/TextStyleNormalRegular"
+                            android:id="@+id/txtTime"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="12:00"
+                            android:textSize="@dimen/text_13"
+                            android:maxLines="1"
+                            android:textColor="@color/md_grey_800"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:gravity="center|start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextStyleNormalRegular"
+                            android:text="@string/total_price_dot"
+                            android:textColor="@color/md_grey_800"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/txtTotalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/colorAccent"
+                            style="@style/TextStyleNormalRegular"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lytDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp">
+                        <TextView
+                            android:id="@+id/tDes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextStyleNormalRegular"
+                            android:text="@string/description_dot"
+                            android:textColor="@color/md_grey_800"
+                            android:textSize="@dimen/text_13" />
+                        <TextView
+                            android:id="@+id/txtDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextStyleNormalRegular"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textSize="@dimen/text_13" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lytSingle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_20"
+                    android:orientation="vertical">
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/txtSingle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        style="@style/TextStyleNormalRegular"
+                        android:text="@string/single_products"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/text_16"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/recyclerSingle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lytCombo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_20"
+                    android:orientation="vertical">
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/txtCombo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        style="@style/TextStyleNormalRegular"
+                        android:text="@string/combo_deals"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/text_16"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/recyclerCombo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lytBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtBuyOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        style="@style/TextStyleNormalRegular"
+                        android:text="@string/buy_one_get_one"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/text_16"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/recyclerBuy1Get1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>

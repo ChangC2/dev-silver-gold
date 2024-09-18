@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MenuFunction">
+        <attr name="inf_title" format="string" />
+        <attr name="inf_description" format="string" />
+        <attr name="inf_icon" format="reference" />
+        <attr name="inf_icon_sub" format="reference" />
+        <attr name="inf_show_icon_subscription" format="boolean" />
+        <attr name="inf_show_switch_check" format="boolean" />
+        <attr name="inf_show_selection_text" format="boolean" />
+        <attr name="inf_selection_text_description" format="string"/>
+        <attr name="inf_show_icon" format="boolean" />
+        <attr name="inf_title_color" format="color"/>
+        <attr name="inf_description_color" format="color"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/txt_setting" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_in_app_notification" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                android:thumb="@drawable/bk_switch_thumb"
+                android:visibility="visible"
+                app:track="@drawable/bk_switch_track"
+                tools:visibility="visible" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_audio_using" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                android:thumb="@drawable/bk_switch_thumb"
+                android:visibility="visible"
+                app:track="@drawable/bk_switch_track"
+                tools:visibility="visible" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_address" />
+            <TextView
+                android:id="@+id/txtAddress"
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:text="153 Salton Avenue, Midrand, Johannesburg, Gauteng" />
+            <LinearLayout
+                android:id="@+id/li_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_14"
+                    android:text="@string/txt_edit" />
+                <View
+                    android:layout_width="@dimen/margin_25"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_dark"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:text="@string/txt_location" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                android:thumb="@drawable/bk_switch_thumb"
+                android:visibility="visible"
+                app:track="@drawable/bk_switch_track"
+                tools:visibility="visible" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:text="@string/txt_camera" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                android:thumb="@drawable/bk_switch_thumb"
+                android:visibility="visible"
+                app:track="@drawable/bk_switch_track"
+                tools:visibility="visible" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_microphone" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                android:thumb="@drawable/bk_switch_thumb"
+                android:visibility="visible"
+                app:track="@drawable/bk_switch_track"
+                tools:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

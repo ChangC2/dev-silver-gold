@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "554612802670",
+    "firebase_url": "https://seemesave-1574761681227-default-rtdb.firebaseio.com",
+    "project_id": "seemesave-1574761681227",
+    "storage_bucket": "seemesave-1574761681227.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554612802670:android:66c9ff2bd80d4adbc8d27f",
+        "android_client_info": {
+          "package_name": "com.mobile.seemesave"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554612802670-b80von9csq0q0etcmni4pdbt32l769qf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.seemesave",
+            "certificate_hash": "85d66d8717ba8233c19d531f36f3bd25569582f3"
+          }
+        },
+        {
+          "client_id": "554612802670-cofjf4a56n5aln1fecpnq4pnlp1qsopo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.seemesave",
+            "certificate_hash": "111bd34f1ec8be9f33c45b4a36b7bf000314ce20"
+          }
+        },
+        {
+          "client_id": "554612802670-r66jgi98aq6gv9qq59n19hio7kusri3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.seemesave",
+            "certificate_hash": "671e3d0a06da6e7d22ab20b3100a7085d7b57121"
+          }
+        },
+        {
+          "client_id": "554612802670-ki46k3n8q60r4ia1fl625pssr3qrk6db.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk1pWJAQb65ff2DjCOyOwl-Lz5EunaD4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554612802670-ki46k3n8q60r4ia1fl625pssr3qrk6db.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554612802670-4c30l390uc4uvr74a0n855ahgvdaa7l1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.business.seemesave"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554612802670:android:d9eee4c9640ffd3dc8d27f",
+        "android_client_info": {
+          "package_name": "seemesave.businesshub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554612802670-ki46k3n8q60r4ia1fl625pssr3qrk6db.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk1pWJAQb65ff2DjCOyOwl-Lz5EunaD4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554612802670-ki46k3n8q60r4ia1fl625pssr3qrk6db.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554612802670-4c30l390uc4uvr74a0n855ahgvdaa7l1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.business.seemesave"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

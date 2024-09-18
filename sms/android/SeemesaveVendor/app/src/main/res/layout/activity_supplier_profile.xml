@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey"
+    android:orientation="vertical"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white_color"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/supplier_profile"
+            android:textColor="@color/grey_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/headerContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgProfile"
+                                android:layout_width="98dp"
+                                android:layout_height="94dp"
+                                android:src="@drawable/ic_store_default"
+                                app:civ_border_color="@color/md_grey_400"
+                                app:civ_border_width="3dp" />
+
+                            <ImageView
+                                android:id="@+id/imgPhotoEdit"
+                                android:layout_width="35dp"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="-35dp"
+                                android:src="@drawable/ic_profile_edit" />
+
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingTop="@dimen/margin_20"
+                                    android:paddingBottom="@dimen/margin_20">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:theme="@style/EditTextStyle"
+                                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                                        app:boxStrokeColor="@color/black_color"
+                                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                                        app:hintTextColor="@color/grey_light">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edtName"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/margin_45"
+                                            android:drawableStart="@drawable/ic_profile_business_name"
+                                            android:drawablePadding="@dimen/margin_10"
+                                            android:hint="@string/txt_supplier_name"
+                                            android:importantForAutofill="no"
+                                            android:inputType="text"
+                                            android:paddingLeft="@dimen/margin_15"
+                                            android:paddingTop="@dimen/margin_10"
+                                            android:paddingRight="@dimen/margin_15"
+                                            android:paddingBottom="@dimen/margin_10"
+                                            android:textColor="@color/grey_dark"
+                                            android:textSize="@dimen/text_14" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_15"
+                                        android:theme="@style/EditTextStyle"
+                                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                                        app:boxStrokeColor="@color/black_color"
+                                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                                        app:hintTextColor="@color/grey_light">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edtAddress"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/margin_45"
+                                            android:drawableStart="@drawable/ic_profile_location"
+                                            android:drawablePadding="@dimen/margin_10"
+                                            android:hint="@string/txt_address"
+                                            android:importantForAutofill="no"
+                                            android:inputType="text"
+                                            android:paddingLeft="@dimen/margin_15"
+                                            android:paddingTop="@dimen/margin_10"
+                                            android:paddingRight="@dimen/margin_15"
+                                            android:paddingBottom="@dimen/margin_10"
+                                            android:textColor="@color/grey_dark"
+                                            android:textSize="@dimen/text_14" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/margin_15"
+                                            android:theme="@style/EditTextStyle"
+                                            app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                                            app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                                            app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                                            app:boxCornerRadiusTopStart="@dimen/margin_10"
+                                            app:boxStrokeColor="@color/black_color"
+                                            app:boxStrokeWidthFocused="@dimen/pixel_4"
+                                            app:endIconDrawable="@drawable/ic_transparent"
+                                            app:endIconMode="custom"
+                                            app:hintTextColor="@color/grey_light">
+
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:id="@+id/edtEmail"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/margin_45"
+                                                android:drawableStart="@drawable/ic_profile_email"
+                                                android:drawablePadding="@dimen/margin_10"
+                                                android:hint="@string/txt_email"
+                                                android:importantForAutofill="no"
+                                                android:inputType="textEmailAddress"
+                                                android:paddingLeft="@dimen/margin_15"
+                                                android:paddingTop="@dimen/margin_10"
+                                                android:paddingRight="@dimen/margin_15"
+                                                android:paddingBottom="@dimen/margin_10"
+                                                android:textColor="@color/grey_dark"
+                                                android:textSize="@dimen/text_14" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lytMobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        android:layout_marginTop="@dimen/margin_15">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:theme="@style/EditTextStyle"
+                                                app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                                                app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                                                app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                                                app:boxCornerRadiusTopStart="@dimen/margin_10"
+                                                app:boxStrokeColor="@color/black_color"
+                                                app:boxStrokeWidthFocused="@dimen/pixel_4"
+                                                app:hintTextColor="@color/grey_light">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/editBMobile"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="@dimen/margin_45"
+                                                    android:drawableStart="@drawable/ic_transparent"
+                                                    android:drawablePadding="@dimen/margin_110"
+                                                    android:hint="@string/txt_mobile_number"
+                                                    android:importantForAutofill="no"
+                                                    android:inputType="phone"
+                                                    android:paddingStart="@dimen/margin_15"
+                                                    android:paddingTop="@dimen/margin_10"
+                                                    android:paddingEnd="@dimen/margin_15"
+                                                    android:paddingBottom="@dimen/margin_10"
+                                                    android:textColor="@color/grey_dark"
+                                                    android:textSize="@dimen/text_14" />
+
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <com.hbb20.CountryCodePicker
+                                                android:id="@+id/country_picker_business"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                app:ccpDialog_showTitle="false"
+                                                android:layout_centerVertical="true"
+                                                android:clickable="false"
+                                                android:paddingLeft="@dimen/margin_15"
+                                                android:paddingTop="@dimen/margin_5"
+                                                app:ccp_arrowColor="@color/colorPrimary"
+                                                app:ccp_arrowSize="30dp"
+                                                app:ccp_contentColor="@color/grey_dark"
+                                                app:ccp_defaultNameCode="ZA"
+                                                app:ccp_padding="0dp"
+                                                app:ccp_textSize="@dimen/text_14" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_15"
+                                        android:theme="@style/EditTextStyle"
+                                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                                        app:boxStrokeColor="@color/black_color"
+                                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                                        app:hintTextColor="@color/grey_light">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edtPhone"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/margin_45"
+                                            android:drawableStart="@drawable/ic_profile_contact"
+                                            android:drawablePadding="@dimen/margin_10"
+                                            android:hint="@string/txt_contact_number"
+                                            android:importantForAutofill="no"
+                                            android:inputType="number"
+                                            android:paddingLeft="@dimen/margin_15"
+                                            android:paddingTop="@dimen/margin_10"
+                                            android:paddingRight="@dimen/margin_15"
+                                            android:paddingBottom="@dimen/margin_10"
+                                            android:textColor="@color/grey_dark"
+                                            android:textSize="@dimen/text_14" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/normal"
+                                            android:text="@string/txt_currency"
+                                            android:textColor="@color/grey_dark"
+                                            android:textSize="@dimen/text_12" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/margin_45"
+                                            android:layout_marginTop="2dp"
+                                            android:background="@drawable/round_stroke_dark">
+
+                                            <ImageView
+                                                android:id="@+id/ic_store_c"
+                                                android:layout_width="@dimen/margin_20"
+                                                android:layout_height="@dimen/margin_20"
+                                                android:layout_centerVertical="true"
+                                                android:layout_marginStart="@dimen/margin_18"
+                                                android:src="@drawable/ic_profile_currency"
+                                                app:tint="@color/grey_dark" />
+
+                                            <Spinner
+                                                android:id="@+id/spinnerCurrency"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/margin_45"
+                                                android:layout_gravity="center_horizontal"
+                                                android:layout_toStartOf="@+id/ic_drop_c"
+                                                android:layout_toEndOf="@+id/ic_store_c"
+                                                android:background="@color/transparent_color"
+                                                android:dropDownWidth="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:spinnerMode="dialog"
+                                                android:textColor="@color/black_color"
+                                                android:textSize="12sp" />
+
+                                            <ImageView
+                                                android:id="@+id/ic_drop_c"
+                                                android:layout_width="@dimen/margin_10"
+                                                android:layout_height="@dimen/margin_20"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_centerVertical="true"
+                                                android:layout_marginEnd="@dimen/margin_15"
+                                                android:src="@drawable/ic_drop"
+                                                app:tint="@color/grey_dark" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_15"
+                                        android:theme="@style/EditTextStyle"
+                                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                                        app:boxStrokeColor="@color/black_color"
+                                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                                        app:hintTextColor="@color/grey_light">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edtLink"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/margin_45"
+                                            android:drawableStart="@drawable/ic_profile_business_name"
+                                            android:drawablePadding="@dimen/margin_10"
+                                            android:hint="@string/txt_website"
+                                            android:importantForAutofill="no"
+                                            android:inputType="text"
+                                            android:paddingLeft="@dimen/margin_15"
+                                            android:paddingTop="@dimen/margin_10"
+                                            android:paddingRight="@dimen/margin_15"
+                                            android:paddingBottom="@dimen/margin_10"
+                                            android:textColor="@color/grey_dark"
+                                            android:textSize="@dimen/text_14" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+                            </ScrollView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/btnUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_20"
+                            android:layout_marginEnd="@dimen/margin_20"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:background="@drawable/bk_blue_rect_10"
+                            android:clickable="true"
+                            android:elevation="@dimen/margin_1"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:visibility="visible">
+
+                            <TextView
+                                style="@style/TextStyleNormalRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_12"
+                                android:text="@string/update"
+                                android:textColor="@color/white_color" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

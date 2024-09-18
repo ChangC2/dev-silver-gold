@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/txt_contact_us" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_with_us"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_grey_800"
+                    />
+
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_support_"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/round_stroke_grey"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_login_email"
+                            app:tint="@color/colorAccent" />
+                        <TextView
+                            style="@style/TextStyleNormalRegular"
+                            android:id="@+id/txtEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorAccent"
+                            android:text="info@seemesave.com"
+                            android:textSize="15sp"
+                            android:layout_marginStart="10dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md_grey_300"/>
+
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_in_"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/md_grey_800"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextStyle"
+                    android:layout_marginTop="@dimen/margin_10"
+                    app:hintTextColor="@color/grey_light"
+                    app:boxStrokeColor="@color/black_color"
+                    app:boxStrokeWidthFocused="@dimen/pixel_4"
+                    app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                    app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                    app:boxCornerRadiusTopStart="@dimen/margin_10"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editFName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_45"
+                        android:hint="@string/txt_first_name"
+                        android:inputType="text"
+                        android:importantForAutofill="no"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingLeft="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:drawableStart="@drawable/ic_login_account"
+                        android:textSize="@dimen/text_14"
+                        android:textColor="@color/grey_dark"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextStyle"
+                    android:layout_marginTop="@dimen/margin_15"
+                    app:hintTextColor="@color/grey_light"
+                    app:boxStrokeColor="@color/black_color"
+                    app:boxStrokeWidthFocused="@dimen/pixel_4"
+                    app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                    app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                    app:boxCornerRadiusTopStart="@dimen/margin_10"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editLName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_45"
+                        android:hint="@string/txt_last_name"
+                        android:inputType="text"
+                        android:importantForAutofill="no"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingLeft="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:drawableStart="@drawable/ic_login_account"
+                        android:textSize="@dimen/text_14"
+                        android:textColor="@color/grey_dark"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lytEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        android:layout_marginTop="@dimen/margin_15"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_transparent"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="@string/txt_email_address"
+                            android:inputType="textEmailAddress"
+                            android:importantForAutofill="no"
+                            android:paddingLeft="@dimen/margin_15"
+                            android:paddingRight="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingBottom="@dimen/margin_10"
+                            android:drawableStart="@drawable/ic_login_email"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextStyle"
+                    android:layout_marginTop="@dimen/margin_15"
+                    app:hintTextColor="@color/grey_light"
+                    app:boxStrokeColor="@color/black_color"
+                    app:boxStrokeWidthFocused="@dimen/pixel_4"
+                    app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                    app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                    app:boxCornerRadiusTopStart="@dimen/margin_10"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_45"
+                        android:hint="@string/message"
+                        android:inputType="text"
+                        android:importantForAutofill="no"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingLeft="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:drawableStart="@drawable/ic_login_email"
+                        android:textSize="@dimen/text_14"
+                        android:textColor="@color/grey_dark"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:id="@+id/btnSend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:gravity="center"
+                        android:elevation="@dimen/margin_1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:background="@drawable/bk_blue_rect_10">
+                        <TextView
+                            style="@style/TextStyleNormalRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_12"
+                            android:gravity="center"
+                            android:textColor="@color/white_color"
+                            android:text="@string/txt_contact_us"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>

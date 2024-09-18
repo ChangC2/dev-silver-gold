@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.mobile.seemesave",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 114,
+      "versionName": "5.0.5",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

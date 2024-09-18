@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#55000000">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:background="@drawable/round_stroke_grey"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:rating="5"
+            app:mrb_progressTint="@color/md_yellow_800"
+            app:mrb_secondaryProgressTint="@color/md_grey_300"
+            style="@style/Widget.MaterialRatingBar.RatingBar" />
+        <EditText
+            android:id="@+id/editMsg"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="100dp"
+            android:hint="@string/write_msg"
+            android:textColor="@color/md_black_1000"
+            android:textSize="13sp"
+            android:gravity="top"
+            android:padding="10dp"
+            android:fontFamily="@font/normal"
+            android:background="@drawable/round_stroke_grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center"
+                android:elevation="@dimen/margin_1"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:background="@drawable/bk_blue_stroke_5">
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8"
+                    android:gravity="center"
+                    android:textColor="@color/main_blue_color"
+                    android:text="@string/cancel"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnSend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center"
+                android:elevation="@dimen/margin_1"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@drawable/bk_blue_rect_5">
+                <TextView
+                    style="@style/TextStyleNormalRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8"
+                    android:gravity="center"
+                    android:textColor="@color/white_color"
+                    android:text="@string/txt_send"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">admin.seemesave.com</domain>
+        <domain includeSubdomains="true">test.admin.seemesave.com</domain>
+        <domain includeSubdomains="true">v5.admin.seemesave.com</domain>
+        <domain includeSubdomains="true">live.v5.admin.seemesave.com</domain>
+    </domain-config>
+</network-security-config>

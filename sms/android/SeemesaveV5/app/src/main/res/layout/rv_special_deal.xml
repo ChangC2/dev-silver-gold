@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginEnd="@dimen/margin_8"
+    app:cardCornerRadius="@dimen/margin_15"
+    app:cardBackgroundColor="@color/transparent_color"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="@dimen/margin_200"
+        android:layout_height="@dimen/margin_120">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            app:riv_mutate_background="true" />
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/margin_50"
+            android:layout_height="@dimen/margin_50"
+            android:layout_alignParentStart="true"
+            app:riv_corner_radius="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10" />
+        <ImageView
+            android:id="@+id/imgOption"
+            android:layout_width="@dimen/margin_35"
+            android:layout_height="@dimen/margin_35"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/margin_8"
+            android:src="@drawable/ic_option"
+            app:tint="@color/white_color" />
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_80"
+            android:layout_centerHorizontal="true"
+            app:riv_corner_radius="@dimen/margin_15"
+            app:riv_mutate_background="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bk_gradient_cover"/>
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_70"
+            android:padding="@dimen/margin_5"
+            android:textColor="@color/white_color"
+            android:maxLines="2"
+            android:textSize="@dimen/text_14"
+            android:layout_gravity="start"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

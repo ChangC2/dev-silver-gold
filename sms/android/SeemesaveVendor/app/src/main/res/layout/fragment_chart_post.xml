@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_300"
+        android:padding="@dimen/margin_10"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical"
+        android:background="@drawable/bk_grey_stroke_10">
+        <TextView
+            style="@style/TextStyleNormalRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/post_chart_title"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="34dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bk_blue_stroke_10">
+
+                <Spinner
+                    android:id="@+id/spinnerPromoter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/transparent_color"
+                    android:dropDownWidth="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_color"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/imgPickTimezone"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_drop"
+                    app:tint="@color/main_blue_color" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/btnProductView"
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="@dimen/margin_30"
+                    android:gravity="center"
+                    android:elevation="@dimen/margin_1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/bk_blue_rect_5">
+                    <TextView
+                        style="@style/TextStyleNormalRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_5"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:gravity="center"
+                        android:textColor="@color/white_color"
+                        android:text="@string/detail"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

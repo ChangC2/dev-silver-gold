@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/transparent_color"/>
+                    <size android:width="@dimen/margin_25"
+                        android:height="@dimen/margin_25"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/transparent_color"/>
+                    <size android:width="@dimen/margin_25"
+                        android:height="@dimen/margin_25"/>
+                    <stroke android:width="@dimen/margin_2"
+                        android:color="@color/transparent_color"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/grey_dark"/>
+                    <size android:width="@dimen/margin_25"
+                        android:height="@dimen/margin_25"/>
+                    <stroke android:width="@dimen/margin_10"
+                        android:color="@color/transparent_color"/>
+                </shape>
+            </item>
+        </layer-list>
+
+    </item>
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/transparent_color"/>
+                    <size android:width="@dimen/margin_25"
+                        android:height="@dimen/margin_25"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/transparent_color"/>
+                    <size android:width="@dimen/margin_25"
+                        android:height="@dimen/margin_25"/>
+                    <stroke android:width="@dimen/margin_2"
+                        android:color="@color/transparent_color"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/white_color"/>
+                    <size android:width="@dimen/margin_25"
+                        android:height="@dimen/margin_25"/>
+                    <stroke android:width="@dimen/margin_10"
+                        android:color="@color/transparent_color"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

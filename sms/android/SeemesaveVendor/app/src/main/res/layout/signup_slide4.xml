@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/margin_20"
+        android:paddingEnd="@dimen/margin_20"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtAgreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    style="@style/TextStyleLargeRegular"
+                    android:textColor="@color/grey_dark"
+                    android:text="@string/txt_vendor_agree_info"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/text_13"/>
+
+                <LinearLayout
+                    android:id="@+id/otp_enlayout_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <CheckBox
+                            android:id="@+id/ckTerm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:checked="false"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:text="@string/txt_agree_to"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_13" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/txtTerm"
+                            style="@style/TextStyleNormalRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:layout_marginStart="@dimen/margin_3"
+                            android:text="@string/txt_vendor_terms"
+                            android:textAllCaps="false"
+                            android:textColor="@color/main_blue_color"
+                            android:textSize="@dimen/text_13"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btnNext4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/bk_blue_rect_10"
+            android:clickable="true"
+            android:elevation="@dimen/margin_1"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_12"
+                android:text="@string/txt_next"
+                android:textColor="@color/white_color" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

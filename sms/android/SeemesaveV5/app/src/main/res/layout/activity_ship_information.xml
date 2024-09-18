@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_dark"
+            android:text="@string/ship_information"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/md_grey_200"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receipter_distance_limit"
+        android:textSize="14sp"
+        android:textColor="@color/md_green_900"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginTop="2dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp"
+            >
+            <fragment
+                android:id="@+id/frag_map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/selLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/receipter_location"
+            android:textColor="@color/md_grey_800"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bk_blue_stroke_5"
+            android:clickable="true"
+            android:layout_below="@+id/frame"
+            android:layout_marginTop="-20dp"
+            android:padding="7dp"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ship_information"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ship_information_alert"
+                        android:textColor="@color/md_grey_800"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_name" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout
+                        android:id="@+id/lytMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="@string/receipter_contact_number"
+                            android:textColor="@color/md_grey_800"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.hbb20.CountryCodePicker
+                                android:id="@+id/country_picker"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                app:ccp_arrowColor="@color/colorPrimary"
+                                app:ccp_arrowSize="30dp"
+                                app:ccp_contentColor="@color/md_black_1000"
+                                app:ccp_defaultNameCode="ZA"
+                                app:ccp_padding="0dp"
+                                app:ccp_textSize="13sp" />
+
+                            <EditText
+                                android:id="@+id/editMobile"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_14"
+                                android:background="@color/transparent_color"
+                                android:inputType="phone"/>
+                        </LinearLayout>
+                        <View
+                            android:id="@+id/subline"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="9.5dp"
+                            android:background="@color/md_grey_400" />
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lytEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/editEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="textEmailAddress"
+                            android:hint="@string/receipter_email" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_color">
+                        <EditText
+                            android:id="@+id/street1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_street1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/street2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_street2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/suburb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_suburb" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_city" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_state" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="text"
+                            android:hint="@string/receipter_country" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/postal_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent_color"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/md_grey_800"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/receipter_postal_code" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:background="@drawable/bk_blue_rect_10"
+                    android:clickable="true"
+                    android:elevation="@dimen/margin_1"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/TextStyleNormalRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_12"
+                        android:text="@string/txt_proceed_payment"
+                        android:textColor="@color/white_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

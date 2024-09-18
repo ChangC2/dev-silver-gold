@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_black_1000">
+
+
+    <ImageView
+        android:id="@+id/imgStoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"/>
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/videoStoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:use_controller="false" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgPause"-->
+<!--        android:layout_width="@dimen/margin_50"-->
+<!--        android:layout_height="@dimen/margin_50"-->
+<!--        android:src="@drawable/ic_pause_story"-->
+<!--        android:padding="@dimen/margin_10"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--        />-->
+    <LinearLayout
+        android:id="@+id/lytControl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_overlay"
+        android:gravity="center"
+        android:padding="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lytProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lytStoreInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgStore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_account" />
+
+        <TextView
+            android:id="@+id/txtStoreName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLines="2"
+            android:text="@string/caption"
+            android:textColor="@color/white_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lytMainSlide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:longClickable="true"
+        android:clickable="true"
+        android:layout_below="@+id/lytStoreInfo"
+        android:layout_above="@+id/lytControl">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnPrev"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent_color"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent_color"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
