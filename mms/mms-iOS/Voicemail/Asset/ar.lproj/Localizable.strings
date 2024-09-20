@@ -1,0 +1,74 @@
+"time_remain" = "الوقت المتبقي %02d:%02d";
+"logout_msg" = "تاكيد تسجيل خروج؟";
+"ok" = "نعم";
+"cancel" = "الغاء";
+"yes" = "نعم";
+"no" = "لا";
+"pass" = "كلمة المرور";
+"username" = "الاسم المستخدم";
+"name_pass_incorrect" = "خطأ في البريد الالكتروني او كلمة المرور ، يرجى اعادة المحاولة";
+"connect_error" = "يرجى التاكد من توفر انترنت";
+"param_invalid" = "خطأ، يرجى اعادة المحاولة";
+"delete_alert" = "تاكيد الالغاء؟";
+"no_item"="لايوجد منتجات";
+"no_item_desc"="لايوجد منتجات";
+"take_photo" = "تصوير";
+"choose_photo" = "اختر الصورة";
+"search" = "بحث";
+
+"today" = "اليوم";
+"yesterday" = "امس";
+"last_7" = "اخر ٧ ايام";
+"last_30" = "اخر ٣٠ يوم";
+"this_month" = "هذا الشهر";
+"this_year" = "خلال السنه";
+"custom" = "اختيار";
+
+"order_id" = "رقم الطلب";
+
+"all"="الكل";
+"Pending" = "قيد الانتظار";
+"Confirmed" = "تاكيد الطلب";
+"Processing" = "قيد التجهيز";
+"Delivered" = "تم التوصيل";
+"Cancelled" = "تم الالغاء";
+"In Transit" = "خلال الشحن";
+
+"currency_unit" = "د.ك";
+
+
+"success_update"="تم التحديث";
+"success_send"="تم التحديث";
+
+"Percent"="نسبه";
+"Amount"="مبلغ";
+"overall"="للجميع";
+"peruser"="للشخص";
+"unlimited"="لانهائي";
+
+"wrong_pass"="كلمة المرور غير صحيحة";
+"mismatch_pass"="كلمة المرور غير متطابقة";
+"write_here" = "اكتب هنا";
+
+"top_customers"="افضل العملاء";
+"top_products"="افضل المبيعات";
+"price"="السعر";
+"qty"="العدد";
+
+"pickup" = "استلام";
+"delivery" = "توصيل";
+"Paid" = "مدفوع";
+"Unpaid" = "غير مدفوع";
+
+"city" = "المحافظة";
+"street" = "الشارع";
+"area" = "المنطقة";
+"building" = "رقم المبنى";
+"unit" = "النوع";
+"floor" = "الدور";
+"block" = "قطعة";
+"flat" = "شقة";
+"note" = "ملاحظة";
+
+"valid_till" = "صالح لغاية";
+"coupon_code" = "رمز الكوبون";

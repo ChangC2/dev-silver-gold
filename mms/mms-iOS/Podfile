@@ -1,0 +1,15 @@
+target 'Voicemail' do
+  use_frameworks!
+  
+  pod 'IQKeyboardManagerSwift'
+  pod 'SnapKit'
+  pod 'SDWebImage'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'KRProgressHUD'
+  pod 'Toast-Swift'
+  pod 'CountryPickerView'
+  pod 'DatePicker', '~> 1.3.0'
+  pod 'SignaturePad', '~> 1.0.3'
+  pod 'DGCharts'
+end

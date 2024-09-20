@@ -1,0 +1,345 @@
+
+/* Class = "UILabel"; text = "رقم الطلب: 321"; ObjectID = "055-eb-iR4"; */
+"055-eb-iR4.text" = "Order ID: 321";
+
+/* Class = "UILabel"; text = "رمز الكوبون : hala30"; ObjectID = "0Uf-Pq-juY"; */
+"0Uf-Pq-juY.text" = "Coupon Code : hala30";
+
+/* Class = "UILabel"; text = "12/12/2021"; ObjectID = "0yE-W0-eVW"; */
+"0yE-W0-eVW.text" = "12/12/2021";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "1pA-JD-5bd"; */
+"1pA-JD-5bd.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; text = "123456"; ObjectID = "1pA-JD-5bd"; */
+"1pA-JD-5bd.text" = "123456";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "1vc-BR-1Yb"; */
+"1vc-BR-1Yb.text" = "معلومات العميل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2cc-wJ-8VT"; */
+"2cc-wJ-8VT.normalTitle" = "الزر";
+
+/* Class = "UILabel"; text = "Coupon Code"; ObjectID = "3di-Re-dS9"; */
+"3di-Re-dS9.text" = "رمز الكوبون";
+
+/* Class = "UILabel"; text = "SALES"; ObjectID = "43j-H0-hqb"; */
+"43j-H0-hqb.text" = "المبيعات";
+
+/* Class = "UILabel"; text = "Percentage"; ObjectID = "4RF-CJ-7DT"; */
+"4RF-CJ-7DT.text" = "النسبة المئوية";
+
+/* Class = "UILabel"; text = "Coupon Details"; ObjectID = "4bm-V7-tvO"; */
+"4bm-V7-tvO.text" = "معلومات الكوبون";
+
+/* Class = "UILabel"; text = "PENDING"; ObjectID = "5nJ-14-y5q"; */
+"5nJ-14-y5q.text" = "قيد الانتظار";
+
+/* Class = "UILabel"; text = "CASH ON DELIVERY"; ObjectID = "6JF-Ou-STs"; */
+"6JF-Ou-STs.text" = "الدفع عند الاستلام";
+
+/* Class = "UILabel"; text = "TOP CUSTOMERS"; ObjectID = "6Ya-yq-WKr"; */
+"6Ya-yq-WKr.text" = "افضل العملاء";
+
+/* Class = "UILabel"; text = "Contact us"; ObjectID = "80O-7b-so1"; */
+"80O-7b-so1.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "Confirm New Password"; ObjectID = "8kN-mI-cGt"; */
+"8kN-mI-cGt.text" = "تاكيد كلمة المرور الجديدة";
+
+/* Class = "UILabel"; text = "DELIVERY INFORMATION"; ObjectID = "9MX-ki-FdM"; */
+"9MX-ki-FdM.text" = "معلومات التوصيل";
+
+/* Class = "UILabel"; text = "Account"; ObjectID = "9cV-hZ-BHF"; */
+"9cV-hZ-BHF.text" = "الحساب";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "9sz-xy-dxP"; */
+"9sz-xy-dxP.text" = "اليوم";
+
+/* Class = "UILabel"; text = "Delivery Fees"; ObjectID = "A6O-yk-fQ9"; */
+"A6O-yk-fQ9.text" = "رسوم التوصيل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AFn-My-IAU"; */
+"AFn-My-IAU.normalTitle" = "الزر";
+
+/* Class = "UILabel"; text = "Business name"; ObjectID = "AHI-La-icK"; */
+"AHI-La-icK.text" = "اسم المشروع";
+
+/* Class = "UILabel"; text = "Valid Till"; ObjectID = "AbG-cZ-oX5"; */
+"AbG-cZ-oX5.text" = "صالح لغاية";
+
+/* Class = "UILabel"; text = "End Date"; ObjectID = "Ad6-Eo-aCZ"; */
+"Ad6-Eo-aCZ.text" = "لغاية";
+
+/* Class = "UILabel"; text = "Minimum Order Amount"; ObjectID = "AgU-8c-byI"; */
+"AgU-8c-byI.text" = "اقل قيمة طلب";
+
+/* Class = "UILabel"; text = "Sales"; ObjectID = "BUQ-MX-a8Y"; */
+"BUQ-MX-a8Y.text" = "المبيعات";
+
+/* Class = "UIButton"; normalTitle = "SEND"; ObjectID = "C3l-Lq-GUb"; */
+"C3l-Lq-GUb.normalTitle" = "ارسال";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "CJ9-J9-q6i"; */
+"CJ9-J9-q6i.text" = "English";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Cdh-zW-pI3"; */
+"Cdh-zW-pI3.normalTitle" = "زر";
+
+/* Class = "UIButton"; normalTitle = "CREATE MASHKOR ORDER"; ObjectID = "DOb-sz-mOP"; */
+"DOb-sz-mOP.normalTitle" = "ارسال الطلب الى مشكور";
+
+/* Class = "UILabel"; text = "عربي"; ObjectID = "DnI-5y-CIG"; */
+"DnI-5y-CIG.text" = "عربي";
+
+/* Class = "UILabel"; text = "Coupon Title(Arabic)"; ObjectID = "Eyq-bW-rBO"; */
+"Eyq-bW-rBO.text" = "مسمى الكوبون بالعربي";
+
+/* Class = "UILabel"; text = "51500900"; ObjectID = "F6s-UB-lD5"; */
+"F6s-UB-lD5.text" = "51500900";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "FCo-mE-tgj"; */
+"FCo-mE-tgj.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "PAID"; ObjectID = "FQo-HC-P2t"; */
+"FQo-HC-P2t.text" = "مدفوع";
+
+/* Class = "UILabel"; text = "3.00KD"; ObjectID = "GrS-FZ-KbX"; */
+"GrS-FZ-KbX.text" = "3.00KD";
+
+/* Class = "UIButton"; normalTitle = "MANAGER APP"; ObjectID = "HMn-dO-DBj"; */
+"HMn-dO-DBj.normalTitle" = "مدير العمليات";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "I76-sM-z8d"; */
+"I76-sM-z8d.text" = "معلومات العميل";
+
+/* Class = "UILabel"; text = "51500900"; ObjectID = "INl-px-c05"; */
+"INl-px-c05.text" = "51500900";
+
+/* Class = "UILabel"; text = "PAYMENT STATUS:"; ObjectID = "IQC-UC-mpM"; */
+"IQC-UC-mpM.text" = "حالة الدفع:";
+
+/* Class = "UILabel"; text = "Discount Type"; ObjectID = "In5-ZX-VyT"; */
+"In5-ZX-VyT.text" = "نوع الخصم:";
+
+/* Class = "UILabel"; text = "DELIVERY INFORMATION"; ObjectID = "JDV-br-nHA"; */
+"JDV-br-nHA.text" = "السعر";
+
+/* Class = "UILabel"; text = "Coupon"; ObjectID = "JSB-EC-M05"; */
+"JSB-EC-M05.text" = "الكوبون";
+
+/* Class = "UILabel"; text = "DELIVERY"; ObjectID = "Jp5-XY-Lxt"; */
+"Jp5-XY-Lxt.text" = "توصيل";
+
+/* Class = "UILabel"; text = "Old Password"; ObjectID = "Ktk-he-kvL"; */
+"Ktk-he-kvL.text" = "كلمة المرور القديمة";
+
+/* Class = "UILabel"; text = "TOP CUSTOMERS"; ObjectID = "LUt-cq-fUv"; */
+"LUt-cq-fUv.text" = "افضل العملاء";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Lfj-54-RdL"; */
+"Lfj-54-RdL.normalTitle" = "تاكيد";
+
+/* Class = "UILabel"; text = "51500900"; ObjectID = "Lqi-sO-hec"; */
+"Lqi-sO-hec.text" = "51500900";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "M2Y-0G-TmJ"; */
+"M2Y-0G-TmJ.normalTitle" = "تسجيل دخول";
+
+/* Class = "UILabel"; text = "Total Sale"; ObjectID = "NMx-xI-tBq"; */
+"NMx-xI-tBq.text" = "اجمالي المبيعات";
+
+/* Class = "UILabel"; text = "SOON BIG FEATURES"; ObjectID = "OUR-e0-kQ5"; */
+"OUR-e0-kQ5.text" = "قريبا مميزات شاملة";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "Ocn-wW-v2L"; */
+"Ocn-wW-v2L.text" = "اسم العميل";
+
+/* Class = "UILabel"; text = "Shop Name"; ObjectID = "Oef-g4-Ner"; */
+"Oef-g4-Ner.text" = "اسم المشروع";
+
+/* Class = "UIButton"; normalTitle = "NEED HELP? CONTACT US"; ObjectID = "PEF-kt-d6z"; */
+"PEF-kt-d6z.normalTitle" = "تحتاج مساعدة؟ اتصل بنا";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "PY4-mK-hJh"; */
+"PY4-mK-hJh.text" = "اسم العميل";
+
+/* Class = "UILabel"; text = "44"; ObjectID = "PpH-hg-rOE"; */
+"PpH-hg-rOE.text" = "44";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "QFp-Fa-Xwv"; */
+"QFp-Fa-Xwv.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "TOP CUSTOMERS"; ObjectID = "QSb-ro-1ro"; */
+"QSb-ro-1ro.text" = "افضل العملاء";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "Qk1-Ol-CaS"; */
+"Qk1-Ol-CaS.text" = "معلومات العميل";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Qqg-Fy-9mJ"; */
+"Qqg-Fy-9mJ.text" = "1";
+
+/* Class = "UILabel"; text = "22/02/2021-10:30 AM"; ObjectID = "Qy2-fn-yNF"; */
+"Qy2-fn-yNF.text" = "22/02/2021-10:30 AM";
+
+/* Class = "UITextView"; text = "Write here"; ObjectID = "Rzw-8F-Vaz"; */
+"Rzw-8F-Vaz.text" = "اكتب هنا";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "SH8-oh-e6A"; */
+"SH8-oh-e6A.text" = "معلومات العميل";
+
+/* Class = "UILabel"; text = "New Password"; ObjectID = "TFO-Nn-UOI"; */
+"TFO-Nn-UOI.text" = "كلمة المرور الجديدة";
+
+/* Class = "UILabel"; text = "PAYMENT OPTION:"; ObjectID = "Tdk-34-cTk"; */
+"Tdk-34-cTk.text" = "طريقة الدفع:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "U0W-Sa-Fqr"; */
+"U0W-Sa-Fqr.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Coupon"; ObjectID = "WUI-dY-4cP"; */
+"WUI-dY-4cP.text" = "كوبون";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "WZW-Cf-6Fs"; */
+"WZW-Cf-6Fs.text" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "Setting"; ObjectID = "Wdx-0R-UqO"; */
+"Wdx-0R-UqO.text" = "الاعدادات";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Wps-sR-WTH"; */
+"Wps-sR-WTH.text" = "التاريخ";
+
+/* Class = "UILabel"; text = "16.750 KD"; ObjectID = "WuP-88-9AJ"; */
+"WuP-88-9AJ.text" = "16.750 KD";
+
+/* Class = "UILabel"; text = "Discount Value"; ObjectID = "ZHn-ex-GN4"; */
+"ZHn-ex-GN4.text" = "قيمة الخصم";
+
+/* Class = "UILabel"; text = "50.00KD"; ObjectID = "Zc6-cK-RZN"; */
+"Zc6-cK-RZN.text" = "50.00KD";
+
+/* Class = "UILabel"; text = "ORDER MODE:"; ObjectID = "aam-dV-I55"; */
+"aam-dV-I55.text" = "نوع الطلب:";
+
+/* Class = "UILabel"; text = "41.750KD"; ObjectID = "ajd-Tn-BSC"; */
+"ajd-Tn-BSC.text" = "41.750KD";
+
+/* Class = "UILabel"; text = "Coupon Details"; ObjectID = "anI-gF-imZ"; */
+"anI-gF-imZ.text" = "معلومات الكوبون";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "b7Q-9A-QLM"; */
+"b7Q-9A-QLM.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "cgb-9G-IV2"; */
+"cgb-9G-IV2.text" = "الحالة";
+
+/* Class = "UILabel"; text = "Valid Till : 27/11/2021"; ObjectID = "dCt-n2-o8S"; */
+"dCt-n2-o8S.text" = "صالح لغاية : 27/11/2021";
+
+/* Class = "UILabel"; text = "PRODUCTS"; ObjectID = "doh-Yq-7b0"; */
+"doh-Yq-7b0.text" = "المنتجات";
+
+/* Class = "UILabel"; text = "Sub Total"; ObjectID = "dwe-OT-G3e"; */
+"dwe-OT-G3e.text" = "السعر الفرعي";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "exN-PQ-p36"; */
+"exN-PQ-p36.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Coupon Title(English)"; ObjectID = "fUG-73-Y41"; */
+"fUG-73-Y41.text" = "مسمى الكوبون بالانجليزي";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "fzi-4F-Mkn"; */
+"fzi-4F-Mkn.text" = "الكل";
+
+/* Class = "UILabel"; text = "Orders"; ObjectID = "gJV-ks-ELg"; */
+"gJV-ks-ELg.text" = "الطلبات";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "hTB-0U-P68"; */
+"hTB-0U-P68.placeholder" = "بحث";
+
+/* Class = "UILabel"; text = "41.750KD"; ObjectID = "hZK-dB-3zh"; */
+"hZK-dB-3zh.text" = "41.750KD";
+
+/* Class = "UILabel"; text = "Message"; ObjectID = "hqQ-99-unf"; */
+"hqQ-99-unf.text" = "الرسالة";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "hqk-gq-Hd0"; */
+"hqk-gq-Hd0.text" = "الكل";
+
+/* Class = "UILabel"; text = "Shop Name"; ObjectID = "jex-Kt-buq"; */
+"jex-Kt-buq.text" = "اسم المشروع";
+
+/* Class = "UILabel"; text = "41.750KD"; ObjectID = "kKn-Sr-SP1"; */
+"kKn-Sr-SP1.text" = "41.750KD";
+
+/* Class = "UILabel"; text = "Start Date"; ObjectID = "kkB-38-PpL"; */
+"kkB-38-PpL.text" = "Start Date";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "kw2-Hc-ySN"; */
+"kw2-Hc-ySN.text" = "معلومات العميل";
+
+/* Class = "UILabel"; text = "12.00KD"; ObjectID = "lA8-X9-2gl"; */
+"lA8-X9-2gl.text" = "12.00KD";
+
+/* Class = "UILabel"; text = "Unlimited"; ObjectID = "lrB-F7-yGG"; */
+"lrB-F7-yGG.text" = "لا نهائي";
+
+/* Class = "UILabel"; text = "CONTACT US"; ObjectID = "nwr-IZ-W19"; */
+"nwr-IZ-W19.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "-1.0KD"; ObjectID = "oZm-JR-RDs"; */
+"oZm-JR-RDs.text" = "-1.0KD";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "p9u-ix-b3n"; */
+"p9u-ix-b3n.placeholder" = "البريد الالكتروني";
+
+/* Class = "UITextField"; text = "emesamall.kw@gmail.com"; ObjectID = "p9u-ix-b3n"; */
+"p9u-ix-b3n.text" = "emesamall.kw@gmail.com";
+
+/* Class = "UILabel"; text = "DELIVERY STATUS:"; ObjectID = "q96-e0-lvv"; */
+"q96-e0-lvv.text" = "حالة التوصيل:";
+
+/* Class = "UILabel"; text = "PENDING"; ObjectID = "rOt-JG-mxm"; */
+"rOt-JG-mxm.text" = "قيد الانتظار";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "raJ-he-BQu"; */
+"raJ-he-BQu.text" = "معلومات العميل";
+
+/* Class = "UILabel"; text = "Online Visits"; ObjectID = "rby-iI-jFW"; */
+"rby-iI-jFW.text" = "عدد الزوار";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "rdA-sy-2hN"; */
+"rdA-sy-2hN.text" = "معلومات العميل";
+
+/* Class = "UILabel"; text = "Grand Total"; ObjectID = "stk-Sn-Zvq"; */
+"stk-Sn-Zvq.text" = "المجموع النهائي";
+
+/* Class = "UILabel"; text = "Change Password"; ObjectID = "tSA-ZG-SU7"; */
+"tSA-ZG-SU7.text" = "تغيير كلمة المرور";
+
+/* Class = "UILabel"; text = "Frequency For"; ObjectID = "u5V-K1-VXV"; */
+"u5V-K1-VXV.text" = "عدد الاستخدامات";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "utU-yY-mSb"; */
+"utU-yY-mSb.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "TOP CUSTOMERS"; ObjectID = "v7a-iL-3h8"; */
+"v7a-iL-3h8.text" = "افضل العملاء";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "vO1-GT-oi0"; */
+"vO1-GT-oi0.text" = "اليوم";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "wB0-7V-afO"; */
+"wB0-7V-afO.text" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "xnI-T2-LbA"; */
+"xnI-T2-LbA.text" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "14.55KD"; ObjectID = "xux-FC-txL"; */
+"xux-FC-txL.text" = "14.55KD";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "yLZ-XN-WzZ"; */
+"yLZ-XN-WzZ.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "CUSTOMER INFORMATION"; ObjectID = "zIr-x6-VnB"; */
+"zIr-x6-VnB.text" = "معلومات العميل";
