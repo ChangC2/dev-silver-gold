@@ -1,0 +1,11 @@
+.machine-grid-ring-container{
+    width: 85px;
+    text-align: center;
+    margin-left: calc(50% - 42px);
+    margin-top: 10px;
+}
+
+.g2-html-annotation{
+    color: white !important;
+}
+

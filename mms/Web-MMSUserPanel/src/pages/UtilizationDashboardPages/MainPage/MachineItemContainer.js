@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import logo from "../../../assets/images/logo.png";
 import MachineItem from "./MachineItem_Grid/MachineItem";
-import MachineItemTile from "./MachineItem_Tile/MachineItemTile";
+import MachineItemTile from "./MachineItem_Grid/MachineItemTile";
 import { Row } from "antd";
 import {
   sizePad,
@@ -71,11 +71,19 @@ function MachineItemContainer(props) {
             (screenSize.width >= sizePad
               ? 80
               : screenSize.width >= sizeMobile
-                ? 60
-                : 50),
+              ? 60
+              : 50),
         }}
       >
-        <Row justify={"start"} align={"top"} gutter={16}>
+        <Row
+          justify={"start"}
+          align={"top"}
+          gutter={16}
+          style={{
+            marginLeft: viewMode == 0 ? 0 : 10,
+            marginRight: viewMode == 0 ? 0 : 10,
+          }}
+        >
           {machineUIList}
         </Row>
       </div>

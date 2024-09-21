@@ -1,0 +1,105 @@
+.machine-item-tile-style {
+  margin: 15px 0px 0px 0px !important;
+  /* height: 150px; */
+  padding: 10px 10px 15px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: linear-gradient(#313131, #1b1b1b);
+  height: 332px;
+}
+
+.machine-item-tile-style:hover {
+  background: linear-gradient(#383838, #2e2e2e);
+}
+
+.machine-item-tile-style:active {
+  background: linear-gradient(#080808, #1d1c1c);
+}
+
+.main-operator-image-style {
+  border-radius: 50%;
+  /* box-shadow: 0px 0px 5px white; */
+  object-fit: cover !important;
+}
+
+.metric-time-range-title{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.metric-time-range-value{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.machine-image {
+  /* margin-left: 20px !important; */
+  max-width: 100% !important;
+  /* object-fit: contain !important; */
+  height: 100px !important; 
+}
+
+.machine-status-tile-style {
+  text-align: center;
+  word-break: break-all;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.main-machine-status-led-container-style {
+  /* background: red; */
+  text-align: center;
+  width: 100%;
+}
+
+.gauge-main-style-mobile > * text {
+  font-size: 12px !important;
+  transform: translateY(-10px) !important;
+}
+.gauge-main-style-ipad > * text {
+  font-size: 16px !important;
+  transform: translateY(-10px) !important;
+}
+
+.calculation-title{
+  width: 100% !important;
+  text-align: left !important;
+  color: white;
+  font-size: 15px;
+}
+
+.machine-tile-title{
+  text-align: center;
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.machine-tile-three {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: whitesmoke solid 1px;
+  text-align: center;
+  height: 120px;
+  max-height: 120px;
+}
+
+.machine-tile-operator-image {
+  height: calc(100% - 20px);
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+
+.machine-item-tile-operator-name{
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}

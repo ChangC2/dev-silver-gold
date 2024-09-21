@@ -1,4 +1,4 @@
-import { Spin } from "antd";
+import { Col, Row, Spin, Switch } from "antd";
 import { useEffect, useState } from "react";
 import { connect, useSelector } from "react-redux";
 import "./UtilizationDashboardPage.css";
@@ -26,7 +26,6 @@ function UtilizationDashboardPage(props) {
 
   const customer_id = props.app.customer_id;
   const group_id = props.app.group_id;
-  const viewMode = props.app.viewMode;
 
   const customerInfo = props.cncService.customerInfoList[customer_id];
   const machineList = props.cncService.utilizationMachineList[customer_id];
@@ -35,6 +34,7 @@ function UtilizationDashboardPage(props) {
 
   const [selectedMachine, setSelectedmachine] = useState("");
   const [operatorList, setOperatorList] = useState([]);
+  const [viewMode, setViewMode] = useState(0);
 
   const [tick, setTick] = useState(true);
   const [intervalId, setIntervalID] = useState(null);
@@ -123,16 +123,26 @@ function UtilizationDashboardPage(props) {
       {!isPageLoading && (
         <div>
           {selectedMachine == "" && (
-            <MachineItemContainer
-              machineList={machineList}
-              customer_id={customer_id}
-              group_id={group_id}
-              customerInfo={customerInfo}
-              onClickMachine={onClickMachine}
-              viewMode={viewMode}
-              operatorList={operatorList}
-              screenSize={screenSize}
-            />
+            <div>
+              <div className="list-tile-switch-container">
+                <Switch
+                  className="list-tile-switch"
+                  checked={viewMode == 1 ? true : false}
+                  onChange={(e) => setViewMode(e == true ? 1 : 0)}
+                />
+                <div className="list-tile-switch-title">{"Tile"}</div>
+              </div>
+              <MachineItemContainer
+                machineList={machineList}
+                customer_id={customer_id}
+                group_id={group_id}
+                customerInfo={customerInfo}
+                onClickMachine={onClickMachine}
+                viewMode={viewMode}
+                operatorList={operatorList}
+                screenSize={screenSize}
+              />
+            </div>
           )}
 
           <CSSTransition

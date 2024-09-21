@@ -27,6 +27,7 @@ function CNCPages(props) {
   const customer_id = props.app.customer_id;
   const group_id = props.app.group_id;
   const viewMode = props.app.viewMode;
+  console.log(viewMode);
 
   const customerInfo = props.cncService.customerInfoList[customer_id];
   const machineList = props.cncService.machineDetailList[customer_id];

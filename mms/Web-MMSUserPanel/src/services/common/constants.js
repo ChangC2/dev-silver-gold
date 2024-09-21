@@ -163,6 +163,7 @@ export const trelloColors = [
 ];
 
 export const STATUS_COLORS = [
+  "#ff9600",
   "#ffec00",
   "#549afc",
   "#c000db",

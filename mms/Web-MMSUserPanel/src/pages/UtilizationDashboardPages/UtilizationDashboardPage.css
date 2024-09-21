@@ -18,3 +18,29 @@
     text-align: center;
     margin-top: 150px;
 }
+
+
+.list-tile-switch-container {
+    /* width: 110px; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.list-tile-switch {
+    max-width: 15px !important;
+    background-color: #1e1e1e !important;
+}
+
+.list-tile-switch.ant-switch-checked {
+    background-color: rgb(99, 8, 245) !important;
+
+}
+
+.list-tile-switch-title {
+    color: white;
+    margin-left: 5px;
+}
