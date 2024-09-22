@@ -152,7 +152,7 @@ function MachineItemTile(props) {
             </h6>
           </Col>
         </Row>
-        <Row align="middle">
+        <Row align="middle" style={{marginTop:-10}}>
           <Col span={24}>
             {appSetting.gantt_chart_display == -1 && (
               <div style={{ width: "100%", textAlign: "center" }}>

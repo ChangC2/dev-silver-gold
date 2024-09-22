@@ -1,13 +1,10 @@
 // @flow strict
 
-import { useEffect, useState } from "react";
 import { RingProgress } from "@ant-design/plots";
-import {
-  readVariableViewIndex,
-  writeVariableViewIndex,
-} from "../../../../../services/common/functions";
+import { Progress } from "antd";
+import { useEffect, useState } from "react";
+import { readVariableViewIndex } from "../../../../../services/common/functions";
 import "./VariablesWidgetTile.css";
-import { Col, Row } from "antd";
 
 const variables = {
   utilization: "24hr Utilization",
@@ -27,17 +24,44 @@ function VariablesWidgetTile(props) {
       readVariableViewIndex(customer_id, machineInfo["machine_id"])
     );
   }, []);
+  let percent = parseInt(Math.round(parseFloat(machineInfo["utilization"])));
+
+  console.log(percent);
 
   const config = {
     height: 85,
     width: 85,
     autoFit: false,
-    percent: parseFloat(machineInfo["utilization"]) / 100.0,
+    percent: percent,
     color: ["#fdc200", "#E8EDF3"],
     innerRadius: 0.85,
+    statistic: {
+      title: {
+        style: {
+          color: "#fff",
+          fontSize: 26,
+          fontStyle: "bold",
+        },
+      },
+      content: {
+        style: {
+          text: `${percent * 100}%`,
+          color: "#fff",
+          fontSize: 26,
+          fontStyle: "bold",
+        },
+      },
+    },
   };
 
-  return <RingProgress {...config} className="machine-grid-ring-container" />;
+  return (
+    <Progress
+      type="circle"
+      percent={percent}
+      width={80}
+      className="machine-grid-ring-container"
+    />
+  );
 }
 
 export default VariablesWidgetTile;
