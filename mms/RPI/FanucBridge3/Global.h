@@ -32,6 +32,8 @@
 #define SETTING_FANUC_READ_INTERVAL "fanuc_read_interval"
 #define SETTING_FANUC_HP_X "fanuc_hp_x"
 
+#define SETTING_PUMP_CONFIG "pump_configuration"
+
 #include <QString>
 #include <QBitArray>
 #include <QtCore/qvector.h>

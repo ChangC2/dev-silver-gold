@@ -21,6 +21,10 @@ public:
     ~MainWindow();
 signals:
     void handleMainTimeout();
+
+protected:
+    void showEvent(QShowEvent *event) override;
+
 private slots:
     void on_btnNav_clicked();
 
@@ -37,6 +41,8 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_numberSlider_valueChanged(int value);
+
+    void updatedPumpConfig();
 
 private:
     void setConnectionStatus(int status);

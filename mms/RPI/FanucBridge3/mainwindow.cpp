@@ -49,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
     connect(worker, &Worker::resultReady, this, &MainWindow::showDataToUI);
     connect(this, &MainWindow::handleMainTimeout, worker, &Worker::handleMainTimeout);
+    connect(settingsWidget, &Settings::updatePumpConfig, this, &MainWindow::updatedPumpConfig);
 
     // Start the worker thread
     workerThread.start();
@@ -64,7 +65,32 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->lblTopFloatStatus->setStyleSheet("QLabel { color : red; }");
     ui->lblBottomFloatStatus->setStyleSheet("QLabel { color : red; }");
     ui->vSlider->hide();
+
+    if (appSetting->getIntValue(SETTING_PUMP_CONFIG, 0) == 1){
+        ui->widgetPump2->hide();
+    }else{
+        ui->widgetPump2->show();
+    }
     ui->numberSlider->setSingleStep(10);
+}
+
+void MainWindow::showEvent(QShowEvent *event)
+{
+    if (appSetting->getIntValue(SETTING_PUMP_CONFIG, 0) == 1){
+        ui->widgetPump2->hide();
+    }else{
+        ui->widgetPump2->show();
+    }
+    QWidget::showEvent(event);
+}
+
+void MainWindow::updatedPumpConfig()
+{
+    if (appSetting->getIntValue(SETTING_PUMP_CONFIG, 0) == 1){
+        ui->widgetPump2->hide();
+    }else{
+        ui->widgetPump2->show();
+    }
 }
 
 void MainWindow::setConnectionStatus(int status){

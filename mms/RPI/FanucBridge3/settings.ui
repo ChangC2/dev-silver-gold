@@ -54,7 +54,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>90</y>
+      <y>79</y>
       <width>681</width>
       <height>57</height>
      </rect>
@@ -90,7 +90,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>240</y>
+      <y>200</y>
       <width>681</width>
       <height>57</height>
      </rect>
@@ -189,7 +189,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>170</y>
+      <y>140</y>
       <width>681</width>
       <height>57</height>
      </rect>
@@ -216,6 +216,38 @@
       <widget class="QPushButton" name="btnSetPressureAddress2">
        <property name="text">
         <string>Set</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="gBConnInfo_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>260</y>
+      <width>681</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QRadioButton" name="radio2Pump">
+       <property name="text">
+        <string>2 Pump Configuration</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radio1Pump">
+       <property name="text">
+        <string>1 Pump Configuration</string>
        </property>
       </widget>
      </item>

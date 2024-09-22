@@ -16,8 +16,12 @@ public:
     explicit Settings(QWidget *parent = nullptr);
     ~Settings();
 
+signals:
+    void updatePumpConfig();
+
 protected:
     void showEvent(QShowEvent *event) override;
+
 
 private slots:
     void on_btnClose_clicked();
@@ -27,6 +31,10 @@ private slots:
     void on_btnSetPortAddress_clicked();
 
     void on_chkFuanucEnable_stateChanged(int arg1);
+
+    void on_radio2Pump_clicked();
+
+    void on_radio1Pump_clicked();
 
 private:
     Ui::Settings *ui;

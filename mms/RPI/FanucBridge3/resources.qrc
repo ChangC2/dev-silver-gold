@@ -6,5 +6,6 @@
         <file>ic_logo.png</file>
         <file>ic_nav.png</file>
         <file>img_machine.png</file>
+        <file>ultraflow.png</file>
     </qresource>
 </RCC>

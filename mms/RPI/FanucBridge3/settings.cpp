@@ -46,6 +46,12 @@ void Settings::showEvent(QShowEvent *event)
     ui->txtPort->setEnabled(appSetting->getIntValue(SETTING_FANUC_ENABLE, 0));
     ui->btnConnect->setEnabled(appSetting->getIntValue(SETTING_FANUC_ENABLE, 0));
 
+    if (appSetting->getIntValue(SETTING_PUMP_CONFIG, 0) == 1){
+        ui->radio1Pump->setChecked(true);
+    }else{
+        ui->radio2Pump->setChecked(true);
+    }
+
     QWidget::showEvent(event);
 }
 
@@ -101,3 +107,18 @@ void Settings::on_chkFuanucEnable_stateChanged(int arg1)
     ui->txtPort->setEnabled(arg1);
     ui->btnConnect->setEnabled(arg1);
 }
+
+void Settings::on_radio2Pump_clicked()
+{
+    appSetting->setValue(SETTING_PUMP_CONFIG, 2);
+    emit updatePumpConfig();
+}
+
+
+void Settings::on_radio1Pump_clicked()
+{
+    appSetting->setValue(SETTING_PUMP_CONFIG, 1);
+    emit updatePumpConfig();
+}
+
+

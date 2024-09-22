@@ -32,6 +32,9 @@ Worker::~Worker()
         serial.close();
     }
 }
+
+
+
 void Worker::handleMainTimeout() {
     if (systemStatus == 1 && newStatus == 1){
         elapsedRunTime++;

@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     MainWindow window;
-    window.setWindowTitle("Fanuc Bridge3");
+    window.setWindowTitle("Hennig");
     int width = 800;
     int height = 480;
     window.resize(width, height);

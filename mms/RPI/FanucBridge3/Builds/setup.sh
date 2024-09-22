@@ -2,7 +2,7 @@
 base="$(dirname "$(realpath "$0")")"
 libdir=/usr/local/lib
 
-sudo cp "$base/libfwlib32-linux-armv7.so" "$libdir/libfwlib32.so"
+sudo cp "$base/libfwlib32-linux-x64.so" "$libdir/libfwlib32.so"
 sudo ldconfig
 
 # Function to check if updates are available
@@ -49,11 +49,32 @@ else
     sudo apt-get install qemu-user-static -y
 fi
 
+if dpkg -l | grep -q '^ii  qemu-user-static '; then
+    echo "Package qemu-user-static is already installed."
+else
+    echo "Package qemu-user-static is not installed. Installing now..."
+    sudo apt-get install qemu-user-static -y
+fi
+
+if dpkg -l | grep -q '^ii  libqt5serialbus5 '; then
+    echo "Package libqt5serialbus5 is already installed."
+else
+    echo "Package libqt5serialbus5 is not installed. Installing now..."
+    sudo apt-get install libqt5serialbus5 -y
+fi
+
 if dpkg -l | grep -q '^ii  libqt5serialbus5:armhf '; then
     echo "Package libqt5serialbus5:armhf is already installed."
 else
     echo "Package libqt5serialbus5:armhf is not installed. Installing now..."
     sudo apt-get install libqt5serialbus5:armhf -y
+fi
+
+if dpkg -l | grep -q '^ii  libqt5serialport5 '; then
+    echo "Package libqt5serialport5 is already installed."
+else
+    echo "Package libqt5serialport5 is not installed. Installing now..."
+    sudo apt-get install libqt5serialport5 -y
 fi
 
 if dpkg -l | grep -q '^ii  libqt5serialport5:armhf '; then
@@ -63,11 +84,25 @@ else
     sudo apt-get install libqt5serialport5:armhf -y
 fi
 
+if dpkg -l | grep -q '^ii  libqt5websockets5 '; then
+    echo "Package libqt5websockets5 is already installed."
+else
+    echo "Package libqt5websockets5 is not installed. Installing now..."
+    sudo apt-get install libqt5websockets5 -y
+fi
+
 if dpkg -l | grep -q '^ii  libqt5websockets5:armhf '; then
     echo "Package libqt5websockets5:armhf is already installed."
 else
     echo "Package libqt5websockets5:armhf is not installed. Installing now..."
     sudo apt-get install libqt5websockets5:armhf -y
+fi
+
+if dpkg -l | grep -q '^ii  libqt5widgets5 '; then
+    echo "Package libqt5widgets5 is already installed."
+else
+    echo "Package libqt5widgets5 is not installed. Installing now..."
+    sudo apt-get install libqt5widgets5 -y
 fi
 
 if dpkg -l | grep -q '^ii  libqt5widgets5:armhf '; then

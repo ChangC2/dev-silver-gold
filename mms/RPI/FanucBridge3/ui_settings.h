@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'settings.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.15.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -18,6 +18,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -50,6 +51,10 @@ public:
     QLabel *label_6;
     QLineEdit *txtAddressPressure2;
     QPushButton *btnSetPressureAddress2;
+    QGroupBox *gBConnInfo_5;
+    QHBoxLayout *horizontalLayout_5;
+    QRadioButton *radio2Pump;
+    QRadioButton *radio1Pump;
     QFrame *line;
     QLabel *label_3;
 
@@ -72,7 +77,7 @@ public:
         groupBox->setGeometry(QRect(30, 63, 741, 321));
         gBConnInfo_2 = new QGroupBox(groupBox);
         gBConnInfo_2->setObjectName(QString::fromUtf8("gBConnInfo_2"));
-        gBConnInfo_2->setGeometry(QRect(30, 90, 681, 57));
+        gBConnInfo_2->setGeometry(QRect(30, 79, 681, 57));
         horizontalLayout_2 = new QHBoxLayout(gBConnInfo_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_4 = new QLabel(gBConnInfo_2);
@@ -93,7 +98,7 @@ public:
 
         gBConnInfo_3 = new QGroupBox(groupBox);
         gBConnInfo_3->setObjectName(QString::fromUtf8("gBConnInfo_3"));
-        gBConnInfo_3->setGeometry(QRect(30, 240, 681, 57));
+        gBConnInfo_3->setGeometry(QRect(30, 200, 681, 57));
         horizontalLayout_3 = new QHBoxLayout(gBConnInfo_3);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_5 = new QLabel(gBConnInfo_3);
@@ -153,7 +158,7 @@ public:
 
         gBConnInfo_4 = new QGroupBox(groupBox);
         gBConnInfo_4->setObjectName(QString::fromUtf8("gBConnInfo_4"));
-        gBConnInfo_4->setGeometry(QRect(30, 170, 681, 57));
+        gBConnInfo_4->setGeometry(QRect(30, 140, 681, 57));
         horizontalLayout_4 = new QHBoxLayout(gBConnInfo_4);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label_6 = new QLabel(gBConnInfo_4);
@@ -171,6 +176,22 @@ public:
         btnSetPressureAddress2->setObjectName(QString::fromUtf8("btnSetPressureAddress2"));
 
         horizontalLayout_4->addWidget(btnSetPressureAddress2);
+
+        gBConnInfo_5 = new QGroupBox(groupBox);
+        gBConnInfo_5->setObjectName(QString::fromUtf8("gBConnInfo_5"));
+        gBConnInfo_5->setGeometry(QRect(30, 260, 681, 51));
+        horizontalLayout_5 = new QHBoxLayout(gBConnInfo_5);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        radio2Pump = new QRadioButton(gBConnInfo_5);
+        radio2Pump->setObjectName(QString::fromUtf8("radio2Pump"));
+        radio2Pump->setChecked(true);
+
+        horizontalLayout_5->addWidget(radio2Pump);
+
+        radio1Pump = new QRadioButton(gBConnInfo_5);
+        radio1Pump->setObjectName(QString::fromUtf8("radio1Pump"));
+
+        horizontalLayout_5->addWidget(radio1Pump);
 
         line = new QFrame(Settings);
         line->setObjectName(QString::fromUtf8("line"));
@@ -212,6 +233,9 @@ public:
         gBConnInfo_4->setTitle(QString());
         label_6->setText(QCoreApplication::translate("Settings", "<html><head/><body><p>Address for Pressure Setting 2 :</p></body></html>", nullptr));
         btnSetPressureAddress2->setText(QCoreApplication::translate("Settings", "Set", nullptr));
+        gBConnInfo_5->setTitle(QString());
+        radio2Pump->setText(QCoreApplication::translate("Settings", "2 Pump Configuration", nullptr));
+        radio1Pump->setText(QCoreApplication::translate("Settings", "1 Pump Configuration", nullptr));
         label_3->setText(QCoreApplication::translate("Settings", "Settings", nullptr));
     } // retranslateUi
 
